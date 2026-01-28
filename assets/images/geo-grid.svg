@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <pattern id="g" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="rgba(216,193,138,0.20)" stroke-width="1"/>
+      <path d="M0 40H80M40 0V80" fill="none" stroke="rgba(216,193,138,0.12)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#g)"/>
+
+  <circle cx="600" cy="400" r="260" fill="none" stroke="rgba(216,193,138,0.20)" stroke-width="2"/>
+  <circle cx="600" cy="400" r="140" fill="none" stroke="rgba(216,193,138,0.14)" stroke-width="2"/>
+
+  <line x1="0" y1="400" x2="1200" y2="400" stroke="rgba(216,193,138,0.10)" stroke-width="1"/>
+  <line x1="600" y1="0" x2="600" y2="800" stroke="rgba(216,193,138,0.10)" stroke-width="1"/>
+</svg>

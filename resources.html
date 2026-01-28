@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>PLATO — Resources</title>
+
+  <meta name="description" content="Free educational resources to study Plato: learning paths from beginner to advanced, plus a structured library of texts, concepts, and context." />
+
+  <meta property="og:title" content="PLATO — Resources" />
+  <meta property="og:description" content="Learning paths and a structured library to study Plato step by step." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://platophilosophy.com/resources.html" />
+
+  <link rel="stylesheet" href="/assets/css/main.css" >
+
+  <style>
+    /* Page-specific additions (move to main.css later if you want) */
+
+    .page-head { padding: 46px 0 18px; }
+
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:8px 12px; border-radius:999px;
+      border:1px solid rgba(216,193,138,.18);
+      background: rgba(216,193,138,.08);
+      color: rgba(255,255,255,.82);
+      font-size: 13px;
+    }
+    .kdot{
+      width:7px; height:7px; border-radius:999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(216,193,138,.12);
+      display:inline-block;
+    }
+
+    .lead{
+      margin-top: 12px;
+      max-width: 78ch;
+      color: rgba(255,255,255,.72);
+    }
+
+    .panel{
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      overflow:hidden;
+      padding: 16px;
+    }
+
+    .tabs{
+      display:flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .tab{
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      color: rgba(255,255,255,.75);
+      border-radius: 999px;
+      padding: 8px 10px;
+      font-size: 13px;
+      cursor: pointer;
+      user-select:none;
+      transition: transform .12s ease, border-color .12s ease;
+    }
+    .tab:hover{ transform: translateY(-1px); }
+    .tab[aria-pressed="true"]{
+      border-color: rgba(216,193,138,.25);
+      background: rgba(216,193,138,.08);
+      color: rgba(255,255,255,.90);
+    }
+
+    .path-box{
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.18);
+    }
+
+    .path-title{
+      margin: 0;
+      font-family: var(--font-serif);
+      font-size: 16px;
+      color: rgba(255,255,255,.92);
+    }
+
+    .muted{
+      color: rgba(255,255,255,.68);
+      font-size: 14px;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .bullets{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: rgba(255,255,255,.70);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .mini-links{
+      margin-top: 12px;
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items:center;
+    }
+
+    .link{
+      color: rgba(216,193,138,.92);
+      text-decoration: underline;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .section-title{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap: 16px;
+      margin-top: 26px;
+      margin-bottom: 14px;
+    }
+
+    .section-title h2{
+      margin:0;
+      font-family: var(--font-serif);
+      font-size: 22px;
+      color: rgba(255,255,255,.92);
+    }
+
+    .section-title p{
+      margin:0;
+      max-width: 78ch;
+      color: rgba(255,255,255,.55);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .card h3{ margin: 0 0 8px; }
+    .card .tag{
+      display:inline-block;
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.10);
+      color: rgba(255,255,255,.70);
+      margin-bottom: 10px;
+    }
+
+    .card a.inline{
+      display:inline-block;
+      margin-top: 10px;
+      color: rgba(216,193,138,.92);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .card a.inline:hover{ text-decoration: underline; }
+
+    .callout{
+      margin-top: 16px;
+      padding: 14px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(216,193,138,.18);
+      background: linear-gradient(180deg, rgba(216,193,138,.10), rgba(255,255,255,.03));
+      box-shadow: var(--shadow-md);
+      color: rgba(255,255,255,.78);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    /* Waitlist form */
+    .form-row {
+      margin-top: 14px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .email {
+      padding: 12px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.25);
+      color: rgba(255,255,255,.90);
+      min-width: 240px;
+      outline: none;
+    }
+    .email::placeholder { color: rgba(255,255,255,.45); }
+
+    @media (max-width: 900px){
+      .section-title{ flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <div class="mark">Φ</div>
+      <div>
+        <strong>PLATO</strong><br/>
+        <span style="font-size:12px;color:rgba(255,255,255,.55)">platophilosophy.com</span>
+      </div>
+    </a>
+
+    <div style="display:flex; gap:10px; align-items:center;">
+      <a class="btn secondary" href="dialogue-sample.html">Dialogue sample</a>
+      <a class="btn" href="#waitlist">Join the waitlist</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-head">
+    <div class="wrap">
+
+      <div class="kicker"><span class="kdot"></span> Free library · structured paths · beginner to advanced</div>
+
+      <h1 style="margin-top:16px;">Resources</h1>
+
+      <p class="lead">
+        These pages are the free educational foundation of the project:
+        clear introductions, structured explanations, and guided pathways for reading Plato.
+      </p>
+
+      <p style="margin-top:10px; font-size:13px; color:rgba(255,255,255,.55);">
+        No prior knowledge required · Launching 2026 · English
+      </p>
+
+      <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="btn" href="#paths">Choose a learning path</a>
+        <a class="btn secondary" href="#library">Browse the library</a>
+        <a class="btn secondary" href="#waitlist">Get updates by email</a>
+      </div>
+
+      <div class="callout">
+        The library is designed to expand gradually (about 50 educational pages).
+        If you join the waitlist, you’ll receive a short update when new chapters go live.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PATHS -->
+  <section id="paths">
+    <div class="wrap">
+      <div class="panel">
+
+        <h2 style="margin:0;">Learning paths</h2>
+        <p class="muted" style="margin-top:10px; max-width:80ch;">
+          Start where you are. Each path combines context, texts, and concepts.
+          As the library grows, each path will become more complete.
+        </p>
+
+        <div class="tabs" role="group" aria-label="Paths">
+          <button class="tab" id="tBeginner" aria-pressed="true" type="button">Beginner</button>
+          <button class="tab" id="tLife" aria-pressed="false" type="button">Plato’s life</button>
+          <button class="tab" id="tPhilosophy" aria-pressed="false" type="button">Core philosophy</button>
+          <button class="tab" id="tAdvanced" aria-pressed="false" type="button">Advanced</button>
+        </div>
+
+        <div class="path-box" id="pathBox"></div>
+
+        <div class="mini-links">
+          <a class="btn secondary" href="dialogue-sample.html">See the dialogue sample</a>
+          <a class="btn" href="#waitlist">Join the waitlist</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LIBRARY -->
+  <section id="library">
+    <div class="wrap">
+
+      <div class="section-title">
+        <div>
+          <h2>Library</h2>
+          <p>
+            Core building blocks aligned with the resource structure (life → philosophy → method and tools). :contentReference[oaicite:1]{index=1}
+          </p>
+        </div>
+        <p>
+          Start small: one page, one dialogue, one concept.
+        </p>
+      </div>
+
+      <div class="grid-3">
+
+        <div class="card">
+          <div class="tag">Start</div>
+          <h3>Start Here</h3>
+          <p>A gentle entry point: what Plato is doing, how dialogues work, and how to begin.</p>
+          <a class="inline" href="start-here.html">Open →</a>
+        </div>
+
+        <div class="card">
+          <div class="tag">Life</div>
+          <h3>Plato’s Life</h3>
+          <p>Athens, family, Socrates, travels, the Academy — the story behind the dialogues.</p>
+          <a class="inline" href="#">Browse →</a>
+        </div>
+
+        <div class="card">
+          <div class="tag">Philosophy</div>
+          <h3>Core Ideas</h3>
+          <p>Reality and appearance, Forms, knowledge, soul, ethics, politics, education.</p>
+          <a class="inline" href="#">Browse →</a>
+        </div>
+
+        <div class="card">
+          <div class="tag">Texts</div>
+          <h3>Dialogues Library</h3>
+          <p>Plato’s dialogues in translation, with short introductions and suggested first readings.</p>
+          <a class="inline" href="#">Browse →</a>
+        </div>
+
+        <div class="card">
+          <div class="tag">Concepts</div>
+          <h3>Glossary</h3>
+          <p>Key terms explained in clear language, linked to where they appear in the dialogues.</p>
+          <a class="inline" href="#">Explore →</a>
+        </div>
+
+        <div class="card">
+          <div class="tag">Method</div>
+          <h3>How to Read a Dialogue</h3>
+          <p>Practical guidance: questions to ask, how to take notes, common pitfalls.</p>
+          <a class="inline" href="#">Read →</a>
+        </div>
+
+      </div>
+
+      <div style="margin-top:22px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="btn" href="#waitlist">Get updates</a>
+        <a class="btn secondary" href="index.html">Back to homepage</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WAITLIST (single form, linear) -->
+  <section id="waitlist">
+    <div class="wrap">
+
+      <h2>Join the waitlist</h2>
+
+      <p style="margin-top:12px; max-width:75ch;">
+        If you want updates on new resources and early access to the mobile dialogue experience,
+        leave your email here.
+      </p>
+
+      <p style="margin-top:12px; max-width:75ch;">
+        Early access members will receive <strong>3 free questions</strong> to begin exploring the dialogue experience.
+      </p>
+
+      <form
+        action="https://formspree.io/f/YOUR_ID"
+        method="POST"
+        class="form-row"
+        aria-label="Waitlist form"
+      >
+        <input class="email" type="email" name="email" placeholder="your@email.com" required />
+        <button class="btn" type="submit">Join the waitlist</button>
+      </form>
+
+      <p style="margin-top:10px; font-size:12px; color:rgba(255,255,255,.55);">
+        No spam. One email for launch, then occasional updates.
+      </p>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p style="color:rgba(255,255,255,.75);">
+      PLATO is an independent project for studying Platonic thought.
+    </p>
+    <p style="margin-top:8px; color:rgba(255,255,255,.55);">
+      Clear paths for beginners. Deeper routes for advanced readers. Dialogue as a way of learning.
+    </p>
+
+    <p style="margin-top:12px; font-size:12px; color:rgba(255,255,255,.55);">
+      <a href="/privacy.html" style="color:rgba(255,255,255,.55);">Privacy</a> ·
+      <a href="/terms.html" style="color:rgba(255,255,255,.55);">Terms</a> ·
+      <a href="mailto:contact@platophilosophy.com" style="color:rgba(255,255,255,.55);">Contact</a>
+    </p>
+
+    <p style="margin-top:14px; font-size:12px; color:rgba(255,255,255,.45);">
+      © <span id="y"></span> platophilosophy.com
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  const pathBox = document.getElementById("pathBox");
+
+  const paths = {
+    beginner: {
+      title: "Beginner path",
+      desc: "A gentle route for first contact with Plato and philosophical reading.",
+      bullets: [
+        "Start Here: how to read a dialogue, what to expect, how to take notes.",
+        "A first short dialogue (guided).",
+        "Glossary support: learn terms as they appear.",
+        "Optional: historical context (Athens, Socrates)."
+      ],
+      links: [
+        { label: "Start Here", href: "start-here.html" },
+        { label: "Dialogue sample", href: "dialogue-sample.html" },
+        { label: "Join the waitlist", href: "#waitlist" }
+      ]
+    },
+    life: {
+      title: "Plato’s life path",
+      desc: "Context that makes the dialogues clearer: Athens, Socrates, travels, the Academy.",
+      bullets: [
+        "Athens in 428 BC: the world Plato was born into.",
+        "Meeting Socrates and the turning point.",
+        "The trial and death of Socrates (399 BC).",
+        "Founding the Academy and its method."
+      ],
+      links: [
+        { label: "Start Here", href: "start-here.html" },
+        { label: "Browse life pages", href: "#" },
+        { label: "Get updates", href: "#waitlist" }
+      ]
+    },
+    philosophy: {
+      title: "Core philosophy path",
+      desc: "Central questions and concepts: reality, knowledge, soul, ethics, politics, education.",
+      bullets: [
+        "What is real? appearance vs. reality.",
+        "Knowledge vs. opinion; learning as recollection.",
+        "Soul and virtue; the good life.",
+        "Education as transformation (the Cave)."
+      ],
+      links: [
+        { label: "Browse core ideas", href: "#" },
+        { label: "Glossary", href: "#" },
+        { label: "Get updates", href: "#waitlist" }
+      ]
+    },
+    advanced: {
+      title: "Advanced path",
+      desc: "A more demanding route: method, objections, and careful reading practice.",
+      bullets: [
+        "Close reading: track definitions and implicit assumptions.",
+        "Key Greek terms when they matter (light, not heavy).",
+        "Follow arguments across dialogues and compare themes.",
+        "Use dialogue to test concepts without shortcuts."
+      ],
+      links: [
+        { label: "How to read a dialogue", href: "#" },
+        { label: "Dialogue sample", href: "dialogue-sample.html" },
+        { label: "Join the waitlist", href: "#waitlist" }
+      ]
+    }
+  };
+
+  function render(key) {
+    const p = paths[key];
+    pathBox.innerHTML = `
+      <h4 class="path-title">${p.title}</h4>
+      <p class="muted" style="margin-top:8px;">${p.desc}</p>
+      <ul class="bullets">
+        ${p.bullets.map(x => `<li>${x}</li>`).join("")}
+      </ul>
+      <div class="mini-links" style="margin-top:12px;">
+        ${p.links.map(l => `<a class="link" href="${l.href}">${l.label}</a>`).join("")}
+      </div>
+    `;
+  }
+
+  function setPressed(activeId){
+    const ids = ["tBeginner","tLife","tPhilosophy","tAdvanced"];
+    for (const id of ids){
+      const el = document.getElementById(id);
+      el.setAttribute("aria-pressed", id === activeId ? "true" : "false");
+    }
+  }
+
+  document.getElementById("tBeginner").addEventListener("click", () => {
+    setPressed("tBeginner"); render("beginner");
+  });
+  document.getElementById("tLife").addEventListener("click", () => {
+    setPressed("tLife"); render("life");
+  });
+  document.getElementById("tPhilosophy").addEventListener("click", () => {
+    setPressed("tPhilosophy"); render("philosophy");
+  });
+  document.getElementById("tAdvanced").addEventListener("click", () => {
+    setPressed("tAdvanced"); render("advanced");
+  });
+
+  render("beginner");
+</script>
+
+</body>
+</html>
