@@ -75,20 +75,22 @@
   </script>
   
   <style>
-    .kicker{display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border-radius:999px;border:1px solid rgba(216,193,138,.18);background:rgba(216,193,138,.08);color:rgba(255,255,255,.82);font-size:13px;}
+    .kicker{display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border-radius:999px;border:1px solid rgba(216,193,138,.18);background:rgba(216,193,138,.08);color:var(--text);font-size:13px;}
     .kdot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(216,193,138,.12);display:inline-block;}
-    .panel{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);padding:16px;}
-    .reading{max-width:78ch;line-height:1.7;color:rgba(255,255,255,.80);}
+    .panel{background:var(--panel);border:1px solid var(--stroke);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);padding:16px;}
+    .reading{max-width:78ch;line-height:1.7;color:var(--text);}
     .reading p{margin:12px 0;}
-    .reading h2{margin-top:24px;}
+    .reading h2{margin-top:24px;color:var(--text-strong);}
+    .reading strong{color:var(--text-strong);}
+    .reading em{color:var(--muted);}
     .two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;margin-top:18px;}
-    .box-title{margin:0 0 10px;font-family:var(--font-serif);font-size:16px;color:rgba(255,255,255,.92);}
-    .list{margin:10px 0 0;padding-left:18px;color:rgba(255,255,255,.72);font-size:14px;line-height:1.6;}
-    .hr{height:1px;background:rgba(255,255,255,.08);margin:20px 0;}
+    .box-title{margin:0 0 10px;font-family:var(--font-serif);font-size:16px;color:var(--text-strong);}
+    .list{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:14px;line-height:1.6;}
+    .hr{height:1px;background:var(--stroke);margin:20px 0;}
     .nav-row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:18px;}
-    .mini{font-size:12px;color:rgba(255,255,255,.55);line-height:1.5;}
+    .mini{font-size:12px;color:var(--muted-soft);line-height:1.5;}
     .schedule-box{background:rgba(216,193,138,.08);border:1px solid rgba(216,193,138,.18);border-radius:8px;padding:16px;margin:18px 0;}
-    .schedule-item{margin:8px 0;padding-left:12px;border-left:2px solid rgba(216,193,138,.3);}
+    .schedule-item{margin:8px 0;padding-left:12px;border-left:2px solid rgba(216,193,138,.3);color:var(--text);}
     @media (max-width:900px){.two-col{grid-template-columns:1fr;}}
   </style>
 </head>
@@ -303,11 +305,11 @@
 
 <footer>
   <div class="wrap">
-    <p style="color:rgba(255,255,255,.75);">PLATO is an independent project for studying Platonic thought.</p>
-    <p style="margin-top:12px;font-size:12px;color:rgba(255,255,255,.55);">
+    <p style="color:var(--text);">PLATO is an independent project for studying Platonic thought.</p>
+    <p style="margin-top:12px;font-size:12px;color:var(--muted-soft);">
       <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:contact@platophilosophy.com">Contact</a>
     </p>
-    <p style="margin-top:14px;font-size:12px;color:rgba(255,255,255,.45);">© <span id="y"></span> platophilosophy.com</p>
+    <p style="margin-top:14px;font-size:12px;color:var(--muted-soft);">© <span id="y"></span> platophilosophy.com</p>
   </div>
 </footer>
 
