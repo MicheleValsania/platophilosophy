@@ -3,111 +3,658 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PLATO — Timeline</title>
-  <meta name="description" content="Key events in Plato's life from birth (428 BC) to death (348 BC) — a chronological overview." />
+  <title>Timeline — Plato's Life | PLATO</title>
+  <meta name="description" content="Key events in Plato's life from birth (428 BC) to death (348 BC) — an interactive chronological overview with links to detailed pages." />
+  <link rel="canonical" href="https://platophilosophy.com/resources/platophilosophy/timeline.html" />
+
+  <meta property="og:title" content="Timeline — Plato's Life" />
+  <meta property="og:description" content="Interactive timeline of Plato's life from 428 BC to 348 BC, with links to detailed biographical pages." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://platophilosophy.com/resources/platophilosophy/timeline.html" />
+
   <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Timeline — Key Events in Plato's Life",
+    "description": "Key events in Plato's life from birth (428 BC) to death (348 BC) — an interactive chronological overview with links to detailed biographical pages.",
+    "author": {
+      "@type": "Organization",
+      "name": "Plato Philosophy",
+      "url": "https://platophilosophy.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Plato Philosophy"
+    },
+    "datePublished": "2026-01-29T00:00:00+00:00",
+    "dateModified": "2026-01-29T00:00:00+00:00",
+    "articleSection": "Biography",
+    "keywords": ["Plato", "Ancient Greece", "Philosophy", "Biography", "Timeline", "Chronology", "428 BC", "348 BC"],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://platophilosophy.com/resources/platophilosophy/timeline.html"
+    }
+  }
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://platophilosophy.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Resources",
+        "item": "https://platophilosophy.com/resources.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Plato's Life",
+        "item": "https://platophilosophy.com/resources/platophilosophy/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Timeline"
+      }
+    ]
+  }
+  </script>
+
   <style>
-    .timeline{ max-width: 78ch; margin-top:24px; }
-    .event{ margin-bottom:24px; padding-left:20px; border-left:2px solid rgba(216,193,138,.3); }
-    .year{ font-size:18px; font-weight:700; color:var(--accent); margin-bottom:6px; }
-    .desc{ color:rgba(255,255,255,.78); line-height:1.6; }
+    .page-intro{
+      max-width:75ch;
+      margin:24px 0;
+      padding:20px;
+      background:var(--accent-soft);
+      border-left:4px solid var(--accent);
+      border-radius:8px;
+      line-height:1.7;
+      color:var(--text);
+    }
+
+    .timeline{
+      max-width:900px;
+      margin:48px auto;
+      position:relative;
+    }
+
+    /* Vertical line */
+    .timeline::before{
+      content:'';
+      position:absolute;
+      left:80px;
+      top:0;
+      bottom:0;
+      width:3px;
+      background:linear-gradient(180deg, transparent, var(--accent-soft) 5%, var(--accent-soft) 95%, transparent);
+    }
+
+    .event{
+      position:relative;
+      margin-bottom:48px;
+      padding-left:140px;
+      min-height:60px;
+    }
+
+    .year{
+      position:absolute;
+      left:0;
+      top:0;
+      width:75px;
+      text-align:right;
+      font-size:15px;
+      font-weight:700;
+      color:var(--accent-strong);
+      font-family:var(--font-mono, monospace);
+      line-height:1.3;
+    }
+
+    /* Dot on timeline */
+    .event::before{
+      content:'';
+      position:absolute;
+      left:73px;
+      top:6px;
+      width:14px;
+      height:14px;
+      border-radius:50%;
+      background:var(--accent);
+      border:3px solid var(--bg);
+      box-shadow:0 0 0 2px var(--accent-soft);
+      z-index:2;
+    }
+
+    /* Major event (larger dot) */
+    .event.major::before{
+      width:22px;
+      height:22px;
+      left:69px;
+      top:2px;
+      box-shadow:0 0 0 4px var(--accent-soft), 0 0 20px var(--accent-soft);
+      animation:pulse 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform:scale(1); opacity:1; }
+      50% { transform:scale(1.05); opacity:.9; }
+    }
+
+    .event-content{
+      background:var(--panel);
+      border:1px solid var(--stroke);
+      border-radius:12px;
+      padding:20px 24px;
+      transition:all .3s ease;
+      box-shadow:var(--shadow-md);
+    }
+
+    .event-content:hover{
+      background:var(--panel-strong);
+      border-color:var(--accent-soft);
+      transform:translateX(6px);
+      box-shadow:0 8px 24px rgba(0,0,0,.15);
+    }
+
+    .event-title{
+      font-size:18px;
+      font-weight:600;
+      color:var(--text);
+      margin:0 0 10px;
+      font-family:var(--font-serif);
+    }
+
+    .event-desc{
+      color:var(--muted);
+      line-height:1.7;
+      margin:0;
+      font-size:15px;
+    }
+
+    .event-context{
+      margin-top:10px;
+      padding-top:10px;
+      border-top:1px solid var(--stroke);
+      color:var(--muted-soft);
+      font-size:13px;
+      line-height:1.6;
+      font-style:italic;
+    }
+
+    .event-link{
+      display:inline-block;
+      margin-top:12px;
+      color:var(--accent);
+      font-size:14px;
+      font-weight:600;
+      text-decoration:none;
+      transition:all .2s;
+    }
+
+    .event-link:hover{
+      color:var(--accent-strong);
+      transform:translateX(3px);
+    }
+
+    .event-link::after{
+      content:' →';
+    }
+
+    .period{
+      margin:64px 0 40px;
+      text-align:center;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      color:var(--muted-soft);
+      font-weight:700;
+      position:relative;
+    }
+
+    .period::before,
+    .period::after{
+      content:'';
+      position:absolute;
+      top:50%;
+      width:calc(50% - 120px);
+      height:1px;
+      background:linear-gradient(to right, transparent, var(--stroke), transparent);
+    }
+
+    .period::before{ left:0; }
+    .period::after{ right:0; }
+
+    .age-note{
+      display:inline-block;
+      margin-left:8px;
+      padding:2px 8px;
+      background:var(--accent-soft);
+      border-radius:12px;
+      font-size:11px;
+      font-weight:600;
+      color:var(--accent-strong);
+    }
+
+    @media (max-width:768px){
+      .timeline::before{
+        left:30px;
+      }
+      .event{
+        padding-left:70px;
+      }
+      .year{
+        width:25px;
+        font-size:11px;
+      }
+      .event::before{
+        left:23px;
+      }
+      .event.major::before{
+        left:19px;
+      }
+      .period::before,
+      .period::after{
+        width:calc(50% - 80px);
+      }
+    }
   </style>
 </head>
+
 <body>
+
 <header>
   <div class="wrap nav">
-    <a class="brand" href="index.html"><div class="mark">Φ</div><div><strong>PLATO</strong></div></a>
-    <div style="display:flex; gap:10px;"><a class="btn secondary" href="resources.html">Resources</a></div>
+    <a class="brand" href="/index.html">
+      <div class="mark">Φ</div>
+      <div><strong>PLATO</strong><br/><span style="font-size:12px;color:var(--muted-soft)">platophilosophy.com</span></div>
+    </a>
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+      <a class="btn secondary" href="/resources.html">Resources</a>
+      <button class="btn secondary" id="themeToggle" type="button" aria-label="Toggle theme">Theme</button>
+      <a class="btn secondary" href="/index.html#waitlist">Waitlist</a>
+    </div>
   </div>
 </header>
+
+<nav aria-label="Breadcrumb" style="padding:12px 0;">
+  <div class="wrap" style="font-size:12px;color:var(--muted-soft);">
+    <a href="/index.html">Home</a> ›
+    <a href="/resources.html">Resources</a> ›
+    <a href="/resources/platophilosophy/index.html">Plato's Life</a> ›
+    <span style="color:var(--muted)">Timeline</span>
+  </div>
+</nav>
+
 <main>
-  <section style="padding:46px 0;">
+  <section style="padding:46px 0 80px;">
     <div class="wrap">
-      <p style="font-size:13px;color:rgba(255,255,255,.6)">Part 1 · Plato's Life · Page 12 of 12</p>
-      <h1 style="margin-top:8px;">Timeline</h1>
-      <p style="margin-top:12px;max-width:78ch;line-height:1.7;color:rgba(255,255,255,.78)">
-        A chronological overview of key events in Plato's life and the historical context surrounding them.
-      </p>
-      
+
+      <h1 style="margin-top:16px;">Timeline — Plato's Life</h1>
+
+      <div class="page-intro">
+        <strong>A chronological journey through 80 years of history</strong> — from Plato's aristocratic birth during the Peloponnesian War to his death as founder of Western philosophy's first institution. This timeline contextualizes his philosophical development within the turbulent political and intellectual landscape of classical Athens.
+      </div>
+
       <div class="timeline">
-        <div class="event">
-          <div class="year">428/427 BC</div>
-          <div class="desc">Plato born in Athens to an aristocratic family. Father: Ariston. Mother: Perictione (related to Solon).</div>
+
+        <!-- BIRTH & EARLY YEARS -->
+        <div class="period">Birth & Early Formation</div>
+
+        <div class="event major">
+          <div class="year">428/427<br/>BC</div>
+          <div class="event-content">
+            <h3 class="event-title">Plato Born in Athens <span class="age-note">Age 0</span></h3>
+            <p class="event-desc">
+              Born Aristocles to one of Athens' most distinguished families. Father Ariston claimed descent from Codrus, the last king of Athens. Mother Perictione related to Solon, the great lawgiver. The name "Plato" (broad) may refer to his physical build or intellectual breadth.
+            </p>
+            <p class="event-context">
+              Athens at its height: The Parthenon completed just a decade earlier, Pericles recently died, democracy flourishing but tested by war.
+            </p>
+            <a href="family-and-birth.html" class="event-link">Read about his family background</a>
+          </div>
         </div>
-        
+
         <div class="event">
           <div class="year">431 BC</div>
-          <div class="desc">Peloponnesian War begins (Athens vs. Sparta). Plato grows up during wartime.</div>
+          <div class="event-content">
+            <h3 class="event-title">Peloponnesian War Begins <span class="age-note">Age ~3</span></h3>
+            <p class="event-desc">
+              Athens and Sparta enter a devastating 27-year conflict that will reshape the Greek world. Plato's entire childhood and youth unfold against the backdrop of war, plague, political instability, and Athens' gradual decline from golden age to defeat.
+            </p>
+            <p class="event-context">
+              This war forms the crucible of Plato's political thought: he witnesses democracy at its best and worst, observes the corruption of power, and sees how crisis tests philosophical convictions.
+            </p>
+            <a href="athens-in-428-bc.html" class="event-link">Explore Athens during this period</a>
+          </div>
         </div>
-        
+
         <div class="event">
-          <div class="year">c. 408 BC</div>
-          <div class="desc">Plato meets Socrates at age 20. Devotes himself to philosophy, abandons plans for politics or poetry.</div>
+          <div class="year">430-429<br/>BC</div>
+          <div class="event-content">
+            <h3 class="event-title">Plague Strikes Athens <span class="age-note">Age ~2</span></h3>
+            <p class="event-desc">
+              Devastating plague kills approximately one-third of Athens' population, including Pericles, the city's greatest statesman. The catastrophe weakens Athens militarily and psychologically, marking the beginning of the end of Athens' golden age.
+            </p>
+            <p class="event-context">
+              Plato grows up in a city haunted by mass death, political chaos, and the collapse of certainties. This atmosphere of crisis shapes his later emphasis on stable, rational governance.
+            </p>
+          </div>
         </div>
-        
+
+        <div class="event">
+          <div class="year">c. 420-<br/>410 BC</div>
+          <div class="event-content">
+            <h3 class="event-title">Traditional Aristocratic Education <span class="age-note">Age ~8-18</span></h3>
+            <p class="event-desc">
+              Receives the finest education available: <em>mousikē</em> (music, poetry, rhetoric, culture) and <em>gymnastikē</em> (athletic training, military preparation). Studies Homer, tragic poetry, learns the lyre. Possibly shows early talent for poetry and drama.
+            </p>
+            <p class="event-context">
+              Education in this era aimed to produce <em>kalokagathia</em> — the beautiful and the good unified. Physical excellence, artistic refinement, and moral virtue were inseparable ideals.
+            </p>
+            <a href="youth-and-education.html" class="event-link">Learn about Greek education</a>
+          </div>
+        </div>
+
+        <!-- SOCRATIC PERIOD -->
+        <div class="period">The Socratic Transformation</div>
+
+        <div class="event major">
+          <div class="year">c. 408 BC</div>
+          <div class="event-content">
+            <h3 class="event-title">Meets Socrates <span class="age-note">Age ~20</span></h3>
+            <p class="event-desc">
+              The defining encounter of Plato's life. According to tradition, meets Socrates in the Agora or at a gymnasium. Abandons all plans for political career or poetic fame. Becomes devoted follower and student, convinced that philosophy—not politics or art—is the path to truth and virtue.
+            </p>
+            <p class="event-context">
+              Socrates, already ~61 years old, has been philosophizing in Athens for decades, questioning citizens about justice, courage, piety, and wisdom. His method: relentless questioning that exposes ignorance and forces deeper thinking.
+            </p>
+            <a href="meeting-socrates.html" class="event-link">Read about their relationship</a>
+          </div>
+        </div>
+
+        <div class="event">
+          <div class="year">406 BC</div>
+          <div class="event-content">
+            <h3 class="event-title">Trial of the Arginusae Generals <span class="age-note">Age ~22</span></h3>
+            <p class="event-desc">
+              After a naval victory at Arginusae, Athens illegally tries and executes six generals en masse for failing to recover the dead. Socrates, serving on the prytany, alone opposes the illegal procedure. Plato witnesses how democratic emotion can override law and reason.
+            </p>
+            <p class="event-context">
+              A critical lesson in democracy's dangers: mob passion, demagogic manipulation, and the sacrifice of justice to political expedience. This episode profoundly influences Plato's later political philosophy.
+            </p>
+          </div>
+        </div>
+
         <div class="event">
           <div class="year">404 BC</div>
-          <div class="desc">Athens defeated by Sparta. Thirty Tyrants briefly rule Athens (including Plato's relatives Critias and Charmides).</div>
+          <div class="event-content">
+            <h3 class="event-title">Athens Defeated — Thirty Tyrants Rule <span class="age-note">Age ~24</span></h3>
+            <p class="event-desc">
+              Sparta defeats Athens. Democracy abolished. Thirty oligarchs seize power, including Plato's relatives Critias (his mother's cousin) and Charmides (his uncle). They invite Plato to join the government. He observes their rule closely but declines to participate.
+            </p>
+            <p class="event-context">
+              The Thirty prove even worse than democracy: they execute 1,500 citizens without trial, confiscate property, rule through terror. Plato's disillusionment with both democracy and oligarchy deepens. He attempts to involve Socrates in an illegal arrest; Socrates refuses.
+            </p>
+          </div>
         </div>
-        
+
         <div class="event">
           <div class="year">403 BC</div>
-          <div class="desc">Democracy restored in Athens. Political tensions remain.</div>
+          <div class="event-content">
+            <h3 class="event-title">Democracy Restored <span class="age-note">Age ~25</span></h3>
+            <p class="event-desc">
+              Democratic exiles return, overthrow the Thirty. Critias and Charmides killed in battle. Democracy restored with an amnesty, but bitterness and resentment linger. Socrates, associated with several oligarchs, becomes a target of suspicion despite his refusal to cooperate with tyranny.
+            </p>
+            <p class="event-context">
+              The restoration brings hope but also instability. Athens has now failed under both democracy and oligarchy. Plato begins to question whether any existing political system can produce justice.
+            </p>
+          </div>
         </div>
-        
-        <div class="event">
+
+        <div class="event major">
           <div class="year">399 BC</div>
-          <div class="desc">Socrates tried and executed on charges of impiety and corrupting youth. Plato present at trial, absent at death. Formative trauma.</div>
+          <div class="event-content">
+            <h3 class="event-title">Trial and Death of Socrates <span class="age-note">Age ~29</span></h3>
+            <p class="event-desc">
+              Socrates charged with impiety (not recognizing the city's gods, introducing new divinities) and corrupting the youth. Found guilty. Sentenced to death. Refuses exile. Drinks hemlock surrounded by friends. Plato, reportedly ill, is absent at the execution but records it in the <em>Phaedo</em>.
+            </p>
+            <p class="event-context">
+              The formative trauma of Plato's life. Athens has executed the wisest and most just man in the city. This event convinces Plato that no existing political order—neither democracy nor oligarchy—is capable of recognizing wisdom or serving justice. Philosophy and politics must be reconciled, or civilization itself is corrupt.
+            </p>
+            <a href="trial-of-socrates.html" class="event-link">Read the full account</a>
+          </div>
         </div>
-        
-        <div class="event">
-          <div class="year">399-387 BC</div>
-          <div class="desc">Plato's travels: Megara (with Eucleides), possibly Egypt, Cyrene (Theodorus), Italy (Archytas and Pythagoreans), Sicily (meets Dion, fails with Dionysius I).</div>
+
+        <!-- TRAVELS -->
+        <div class="period">Travels & Intellectual Formation</div>
+
+        <div class="event major">
+          <div class="year">399-387<br/>BC</div>
+          <div class="event-content">
+            <h3 class="event-title">Mediterranean Travels <span class="age-note">Age 29-41</span></h3>
+            <p class="event-desc">
+              Twelve years of wandering. Megara with Eucleides and other Socratics. Possibly Egypt (though disputed). Cyrene to study mathematics with Theodorus. Southern Italy to meet Pythagorean communities. Sicily, where he meets Dion (who becomes lifelong friend) and tyrant Dionysius I (who nearly sells him into slavery). Returns to Athens mature, ready to teach.
+            </p>
+            <p class="event-context">
+              These travels expose Plato to mathematical traditions (Pythagoreans), alternative political systems, and a broader Mediterranean intellectual culture. He absorbs Pythagorean mathematics, metaphysics, and the idea of a philosophical community. The travels transform him from Socratic devotee to independent systematic thinker.
+            </p>
+            <a href="travels.html" class="event-link">Follow his journey</a>
+          </div>
         </div>
-        
-        <div class="event">
+
+        <!-- ACADEMY PERIOD -->
+        <div class="period">The Academy & Mature Philosophy</div>
+
+        <div class="event major">
           <div class="year">387 BC</div>
-          <div class="desc">Plato returns to Athens and founds the Academy — first institution of higher learning in the Western world.</div>
+          <div class="event-content">
+            <h3 class="event-title">Founds the Academy <span class="age-note">Age ~40</span></h3>
+            <p class="event-desc">
+              Returns to Athens. Purchases land and establishes the Academy, named after the hero Akademos. The first permanent institution of higher learning in Western history. Curriculum: mathematics, astronomy, dialectic, political theory. Inscription above entrance: "Let no one ignorant of geometry enter."
+            </p>
+            <p class="event-context">
+              The Academy isn't merely a school—it's Plato's answer to the problem of politics. If existing states won't recognize philosophers, create an institution to train philosopher-rulers. For 900 years, it will be the intellectual center of the ancient world.
+            </p>
+            <a href="founding-academy.html" class="event-link">Discover the Academy</a>
+          </div>
         </div>
-        
+
+        <div class="event">
+          <div class="year">c. 385-<br/>380 BC</div>
+          <div class="event-content">
+            <h3 class="event-title">Early Dialogues Written <span class="age-note">Age ~43-48</span></h3>
+            <p class="event-desc">
+              <em>Apology</em>, <em>Crito</em>, <em>Euthyphro</em>, <em>Laches</em>, <em>Charmides</em>. Focused on defending Socrates' memory and preserving his method. Largely aporetic (ending without firm conclusions), emphasizing the importance of questioning over doctrine.
+            </p>
+          </div>
+        </div>
+
+        <div class="event">
+          <div class="year">c. 380-<br/>370 BC</div>
+          <div class="event-content">
+            <h3 class="event-title">Middle Dialogues & Theory of Forms <span class="age-note">Age ~48-58</span></h3>
+            <p class="event-desc">
+              <em>Meno</em>, <em>Phaedo</em>, <em>Symposium</em>, <em>Republic</em>, <em>Phaedrus</em>. Plato moves beyond Socrates, developing his own systematic philosophy: the Theory of Forms, immortality of the soul, the ideal state ruled by philosopher-kings, the allegory of the Cave. Peak of creative power.
+            </p>
+            <p class="event-context">
+              The <em>Republic</em> becomes the foundational text of Western political philosophy. Its central question: What is justice? Its revolutionary answer: Justice is harmony of the soul, achievable only through philosophical education and rational governance.
+            </p>
+          </div>
+        </div>
+
         <div class="event">
           <div class="year">367 BC</div>
-          <div class="desc">Second visit to Syracuse. Attempts to educate Dionysius II. Dion exiled. Plato returns frustrated.</div>
+          <div class="event-content">
+            <h3 class="event-title">Aristotle Joins the Academy <span class="age-note">Age ~61</span></h3>
+            <p class="event-desc">
+              17-year-old Aristotle of Stagira arrives in Athens, enrolls at the Academy. Becomes Plato's most brilliant student. Remains for 20 years until Plato's death. Their relationship: respectful but increasingly critical. Aristotle rejects Forms, embraces empiricism, but inherits Plato's systematic ambition.
+            </p>
+            <p class="event-context">
+              The meeting of the two greatest philosophers of antiquity. Their divergence—Plato toward transcendent ideals, Aristotle toward observed particulars—defines two fundamental approaches to philosophy for the next 2,400 years.
+            </p>
+          </div>
         </div>
-        
-        <div class="event">
-          <div class="year">367-347 BC</div>
-          <div class="desc">Aristotle joins Academy at age 17, studies there for 20 years until Plato's death.</div>
+
+        <!-- SICILIAN ADVENTURES -->
+        <div class="period">Political Experiments in Sicily</div>
+
+        <div class="event major">
+          <div class="year">367 BC</div>
+          <div class="event-content">
+            <h3 class="event-title">Second Sicilian Journey <span class="age-note">Age ~61</span></h3>
+            <p class="event-desc">
+              Dionysius I dies. His son Dionysius II succeeds. Dion invites Plato to Syracuse to educate the young tyrant and create a philosopher-king. Initial promise: Dionysius shows interest in philosophy. But court intrigue intervenes. Dion exiled. Plato returns to Athens, frustrated but not yet defeated.
+            </p>
+            <p class="event-context">
+              The philosopher-king experiment put to the test—and immediately complicated by power, jealousy, and political reality. Plato learns that transforming a tyrant requires more than philosophical instruction.
+            </p>
+            <a href="sicilian-adventures.html" class="event-link">Read about the Sicilian attempts</a>
+          </div>
         </div>
-        
+
         <div class="event">
           <div class="year">361 BC</div>
-          <div class="desc">Third visit to Syracuse. Essentially held hostage. Rescued by Archytas. Final political failure.</div>
+          <div class="event-content">
+            <h3 class="event-title">Third Sicilian Journey <span class="age-note">Age ~67</span></h3>
+            <p class="event-desc">
+              Final attempt to educate Dionysius II and reconcile him with Dion. Complete failure. Plato essentially held hostage, his life threatened. Rescued by Archytas of Tarentum, a Pythagorean philosopher and general. Returns to Athens, never attempts direct political action again. The gap between philosophy and power proves unbridgeable.
+            </p>
+            <p class="event-context">
+              The death of the philosopher-king dream. Plato concludes that reform must come through education across generations, not conversion of existing rulers. The Academy becomes even more central to his mission.
+            </p>
+            <a href="sicilian-adventures.html" class="event-link">Read the full story</a>
+          </div>
         </div>
-        
+
+        <!-- FINAL YEARS -->
+        <div class="period">Late Maturity & Final Works</div>
+
         <div class="event">
-          <div class="year">360-348 BC</div>
-          <div class="desc">Plato's final years. Continues teaching at Academy. Writes late dialogues: <em>Timaeus</em>, <em>Laws</em> (unfinished).</div>
+          <div class="year">c. 360-<br/>355 BC</div>
+          <div class="event-content">
+            <h3 class="event-title">Late Dialogues — Self-Criticism <span class="age-note">Age ~68-73</span></h3>
+            <p class="event-desc">
+              <em>Parmenides</em>, <em>Theaetetus</em>, <em>Sophist</em>, <em>Statesman</em>. More technical, more self-critical. Parmenides contains devastating objections to the Theory of Forms—objections Plato himself raises. He refines, complicates, but doesn't abandon his central insights. Philosophy as ongoing inquiry, not fixed dogma.
+            </p>
+          </div>
         </div>
-        
+
+        <div class="event major">
+          <div class="year">c. 355-<br/>347 BC</div>
+          <div class="event-content">
+            <h3 class="event-title">Final Works — <em>Timaeus</em> and <em>Laws</em> <span class="age-note">Age ~73-80</span></h3>
+            <p class="event-desc">
+              <em>Timaeus</em>: cosmology, creation myth, mathematics and physics. <em>Laws</em>: his longest dialogue, unfinished at death. A more realistic political vision than the <em>Republic</em>—focused on second-best constitutions for actual cities, detailed legal codes, the role of religion in civic life. Less utopian, more pragmatic.
+            </p>
+            <p class="event-context">
+              Old age brings neither cynicism nor abandonment of ideals, but a more nuanced understanding of how philosophy can shape imperfect human communities. The <em>Laws</em> accepts human limitation while still insisting on rational governance.
+            </p>
+            <a href="later-years.html" class="event-link">Explore the final period</a>
+          </div>
+        </div>
+
+        <div class="event major">
+          <div class="year">348/347<br/>BC</div>
+          <div class="event-content">
+            <h3 class="event-title">Death of Plato <span class="age-note">Age 80-81</span></h3>
+            <p class="event-desc">
+              Dies in Athens, probably while writing. Some legends say he died at a wedding feast; others say peacefully in sleep. Buried at the Academy. Nephew Speusippus becomes scholarch. Corpus survives nearly complete: 25 dialogues, 13 letters (some spurious), a few fragments. His voice, method, and vision preserved for posterity.
+            </p>
+            <p class="event-context">
+              What Socrates was to Plato, Plato becomes to Western philosophy: the teacher whose questions, arguments, and systematic vision define the discipline. Alfred North Whitehead later writes: "The safest characterization of the European philosophical tradition is that it consists of a series of footnotes to Plato."
+            </p>
+            <a href="death-and-legacy.html" class="event-link">Read about his legacy</a>
+          </div>
+        </div>
+
+        <!-- AFTERMATH -->
+        <div class="period">The Academy's Legacy</div>
+
         <div class="event">
-          <div class="year">348/347 BC</div>
-          <div class="desc">Plato dies in Athens at age 80-81. Buried at Academy. Speusippus becomes second scholarch.</div>
+          <div class="year">347-<br/>529 AD</div>
+          <div class="event-content">
+            <h3 class="event-title">The Academy Continues for 900 Years</h3>
+            <p class="event-desc">
+              Under successive scholarchs, the Academy evolves. Early: Speusippus, Xenocrates, Polemon. Middle Academy: skeptical turn under Arcesilaus and Carneades. New Academy: Philo of Larissa. Neoplatonic revival in late antiquity: Plotinus, Porphyry, Iamblichus, Proclus. Remains intellectual center of pagan philosophy through Roman Empire and into Christian era.
+            </p>
+            <p class="event-context">
+              Nearly a millennium of continuous philosophical inquiry, making it the longest-lived educational institution in Western history. Its influence spreads through Alexandria, Rome, Constantinople—preserving and transforming Platonic thought.
+            </p>
+          </div>
         </div>
-        
+
         <div class="event">
           <div class="year">529 AD</div>
-          <div class="desc">Academy closed by Byzantine emperor Justinian after nearly 1,000 years of continuous operation.</div>
+          <div class="event-content">
+            <h3 class="event-title">Byzantine Emperor Justinian Closes the Academy</h3>
+            <p class="event-desc">
+              As part of campaign to enforce Christian orthodoxy, Justinian orders all pagan schools closed. The last Platonists—Damascius, Simplicius, and others—briefly flee to Persia, then return to Athens under protection but without institutional support. The 917-year tradition ends, but Platonic philosophy survives: copied, translated, absorbed into Christian, Islamic, and Jewish thought.
+            </p>
+            <p class="event-context">
+              The physical Academy closes, but Platonic philosophy proves impossible to suppress. Medieval scholastics, Islamic philosophers (Al-Farabi, Avicenna), Renaissance humanists, German idealists, Cambridge Platonists, and modern analytic philosophers—all inherit and transform Plato's questions. The Academy dies; the dialogue continues.
+            </p>
+            <a href="death-and-legacy.html" class="event-link">Explore 2,400 years of influence</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="margin-top:80px;padding:32px;border-radius:12px;background:var(--panel);border:1px solid var(--stroke);">
+        <h2 style="font-size:1.4rem;margin-bottom:20px;font-family:var(--font-serif);color:var(--text);">Continue Exploring</h2>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="index.html" class="btn">Plato's Life Index</a>
+          <a href="../../resources.html" class="btn secondary">All Resources</a>
+          <a href="../../beginner/why-philosophy.html" class="btn secondary">Beginner's Path</a>
         </div>
       </div>
-      
-      <div style="margin-top:32px;">
-        <a class="btn secondary" href="death-and-legacy.html">← Previous</a>
-        <a class="btn" href="resources.html">Explore Philosophy Section →</a>
-      </div>
+
     </div>
   </section>
 </main>
-<footer><div class="wrap"><p style="font-size:12px;color:rgba(255,255,255,.5)">© 2026 platophilosophy.com</p></div></footer>
+
+<footer>
+  <div class="wrap">
+    <p style="color:var(--muted);">PLATO is an independent project for studying Platonic thought.</p>
+    <p style="margin-top:12px;font-size:12px;color:var(--muted-soft);">
+      <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:contact@platophilosophy.com">Contact</a>
+    </p>
+    <p style="margin-top:14px;font-size:12px;color:var(--muted-soft);opacity:.85;">© <span id="y"></span> platophilosophy.com</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  // Theme toggle
+  (function(){
+    const root = document.documentElement;
+    const saved = localStorage.getItem("theme");
+    if(saved) root.setAttribute("data-theme", saved);
+
+    const btn = document.getElementById("themeToggle");
+    if(!btn) return;
+
+    btn.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme") || "light";
+      const next = current === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+    });
+  })();
+</script>
+
 </body>
 </html>

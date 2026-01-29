@@ -1,0 +1,19 @@
+# robots.txt for platophilosophy.com
+
+# Allow all bots to crawl the site
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://platophilosophy.com/sitemap.xml
+
+# Block specific directories (if needed in future)
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /temp/
+
+# Block access to SEO package folder
+Disallow: /SEO/
+
+# Crawl-delay (optional, only if server load is concern)
+# Crawl-delay: 1
