@@ -6,7 +6,67 @@
   <title>Reading vs Being Told — Beginner's Path | PLATO</title>
   <meta name="description" content="Summaries give you conclusions. Primary texts give you the reasoning that leads to conclusions—and that is what matters in philosophy." />
   <link rel="canonical" href="https://platophilosophy.com/beginner/reading-vs-summary.html" />
+
+  <meta property="og:title" content="Reading vs Being Told" />
+  <meta property="og:description" content="Summaries give you conclusions. Primary texts give you the reasoning that leads to conclusions—and that is what matters in philosophy." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://platophilosophy.com/beginner/reading-vs-summary.html" />
+
   <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Reading vs Being Told — Why Primary Texts Matter",
+    "description": "Summaries give you conclusions. Primary texts give you the reasoning that leads to conclusions—and that is what matters in philosophy.",
+    "author": {
+      "@type": "Organization",
+      "name": "Plato Philosophy",
+      "url": "https://platophilosophy.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Plato Philosophy"
+    },
+    "datePublished": "2026-01-29T00:00:00+00:00",
+    "dateModified": "2026-01-29T00:00:00+00:00",
+    "articleSection": "Beginner's Path",
+    "keywords": ["Plato", "Reading Philosophy", "Primary Texts", "Slow Reading", "Philosophical Method"],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://platophilosophy.com/beginner/reading-vs-summary.html"
+    }
+  }
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://platophilosophy.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Start Here",
+        "item": "https://platophilosophy.com/resources/guides/start-here.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Reading vs Being Told"
+      }
+    ]
+  }
+  </script>
   <style>
     .carousel-nav{display:flex;justify-content:space-between;align-items:center;margin:32px 0;padding:20px 0;border-top:1px solid var(--stroke);border-bottom:1px solid var(--stroke);}
     .progress-dots{display:flex;gap:8px;}
@@ -21,10 +81,23 @@
 <body>
 <header>
   <div class="wrap nav">
-    <a class="brand" href="/"><div class="mark">Φ</div><div><strong>PLATO</strong></div></a>
-    <div><a class="btn secondary" href="/resources.html">Resources</a></div>
+    <a class="brand" href="/index.html"><div class="mark">Φ</div><div><strong>PLATO</strong><br/><span style="font-size:12px;color:var(--muted-soft)">platophilosophy.com</span></div></a>
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+      <a class="btn secondary" href="/resources.html">Resources</a>
+      <button class="btn secondary" id="themeToggle" type="button" aria-label="Toggle theme">Theme</button>
+      <a class="btn secondary" href="/index.html#waitlist">Waitlist</a>
+    </div>
   </div>
 </header>
+
+<nav aria-label="Breadcrumb" style="padding:12px 0;">
+  <div class="wrap" style="font-size:12px;color:var(--muted-soft);">
+    <a href="/index.html">Home</a> ›
+    <a href="/resources/guides/start-here.html">Start Here</a> ›
+    <span style="color:var(--muted)">Reading vs Being Told</span>
+  </div>
+</nav>
+
 <main>
   <section style="padding:40px 0;">
     <div class="wrap">
@@ -74,7 +147,15 @@
     </div>
   </section>
 </main>
-<footer><div class="wrap"><p style="font-size:12px;color:rgba(255,255,255,.5);">© <span id="y"></span> platophilosophy.com</p></div></footer>
+<footer>
+  <div class="wrap">
+    <p style="color:var(--text);">PLATO is an independent project for studying Platonic thought.</p>
+    <p style="margin-top:12px;font-size:12px;color:var(--muted-soft);">
+      <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:contact@platophilosophy.com">Contact</a>
+    </p>
+    <p style="margin-top:14px;font-size:12px;color:var(--muted-soft);">© <span id="y"></span> platophilosophy.com</p>
+  </div>
+</footer>
 <script>
   document.getElementById("y").textContent = new Date().getFullYear();
 

@@ -6,7 +6,67 @@
   <title>Choose Your Path — Beginner's Path | PLATO</title>
   <meta name="description" content="Three pathways to explore Plato: historical context, philosophical ideas, or direct reading of the dialogues." />
   <link rel="canonical" href="https://platophilosophy.com/beginner/pathways.html" />
+
+  <meta property="og:title" content="Choose Your Path" />
+  <meta property="og:description" content="Three pathways to explore Plato: historical context, philosophical ideas, or direct reading of the dialogues." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://platophilosophy.com/beginner/pathways.html" />
+
   <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Choose Your Path — Three Ways to Study Plato",
+    "description": "Three pathways to explore Plato: historical context, philosophical ideas, or direct reading of the dialogues.",
+    "author": {
+      "@type": "Organization",
+      "name": "Plato Philosophy",
+      "url": "https://platophilosophy.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Plato Philosophy"
+    },
+    "datePublished": "2026-01-29T00:00:00+00:00",
+    "dateModified": "2026-01-29T00:00:00+00:00",
+    "articleSection": "Beginner's Path",
+    "keywords": ["Plato", "Study Guide", "Learning Paths", "Philosophy Education", "Dialogues"],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://platophilosophy.com/beginner/pathways.html"
+    }
+  }
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://platophilosophy.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Start Here",
+        "item": "https://platophilosophy.com/resources/guides/start-here.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Choose Your Path"
+      }
+    ]
+  }
+  </script>
   <style>
     .carousel-nav{display:flex;justify-content:space-between;align-items:center;margin:32px 0;padding:20px 0;border-top:1px solid var(--stroke);border-bottom:1px solid var(--stroke);}
     .progress-dots{display:flex;gap:8px;}
@@ -14,20 +74,33 @@
     .dot.active{background:var(--accent);width:24px;border-radius:5px;}
     .reading{max-width:75ch;line-height:1.8;color:var(--text);}
     .reading p{margin:16px 0;}
-    .path-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:24px;margin:20px 0;transition:all .3s;}
-    .path-card:hover{background:rgba(255,255,255,.06);border-color:rgba(216,193,138,.3);transform:translateY(-2px);}
+    .path-card{background:var(--panel);border:1px solid var(--stroke);border-radius:12px;padding:24px;margin:20px 0;transition:all .3s;}
+    .path-card:hover{background:var(--panel);border-color:var(--accent);transform:translateY(-2px);}
     .path-number{display:inline-block;background:var(--accent);color:#0b0f14;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:12px;font-size:14px;}
-    .path-title{font-size:1.4rem;margin:12px 0;font-family:var(--font-serif);color:rgba(255,255,255,.95);}
+    .path-title{font-size:1.4rem;margin:12px 0;font-family:var(--font-serif);color:var(--text-strong);}
     .path-links{margin-top:12px;display:flex;gap:12px;flex-wrap:wrap;}
   </style>
 </head>
 <body>
 <header>
   <div class="wrap nav">
-    <a class="brand" href="/"><div class="mark">Φ</div><div><strong>PLATO</strong></div></a>
-    <div><a class="btn secondary" href="/resources.html">Resources</a></div>
+    <a class="brand" href="/index.html"><div class="mark">Φ</div><div><strong>PLATO</strong><br/><span style="font-size:12px;color:var(--muted-soft)">platophilosophy.com</span></div></a>
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+      <a class="btn secondary" href="/resources.html">Resources</a>
+      <button class="btn secondary" id="themeToggle" type="button" aria-label="Toggle theme">Theme</button>
+      <a class="btn secondary" href="/index.html#waitlist">Waitlist</a>
+    </div>
   </div>
 </header>
+
+<nav aria-label="Breadcrumb" style="padding:12px 0;">
+  <div class="wrap" style="font-size:12px;color:var(--muted-soft);">
+    <a href="/index.html">Home</a> ›
+    <a href="/resources/guides/start-here.html">Start Here</a> ›
+    <span style="color:var(--muted)">Choose Your Path</span>
+  </div>
+</nav>
+
 <main>
   <section style="padding:40px 0;">
     <div class="wrap">
@@ -45,7 +118,7 @@
             <a href="/athens-in-428-bc.html" class="btn">Start: Athens in 428 BC →</a>
             <a href="/timeline.html" class="btn secondary">View Timeline</a>
           </div>
-          <p style="margin-top:16px;font-size:14px;color:rgba(255,255,255,.6);">12 pages · ~40 minutes total reading</p>
+          <p style="margin-top:16px;font-size:14px;color:var(--muted-soft);">12 pages · ~40 minutes total reading</p>
         </div>
 
         <div class="path-card">
@@ -55,7 +128,7 @@
           <div class="path-links">
             <a href="/resources.html#philosophy" class="btn">Explore Philosophy Section →</a>
           </div>
-          <p style="margin-top:16px;font-size:14px;color:rgba(255,255,255,.6);">15 pages · Coming soon</p>
+          <p style="margin-top:16px;font-size:14px;color:var(--muted-soft);">15 pages · Coming soon</p>
         </div>
 
         <div class="path-card">
@@ -63,7 +136,7 @@
           <h2 class="path-title">The Textual Path</h2>
           <p style="color:var(--muted);line-height:1.7;">If you want to read the dialogues immediately. Start with accessible, shorter works and experience Socratic questioning firsthand.</p>
           <p style="margin-top:12px;color:var(--muted);line-height:1.7;"><strong>Recommended starting dialogues:</strong></p>
-          <ul style="margin:12px 0 0 24px;color:rgba(255,255,255,.7);line-height:1.8;">
+          <ul style="margin:12px 0 0 24px;color:var(--text);line-height:1.8;">
             <li><strong>Apology</strong> (30 min) — Socrates' defense at trial</li>
             <li><strong>Crito</strong> (20 min) — Should he escape prison?</li>
             <li><strong>Meno</strong> (40 min) — How do we learn?</li>
@@ -71,7 +144,7 @@
           <div class="path-links" style="margin-top:16px;">
             <a href="http://classics.mit.edu/Plato/apology.html" target="_blank" class="btn secondary">Read Apology (MIT) →</a>
           </div>
-          <p style="margin-top:16px;font-size:14px;color:rgba(255,255,255,.6);">Or wait for: <strong>Talk with Plato</strong> (coming soon)</p>
+          <p style="margin-top:16px;font-size:14px;color:var(--muted-soft);">Or wait for: <strong>Talk with Plato</strong> (coming soon)</p>
         </div>
 
         <hr style="margin:40px 0;border:none;height:1px;background:var(--stroke);">
@@ -92,7 +165,15 @@
     </div>
   </section>
 </main>
-<footer><div class="wrap"><p style="font-size:12px;color:rgba(255,255,255,.5);">© <span id="y"></span> platophilosophy.com</p></div></footer>
+<footer>
+  <div class="wrap">
+    <p style="color:var(--text);">PLATO is an independent project for studying Platonic thought.</p>
+    <p style="margin-top:12px;font-size:12px;color:var(--muted-soft);">
+      <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:contact@platophilosophy.com">Contact</a>
+    </p>
+    <p style="margin-top:14px;font-size:12px;color:var(--muted-soft);">© <span id="y"></span> platophilosophy.com</p>
+  </div>
+</footer>
 <script>
   document.getElementById("y").textContent = new Date().getFullYear();
 
