@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Interactive Map — Plato's World | PLATO</title>
+
+  <meta name="description" content="Explore an interactive map of Ancient Greece and the Mediterranean world of Plato. Follow his travels from Athens to Sicily, Italy, and beyond." />
+
+  <meta property="og:title" content="Interactive Map — Plato's World" />
+  <meta property="og:description" content="An interactive map showing Plato's Athens and his travels across the ancient Mediterranean." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://platophilosophy.com/resources/guides/interactive-map.html" />
+
+  <link rel="canonical" href="https://platophilosophy.com/resources/guides/interactive-map.html" />
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+  <style>
+    #map {
+      width: 100%;
+      height: 600px;
+      border-radius: 8px;
+      border: 1px solid var(--stroke);
+      margin-top: 24px;
+    }
+
+    .leaflet-popup-content-wrapper {
+      background: var(--panel);
+      color: var(--text);
+      border: 1px solid var(--stroke);
+    }
+
+    .leaflet-popup-tip {
+      background: var(--panel);
+      border: 1px solid var(--stroke);
+    }
+
+    .location-card {
+      padding: 12px;
+      background: var(--panel);
+      border: 1px solid var(--stroke);
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+
+    .location-card h4 {
+      margin: 0 0 8px 0;
+      color: var(--accent);
+      font-size: 16px;
+    }
+
+    .location-card p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Interactive Map — Plato's World",
+    "description": "An interactive map showing Plato's Athens and his travels across the ancient Mediterranean.",
+    "url": "https://platophilosophy.com/resources/guides/interactive-map.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "platophilosophy.com"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/index.html">
+      <div class="mark">Φ</div>
+      <div>
+        <strong>PLATO</strong><br/>
+        <span style="font-size:12px;color:var(--muted-soft)">platophilosophy.com</span>
+      </div>
+    </a>
+
+    <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+      <a class="btn secondary" href="/resources/guides/start-here.html">Start Here</a>
+      <a class="btn secondary" href="/resources.html">Resources</a>
+      <button class="btn secondary" id="themeToggle" type="button" aria-label="Toggle theme">Theme</button>
+      <a class="btn secondary" href="/index.html#waitlist">Waitlist</a>
+    </div>
+  </div>
+</header>
+
+<nav aria-label="Breadcrumb" style="padding:12px 0;">
+  <div class="wrap" style="font-size:12px;color:var(--muted-soft);">
+    <a href="/index.html">Home</a> ›
+    <a href="/resources.html">Resources</a> ›
+    <a href="/resources.html#guides">Guides</a> ›
+    <span style="color:var(--muted)">Interactive Map</span>
+  </div>
+</nav>
+
+<main>
+
+  <!-- INTRO -->
+  <section style="padding:40px 0 20px;">
+    <div class="wrap">
+
+      <h1>Plato's World: Interactive Map</h1>
+
+      <p style="margin-top:18px; max-width:70ch; color:var(--muted);">
+        Explore the ancient Mediterranean world of Plato. This interactive map shows key locations from his life:
+        Athens where he was born and founded the Academy, Syracuse where he attempted to advise tyrants,
+        and the broader Greek world that shaped his philosophy.
+      </p>
+
+      <p style="margin-top:12px; max-width:70ch; color:var(--muted);">
+        Click on each marker to learn more about Plato's connection to these places.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section style="padding:20px 0;">
+    <div class="wrap">
+      <div id="map"></div>
+    </div>
+  </section>
+
+  <!-- KEY LOCATIONS -->
+  <section style="padding:40px 0;">
+    <div class="wrap">
+
+      <h2>Key Locations in Plato's Life</h2>
+
+      <div style="margin-top:24px; display:grid; gap:16px; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));">
+
+        <div class="location-card">
+          <h4>Athens</h4>
+          <p>
+            Plato's birthplace (428 BC) and lifelong home. Here he met Socrates, witnessed the Peloponnesian War,
+            and founded the Academy around 387 BC — one of the first institutions of higher learning.
+          </p>
+        </div>
+
+        <div class="location-card">
+          <h4>Syracuse, Sicily</h4>
+          <p>
+            Plato visited Syracuse three times (c. 387, 367, 361 BC) attempting to advise the tyrants
+            Dionysius I and II. These visits ended in disappointment and danger, but inspired his political philosophy.
+          </p>
+        </div>
+
+        <div class="location-card">
+          <h4>Megara</h4>
+          <p>
+            After Socrates' execution in 399 BC, Plato fled to Megara to stay with the philosopher Euclid.
+            This refuge provided safety and time to process the trauma of his teacher's death.
+          </p>
+        </div>
+
+        <div class="location-card">
+          <h4>Southern Italy</h4>
+          <p>
+            Plato traveled to southern Italy (Magna Graecia) where he encountered Pythagorean philosophers.
+            Their emphasis on mathematics and immortality influenced his developing philosophy.
+          </p>
+        </div>
+
+        <div class="location-card">
+          <h4>Egypt</h4>
+          <p>
+            Ancient sources suggest Plato may have visited Egypt, though this is disputed by modern scholars.
+            If true, he would have encountered Egyptian mathematics, astronomy, and priesthood traditions.
+          </p>
+        </div>
+
+        <div class="location-card">
+          <h4>Cyrene</h4>
+          <p>
+            Some sources mention a visit to Cyrene in North Africa, where Plato may have met the mathematician
+            Theodorus, who appears as a character in his dialogues Theaetetus and Sophist.
+          </p>
+        </div>
+
+      </div>
+
+      <div style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="btn secondary" href="maps-and-timelines.html">← Back to Maps & Timelines</a>
+        <a class="btn secondary" href="/resources/platophilosophy/timeline.html">View Timeline</a>
+        <a class="btn secondary" href="/resources/platophilosophy/travels.html">Read About Plato's Travels</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+
+    <p style="color:var(--text);">
+      PLATO is an independent project for studying Platonic thought.
+    </p>
+
+    <p style="margin-top:8px; color:var(--muted);">
+      Clear paths for beginners. Deeper routes for advanced readers. Dialogue as a way of learning.
+    </p>
+
+    <p style="margin-top:12px; font-size:12px; color:var(--muted-soft);">
+      <a href="/privacy.html" style="color:inherit;">Privacy</a> ·
+      <a href="/terms.html" style="color:inherit;">Terms</a> ·
+      <a href="mailto:contact@platophilosophy.com" style="color:inherit;">Contact</a>
+    </p>
+
+    <p style="margin-top:14px; font-size:12px; color:var(--muted-soft); opacity:.85;">
+      © <span id="y"></span> platophilosophy.com
+    </p>
+
+  </div>
+</footer>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+   crossorigin=""></script>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  // Theme toggle
+  (function(){
+    const root = document.documentElement;
+    const saved = localStorage.getItem("theme");
+    if(saved) root.setAttribute("data-theme", saved);
+
+    const btn = document.getElementById("themeToggle");
+    if(!btn) return;
+
+    btn.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme") || "light";
+      const next = current === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+    });
+  })();
+
+  // Initialize map
+  const map = L.map('map').setView([38.0, 23.0], 6);
+
+  // Use CartoDB Positron tiles (clean, works with both themes)
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(map);
+
+  // Define locations
+  const locations = [
+    {
+      name: "Athens",
+      coords: [37.9838, 23.7275],
+      description: "<strong>Athens</strong><br/>Birthplace of Plato (428 BC). Home of Socrates, site of the Academy, and center of Greek philosophical life.",
+      link: "/resources/platophilosophy/athens-in-428-bc.html"
+    },
+    {
+      name: "Syracuse",
+      coords: [37.0755, 15.2866],
+      description: "<strong>Syracuse, Sicily</strong><br/>Plato visited three times (c. 387, 367, 361 BC) attempting to create a philosopher-king. Ended in disappointment.",
+      link: "/resources/platophilosophy/sicilian-adventures.html"
+    },
+    {
+      name: "Megara",
+      coords: [37.9956, 23.3417],
+      description: "<strong>Megara</strong><br/>Refuge after Socrates' death (399 BC). Plato stayed with philosopher Euclid.",
+      link: "/resources/platophilosophy/travels.html"
+    },
+    {
+      name: "Tarentum",
+      coords: [40.4643, 17.2472],
+      description: "<strong>Tarentum (Taranto), Southern Italy</strong><br/>Met Pythagorean philosophers including Archytas. Mathematics and immortality shaped his philosophy.",
+      link: "/resources/platophilosophy/travels.html"
+    },
+    {
+      name: "Egypt",
+      coords: [30.0444, 31.2357],
+      description: "<strong>Egypt</strong><br/>Disputed ancient tradition suggests Plato visited Egypt to study mathematics and astronomy.",
+      link: "/resources/platophilosophy/travels.html"
+    },
+    {
+      name: "Cyrene",
+      coords: [32.8256, 21.8581],
+      description: "<strong>Cyrene, North Africa</strong><br/>Possibly visited to meet mathematician Theodorus, who appears in the Theaetetus dialogue.",
+      link: "/resources/platophilosophy/travels.html"
+    }
+  ];
+
+  // Add markers
+  locations.forEach(location => {
+    const marker = L.marker(location.coords).addTo(map);
+
+    let popupContent = `<div style="min-width:200px;">${location.description}`;
+    if(location.link) {
+      popupContent += `<br/><br/><a href="${location.link}" style="color:var(--accent);font-weight:600;font-size:13px;">Learn more →</a>`;
+    }
+    popupContent += `</div>`;
+
+    marker.bindPopup(popupContent);
+  });
+
+  // Draw approximate travel routes
+  const routes = [
+    // Athens to Megara (immediate refuge after Socrates)
+    [[37.9838, 23.7275], [37.9956, 23.3417]],
+    // Athens to Tarentum (Italy trip)
+    [[37.9838, 23.7275], [40.4643, 17.2472]],
+    // Tarentum to Syracuse (first Sicily visit)
+    [[40.4643, 17.2472], [37.0755, 15.2866]],
+    // Syracuse back to Athens
+    [[37.0755, 15.2866], [37.9838, 23.7275]],
+    // Athens to Egypt (disputed)
+    [[37.9838, 23.7275], [30.0444, 31.2357]],
+    // Athens to Cyrene (disputed)
+    [[37.9838, 23.7275], [32.8256, 21.8581]]
+  ];
+
+  routes.forEach(route => {
+    L.polyline(route, {
+      color: 'var(--accent)',
+      weight: 2,
+      opacity: 0.5,
+      dashArray: '5, 10'
+    }).addTo(map);
+  });
+</script>
+
+</body>
+</html>
