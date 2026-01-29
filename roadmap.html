@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Roadmap — What We're Building | PLATO</title>
+
+  <meta name="description" content="Development roadmap for platophilosophy.com. See what's complete, what's in progress, and what's coming next." />
+
+  <meta property="og:title" content="Roadmap — What We're Building" />
+  <meta property="og:description" content="Track our progress building a modern platform for studying Platonic philosophy." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://platophilosophy.com/roadmap.html" />
+
+  <link rel="canonical" href="https://platophilosophy.com/roadmap.html" />
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <style>
+    .progress-bar{background:var(--panel);border:1px solid var(--stroke);border-radius:8px;height:32px;position:relative;overflow:hidden;margin:24px 0;}
+    .progress-fill{background:linear-gradient(90deg, var(--accent), rgba(216,193,138,.6));height:100%;display:flex;align-items:center;padding:0 16px;color:#0b0f14;font-weight:700;font-size:14px;transition:width 0.5s ease;}
+    .phase{margin:40px 0;padding:24px;background:var(--panel);border:1px solid var(--stroke);border-radius:var(--radius-lg);}
+    .phase-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+    .phase-badge{padding:6px 12px;border-radius:6px;font-size:13px;font-weight:700;text-transform:uppercase;}
+    .phase-badge.complete{background:rgba(76,175,80,.2);color:rgb(76,175,80);border:1px solid rgba(76,175,80,.3);}
+    .phase-badge.progress{background:rgba(255,152,0,.2);color:rgb(255,152,0);border:1px solid rgba(255,152,0,.3);}
+    .phase-badge.planned{background:rgba(216,193,138,.12);color:var(--accent);border:1px solid rgba(216,193,138,.3);}
+    .phase-title{font-size:24px;font-weight:700;color:var(--text-strong);margin:0;}
+    .phase-desc{color:var(--muted);font-size:15px;line-height:1.6;margin:12px 0;}
+    .deliverables{margin:16px 0 0;padding-left:20px;}
+    .deliverables li{color:var(--text);margin:8px 0;line-height:1.6;}
+    .deliverables li::marker{color:var(--accent);}
+    .stat-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:16px;margin:32px 0;}
+    .stat-card{padding:20px;background:var(--panel);border:1px solid var(--stroke);border-radius:var(--radius-md);text-align:center;}
+    .stat-number{font-size:36px;font-weight:700;color:var(--accent);font-family:var(--font-serif);}
+    .stat-label{color:var(--muted);font-size:14px;margin-top:8px;}
+    .timeline{margin:32px 0;}
+    .timeline-item{padding:16px 0;border-left:2px solid var(--stroke);padding-left:24px;margin-left:12px;position:relative;}
+    .timeline-item::before{content:"";position:absolute;left:-6px;top:24px;width:10px;height:10px;border-radius:50%;background:var(--accent);border:2px solid var(--bg);}
+    .timeline-date{font-weight:700;color:var(--accent);font-size:14px;}
+    .timeline-event{color:var(--text);margin-top:4px;}
+    @media (max-width:768px){.stat-grid{grid-template-columns:1fr;}}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "headline": "Roadmap — What We're Building",
+    "description": "Development roadmap for platophilosophy.com",
+    "url": "https://platophilosophy.com/roadmap.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "platophilosophy.com"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/index.html">
+      <div class="mark">Φ</div>
+      <div>
+        <strong>PLATO</strong><br/>
+        <span style="font-size:12px;color:var(--muted-soft)">platophilosophy.com</span>
+      </div>
+    </a>
+
+    <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+      <a class="btn secondary" href="/resources/guides/start-here.html">Start Here</a>
+      <a class="btn secondary" href="/resources.html">Resources</a>
+      <button class="btn secondary" id="themeToggle" type="button" aria-label="Toggle theme">Theme</button>
+      <a class="btn secondary" href="/index.html#waitlist">Waitlist</a>
+    </div>
+  </div>
+</header>
+
+<nav aria-label="Breadcrumb" style="padding:12px 0;">
+  <div class="wrap" style="font-size:12px;color:var(--muted-soft);">
+    <a href="/index.html">Home</a> ›
+    <span style="color:var(--muted)">Roadmap</span>
+  </div>
+</nav>
+
+<main>
+
+  <section style="padding:40px 0 20px;">
+    <div class="wrap">
+
+      <h1>Development Roadmap</h1>
+
+      <p style="margin-top:18px; max-width:70ch; color:var(--muted);">
+        We're building a modern platform for studying Platonic philosophy. Here's where we are and where we're going.
+      </p>
+
+      <!-- Overall Progress -->
+      <div style="margin-top:32px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+          <h2 style="margin:0;font-size:18px;color:var(--text-strong);">Overall Progress</h2>
+          <span style="font-size:24px;font-weight:700;color:var(--accent);">70%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:70%;">MVP Launch Ready</div>
+        </div>
+        <p style="color:var(--muted);font-size:14px;margin-top:8px;">
+          <strong>Status:</strong> Core content complete. Ready for initial launch. Interactive features in planning.
+        </p>
+      </div>
+
+      <!-- Stats -->
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-number">48</div>
+          <div class="stat-label">Pages Live</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">3</div>
+          <div class="stat-label">Major Sections Complete</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">95%</div>
+          <div class="stat-label">Launch Ready</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">~50k</div>
+          <div class="stat-label">Words of Content</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Phase 1: Foundation -->
+  <section style="padding:20px 0;">
+    <div class="wrap">
+
+      <div class="phase">
+        <div class="phase-header">
+          <span class="phase-badge complete">✓ Complete</span>
+          <h2 class="phase-title">Phase 1: Foundation</h2>
+        </div>
+
+        <p class="phase-desc">
+          Build the core static website with high-quality content. Establish SEO foundation and responsive design.
+        </p>
+
+        <ul class="deliverables">
+          <li><strong>Design System</strong> — Light/dark themes, CSS variables, responsive layout</li>
+          <li><strong>Beginner's Path</strong> — 6 pages introducing philosophy and Plato (100% complete)</li>
+          <li><strong>Plato's Life</strong> — 12-page biography from birth to legacy (100% complete)</li>
+          <li><strong>Philosophy Section</strong> — 15 pages on Forms, Cave, virtue, politics (100% complete)</li>
+          <li><strong>Guides</strong> — Start Here, Greek Essentials, Reading Pathways, Interactive Map</li>
+          <li><strong>References</strong> — Complete dialogues library, philosophical glossary (50+ terms)</li>
+          <li><strong>SEO</strong> — Sitemap, Schema.org markup, canonical URLs, robots.txt</li>
+        </ul>
+
+        <p style="margin-top:16px;color:var(--muted-soft);font-size:14px;">
+          <strong>Completed:</strong> January 2026
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Phase 2: Launch -->
+  <section style="padding:20px 0;">
+    <div class="wrap">
+
+      <div class="phase">
+        <div class="phase-header">
+          <span class="phase-badge progress">⟳ In Progress</span>
+          <h2 class="phase-title">Phase 2: MVP Launch</h2>
+        </div>
+
+        <p class="phase-desc">
+          Polish remaining details and deploy the static site. Begin collecting early users.
+        </p>
+
+        <ul class="deliverables">
+          <li><strong>Visual Assets</strong> — Favicon, OG images for social sharing</li>
+          <li><strong>Testing</strong> — Link validation, mobile testing, cross-browser checks</li>
+          <li><strong>Deploy</strong> — Launch on Netlify, connect domain, SSL setup</li>
+          <li><strong>Analytics</strong> — Google Search Console, Analytics, submit sitemap</li>
+          <li><strong>Announcement</strong> — Share on Reddit r/philosophy, Twitter, academic forums</li>
+        </ul>
+
+        <p style="margin-top:16px;color:var(--accent);font-size:14px;font-weight:600;">
+          <strong>Target:</strong> February 2026
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Phase 3: Backend -->
+  <section style="padding:20px 0;">
+    <div class="wrap">
+
+      <div class="phase">
+        <div class="phase-header">
+          <span class="phase-badge planned">○ Planned</span>
+          <h2 class="phase-title">Phase 3: Backend & AI Chatbot</h2>
+        </div>
+
+        <p class="phase-desc">
+          Build the backend infrastructure and launch the dual-chatbot system: "The Master" (Claude 3.5 Sonnet premium) and "The Student" (free browser-based assistant).
+        </p>
+
+        <ul class="deliverables">
+          <li><strong>Supabase Setup</strong> — Database, authentication, user management</li>
+          <li><strong>API Backend</strong> — Node.js/TypeScript API for chatbot routing</li>
+          <li><strong>RAG System</strong> — Parse site content, vector embeddings, context injection</li>
+          <li><strong>The Student</strong> — Free browser-based chatbot (Transformers.js or similar)</li>
+          <li><strong>The Master</strong> — Premium Claude 3.5 Sonnet with maieutic dialogue</li>
+          <li><strong>Conversation Memory</strong> — Persistent chat history, context management</li>
+          <li><strong>Usage Tracking</strong> — Token counting, 3 free questions system</li>
+        </ul>
+
+        <p style="margin-top:16px;color:var(--muted-soft);font-size:14px;">
+          <strong>Target:</strong> Q2 2026
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Phase 4: Mobile App -->
+  <section style="padding:20px 0;">
+    <div class="wrap">
+
+      <div class="phase">
+        <div class="phase-header">
+          <span class="phase-badge planned">○ Planned</span>
+          <h2 class="phase-title">Phase 4: Mobile Application</h2>
+        </div>
+
+        <p class="phase-desc">
+          Launch native mobile app for iOS and Android. The "Symposium" experience — immersive AI-guided philosophical dialogue.
+        </p>
+
+        <ul class="deliverables">
+          <li><strong>React Native App</strong> — Cross-platform mobile application</li>
+          <li><strong>Symposium Interface</strong> — Immersive chat experience with Plato</li>
+          <li><strong>Offline Mode</strong> — Download dialogues for offline reading</li>
+          <li><strong>Progress Tracking</strong> — Reading streaks, philosophy journey visualization</li>
+          <li><strong>Premium Tier</strong> — Unlimited Master access, advanced features</li>
+          <li><strong>Social Features</strong> — Share insights, discussion groups (optional)</li>
+        </ul>
+
+        <p style="margin-top:16px;color:var(--muted-soft);font-size:14px;">
+          <strong>Target:</strong> Q3-Q4 2026
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section style="padding:20px 0;">
+    <div class="wrap">
+
+      <h2>Recent Milestones</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-date">January 29, 2026</div>
+          <div class="timeline-event">✓ Philosophy section completed — 15 pages covering Forms, Cave, virtue, politics</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">January 29, 2026</div>
+          <div class="timeline-event">✓ Interactive map added — Leaflet.js map showing Plato's world and travels</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">January 29, 2026</div>
+          <div class="timeline-event">✓ Glossary completed — 50+ philosophical terms with Greek transliterations</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">January 28, 2026</div>
+          <div class="timeline-event">✓ Biography section completed — 12 pages covering Plato's life from birth to legacy</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">January 27, 2026</div>
+          <div class="timeline-event">✓ Beginner's Path completed — 6-page introduction to Plato and philosophy</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">January 26, 2026</div>
+          <div class="timeline-event">✓ Design system finalized — Light/dark themes, CSS variables, responsive layout</div>
+        </div>
+
+      </div>
+
+      <div style="margin-top:40px;padding:20px;background:var(--panel);border:1px solid var(--stroke);border-radius:var(--radius-md);">
+        <h3 style="margin:0 0 12px;color:var(--text-strong);">Join the Journey</h3>
+        <p style="margin:0 0 16px;color:var(--muted);">
+          Want to be notified when we launch new features? Join our waitlist for early access to the AI chatbot.
+        </p>
+        <a class="btn" href="/index.html#waitlist">Join Waitlist →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+
+    <p style="color:var(--text);">
+      PLATO is an independent project for studying Platonic thought.
+    </p>
+
+    <p style="margin-top:8px; color:var(--muted);">
+      Clear paths for beginners. Deeper routes for advanced readers. Dialogue as a way of learning.
+    </p>
+
+    <p style="margin-top:12px; font-size:12px; color:var(--muted-soft);">
+      <a href="/privacy.html" style="color:inherit;">Privacy</a> ·
+      <a href="/terms.html" style="color:inherit;">Terms</a> ·
+      <a href="mailto:contact@platophilosophy.com" style="color:inherit;">Contact</a>
+    </p>
+
+    <p style="margin-top:14px; font-size:12px; color:var(--muted-soft); opacity:.85;">
+      © <span id="y"></span> platophilosophy.com
+    </p>
+
+  </div>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  // Theme toggle
+  (function(){
+    const root = document.documentElement;
+    const saved = localStorage.getItem("theme");
+    if(saved) root.setAttribute("data-theme", saved);
+
+    const btn = document.getElementById("themeToggle");
+    if(!btn) return;
+
+    btn.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme") || "light";
+      const next = current === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+    });
+  })();
+</script>
+
+</body>
+</html>
