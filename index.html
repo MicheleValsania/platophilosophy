@@ -29,11 +29,10 @@
     </a>
 
     <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+      <a class="btn" href="resources/guides/start-here.html">Start Here</a>
       <a class="btn secondary" href="resources.html">Resources</a>
-      <a class="btn secondary" href="dialogue-sample.html">Dialogue sample</a>
-      <a class="btn secondary" href="#paths">Learning paths</a>
       <button class="btn secondary" id="themeToggle" type="button" aria-label="Toggle theme">Theme</button>
-      <a class="btn" href="#waitlist">Join the waitlist</a>
+      <a class="btn secondary" href="#waitlist">Waitlist</a>
     </div>
   </div>
 </header>
@@ -65,8 +64,9 @@
       </p>
 
       <div style="margin-top:26px; display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="btn" href="#waitlist">Join the waitlist</a>
+        <a class="btn" href="resources/guides/start-here.html">Start Here</a>
         <a class="btn secondary" href="resources.html">Explore resources</a>
+        <a class="btn secondary" href="#waitlist">Join the waitlist</a>
       </div>
 
     </div>
@@ -83,6 +83,13 @@
       </p>
 
       <div class="grid-3" style="margin-top:28px;">
+
+        <a class="card" href="beginner/why-philosophy.html" style="text-decoration:none; color:inherit; border:2px solid var(--accent); background: linear-gradient(180deg, var(--accent-soft), var(--panel));">
+          <div style="display:inline-block;background:var(--accent);color:var(--bg);padding:4px 10px;border-radius:20px;font-size:11px;font-weight:600;text-transform:uppercase;margin-bottom:10px;">For Beginners</div>
+          <h3>Beginner's Path</h3>
+          <p>6-page guided introduction to philosophy and Plato's unique approach. Perfect if you're completely new.</p>
+          <p style="margin-top:10px; font-size:13px; color:var(--accent-strong); font-weight:600;">Start journey →</p>
+        </a>
 
         <a class="card" href="resources/guides/start-here.html" style="text-decoration:none; color:inherit;">
           <h3>Start Here</h3>
@@ -122,9 +129,8 @@
 
       </div>
 
-      <div style="margin-top:24px; display:flex; gap:12px; flex-wrap:wrap;">
+      <div style="margin-top:24px;">
         <a class="btn secondary" href="resources.html">Browse all resources</a>
-        <a class="btn secondary" href="dialogue-sample.html">See a dialogue sample</a>
       </div>
 
     </div>
@@ -153,9 +159,8 @@
         </p>
       </div>
 
-      <div style="margin-top:22px; display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="btn" href="#waitlist">Get early access</a>
-        <a class="btn secondary" href="dialogue-sample.html">Open the full sample</a>
+      <div style="margin-top:22px;">
+        <a class="btn" href="#waitlist" style="background: linear-gradient(180deg, rgba(216,193,138,.28), rgba(216,193,138,.18));">Chat with Plato (Coming Soon)</a>
       </div>
 
     </div>
@@ -187,7 +192,7 @@
       </div>
 
       <div style="margin-top:22px;">
-        <a class="btn secondary" href="roadmap.html">Open roadmap →</a>
+        <a class="btn secondary" href="roadmap.html">View full roadmap</a>
       </div>
 
     </div>
@@ -274,8 +279,8 @@
     if(!btn) return;
 
     btn.addEventListener("click", () => {
-      const current = root.getAttribute("data-theme") || "dark";
-      const next = current === "dark" ? "light" : "dark";
+      const current = root.getAttribute("data-theme") || "light";
+      const next = current === "light" ? "dark" : "light";
       root.setAttribute("data-theme", next);
       localStorage.setItem("theme", next);
     });

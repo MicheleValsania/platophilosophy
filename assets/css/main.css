@@ -4,26 +4,27 @@
 
 /* ---------- CSS Variables (Design System) ---------- */
 
+/* Light theme as default */
 :root{
   /* Theme */
-  --bg: #0b0f14;
-  --text: rgba(255,255,255,.92);
-  --muted: rgba(255,255,255,.72);
-  --muted-soft: rgba(255,255,255,.55);
+  --bg: #f6f3ea;
+  --text: rgba(20,22,26,.95);
+  --muted: rgba(20,22,26,.80);
+  --muted-soft: rgba(20,22,26,.65);
 
   /* Surfaces */
-  --panel: rgba(255,255,255,.06);
-  --panel-strong: rgba(255,255,255,.08);
-  --stroke: rgba(255,255,255,.10);
+  --panel: rgba(20,22,26,.06);
+  --panel-strong: rgba(20,22,26,.08);
+  --stroke: rgba(20,22,26,.12);
 
   /* Accent */
-  --accent: #d8c18a;
-  --accent-strong: #b99a59;
-  --accent-soft: rgba(216,193,138,.18);
+  --accent: #8a6a2b;
+  --accent-strong: #6f531f;
+  --accent-soft: rgba(138,106,43,.20);
 
   /* Shadows */
-  --shadow-md: 0 12px 35px rgba(0,0,0,.22);
-  --shadow-lg: 0 18px 55px rgba(0,0,0,.45);
+  --shadow-md: 0 12px 35px rgba(0,0,0,.12);
+  --shadow-lg: 0 18px 55px rgba(0,0,0,.25);
 
   /* Radius */
   --radius-sm: 12px;
@@ -40,20 +41,23 @@
                 "Palatino Linotype", Palatino, Georgia, serif;
 }
 
-/* Light theme override */
-:root[data-theme="light"]{
-  --bg: #f6f3ea;
-  --text: rgba(20,22,26,.92);
-  --muted: rgba(20,22,26,.72);
-  --muted-soft: rgba(20,22,26,.55);
+/* Dark theme override - softer dark, not black */
+:root[data-theme="dark"]{
+  --bg: #1a1f26;
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.72);
+  --muted-soft: rgba(255,255,255,.55);
 
-  --panel: rgba(20,22,26,.06);
-  --panel-strong: rgba(20,22,26,.08);
-  --stroke: rgba(20,22,26,.12);
+  --panel: rgba(255,255,255,.06);
+  --panel-strong: rgba(255,255,255,.08);
+  --stroke: rgba(255,255,255,.10);
 
-  --accent: #8a6a2b;
-  --accent-strong: #6f531f;
-  --accent-soft: rgba(138,106,43,.20);
+  --accent: #d8c18a;
+  --accent-strong: #b99a59;
+  --accent-soft: rgba(216,193,138,.18);
+
+  --shadow-md: 0 12px 35px rgba(0,0,0,.22);
+  --shadow-lg: 0 18px 55px rgba(0,0,0,.45);
 }
 
 /* ---------- Reset & Base ---------- */
@@ -68,8 +72,8 @@ html, body{
   height: 100%;
 }
 
-/* Bigger baseline typography */
-html{ font-size: 18px; }
+/* Bigger baseline typography - increased for better readability */
+html{ font-size: 19px; }
 
 body{
   font-family: var(--font-sans);
@@ -81,6 +85,7 @@ body{
 
 /* ---------- Background: gradients + geometric overlay ---------- */
 /* We use only ::before for gradients+grid to avoid conflicts */
+/* Light theme background (default) */
 body::before{
   content:"";
   position: fixed;
@@ -88,24 +93,24 @@ body::before{
   pointer-events: none;
   z-index: -2;
   background:
-    radial-gradient(1200px 800px at 20% -10%, rgba(216,193,138,.18), transparent 60%),
-    radial-gradient(900px 600px at 110% 10%, rgba(185,154,89,.14), transparent 55%),
-    radial-gradient(800px 600px at 40% 120%, rgba(216,193,138,.10), transparent 55%),
-    url("/assets/images/geo-grid.svg"),
-    linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.88));
-  background-size: auto, auto, auto, cover, auto;
-  background-position: 0 0, 0 0, 0 0, center, 0 0;
-  opacity: 1;
-}
-
-/* In light theme: keep it more subtle */
-:root[data-theme="light"] body::before{
-  background:
     radial-gradient(1200px 800px at 20% -10%, rgba(138,106,43,.10), transparent 60%),
     radial-gradient(900px 600px at 110% 10%, rgba(138,106,43,.08), transparent 55%),
     radial-gradient(800px 600px at 40% 120%, rgba(138,106,43,.06), transparent 55%),
     url("/assets/images/geo-grid.svg"),
     linear-gradient(180deg, rgba(255,255,255,.70), rgba(246,243,234,1));
+  background-size: auto, auto, auto, cover, auto;
+  background-position: 0 0, 0 0, 0 0, center, 0 0;
+  opacity: 1;
+}
+
+/* Dark theme: softer dark background */
+:root[data-theme="dark"] body::before{
+  background:
+    radial-gradient(1200px 800px at 20% -10%, rgba(216,193,138,.18), transparent 60%),
+    radial-gradient(900px 600px at 110% 10%, rgba(185,154,89,.14), transparent 55%),
+    radial-gradient(800px 600px at 40% 120%, rgba(216,193,138,.10), transparent 55%),
+    url("/assets/images/geo-grid.svg"),
+    linear-gradient(180deg, rgba(26,31,38,.20), rgba(26,31,38,.88));
 }
 
 /* Optional poster image layer (se vuoi usare la tua immagine “Plato”) */
@@ -196,13 +201,8 @@ p{
 }
 
 .btn.secondary{
-  background: rgba(255,255,255,.04);
+  background: var(--panel);
   box-shadow: none;
-}
-
-/* Better in light theme */
-:root[data-theme="light"] .btn.secondary{
-  background: rgba(20,22,26,.04);
 }
 
 /* ---------- Header / Navigation ---------- */
@@ -213,13 +213,13 @@ header{
   z-index: 50;
 
   backdrop-filter: blur(14px);
-  background: rgba(11,15,20,.55);
-  border-bottom: 1px solid rgba(255,255,255,.06);
-}
-
-:root[data-theme="light"] header{
   background: rgba(246,243,234,.65);
   border-bottom: 1px solid rgba(20,22,26,.08);
+}
+
+:root[data-theme="dark"] header{
+  background: rgba(26,31,38,.55);
+  border-bottom: 1px solid rgba(255,255,255,.06);
 }
 
 .nav{
@@ -263,16 +263,11 @@ header{
 /* ---------- Cards ---------- */
 
 .card{
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.08);
+  background: var(--panel);
+  border: 1px solid var(--stroke);
   border-radius: var(--radius-md);
   padding: 16px;
   box-shadow: var(--shadow-md);
-}
-
-:root[data-theme="light"] .card{
-  background: rgba(20,22,26,.04);
-  border: 1px solid rgba(20,22,26,.10);
 }
 
 .card p{ font-size: .95rem; }
@@ -290,13 +285,9 @@ header{
 .quote{
   border-radius: var(--radius-lg);
   border: 1px solid var(--accent-soft);
-  background: linear-gradient(180deg, rgba(216,193,138,.10), rgba(255,255,255,.03));
+  background: linear-gradient(180deg, var(--accent-soft), var(--panel));
   padding: 20px;
   box-shadow: var(--shadow-lg);
-}
-
-:root[data-theme="light"] .quote{
-  background: linear-gradient(180deg, rgba(138,106,43,.10), rgba(20,22,26,.03));
 }
 
 .quote p{
@@ -309,13 +300,13 @@ header{
 
 footer{
   padding: 48px 0;
-  border-top: 1px solid rgba(255,255,255,.06);
+  border-top: 1px solid rgba(20,22,26,.08);
   color: var(--muted-soft);
   font-size: 13px;
 }
 
-:root[data-theme="light"] footer{
-  border-top: 1px solid rgba(20,22,26,.08);
+:root[data-theme="dark"] footer{
+  border-top: 1px solid rgba(255,255,255,.06);
 }
 
 /* ---------- Responsive ---------- */

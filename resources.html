@@ -23,27 +23,27 @@
     .kicker{
       display:inline-flex; align-items:center; gap:10px;
       padding:8px 12px; border-radius:999px;
-      border:1px solid rgba(216,193,138,.18);
-      background: rgba(216,193,138,.08);
-      color: rgba(255,255,255,.82);
+      border:1px solid var(--accent-soft);
+      background: var(--accent-soft);
+      color: var(--text);
       font-size: 13px;
     }
     .kdot{
       width:7px; height:7px; border-radius:999px;
-      background: var(--accent);
-      box-shadow: 0 0 0 4px rgba(216,193,138,.12);
+      background: var(--accent-strong);
+      box-shadow: 0 0 0 4px var(--accent-soft);
       display:inline-block;
     }
 
     .lead{
       margin-top: 12px;
       max-width: 78ch;
-      color: rgba(255,255,255,.72);
+      color: var(--muted);
     }
 
     .panel{
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.08);
+      background: var(--panel);
+      border: 1px solid var(--stroke);
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-lg);
       overflow:hidden;
@@ -58,9 +58,9 @@
     }
 
     .tab{
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      color: rgba(255,255,255,.75);
+      border: 1px solid var(--stroke);
+      background: var(--panel);
+      color: var(--muted);
       border-radius: 999px;
       padding: 8px 10px;
       font-size: 13px;
@@ -70,28 +70,28 @@
     }
     .tab:hover{ transform: translateY(-1px); }
     .tab[aria-pressed="true"]{
-      border-color: rgba(216,193,138,.25);
-      background: rgba(216,193,138,.08);
-      color: rgba(255,255,255,.90);
+      border-color: var(--accent-soft);
+      background: var(--accent-soft);
+      color: var(--text);
     }
 
     .path-box{
       margin-top: 12px;
       padding: 12px;
       border-radius: var(--radius-md);
-      border: 1px solid rgba(255,255,255,.08);
-      background: rgba(0,0,0,.18);
+      border: 1px solid var(--stroke);
+      background: var(--panel-strong);
     }
 
     .path-title{
       margin: 0;
       font-family: var(--font-serif);
       font-size: 16px;
-      color: rgba(255,255,255,.92);
+      color: var(--text);
     }
 
     .muted{
-      color: rgba(255,255,255,.68);
+      color: var(--muted);
       font-size: 14px;
       line-height: 1.55;
       margin: 0;
@@ -100,7 +100,7 @@
     .bullets{
       margin: 10px 0 0;
       padding-left: 18px;
-      color: rgba(255,255,255,.70);
+      color: var(--muted);
       font-size: 14px;
       line-height: 1.6;
     }
@@ -114,7 +114,7 @@
     }
 
     .link{
-      color: rgba(216,193,138,.92);
+      color: var(--accent);
       text-decoration: underline;
       font-weight: 600;
       font-size: 13px;
@@ -133,13 +133,13 @@
       margin:0;
       font-family: var(--font-serif);
       font-size: 22px;
-      color: rgba(255,255,255,.92);
+      color: var(--text);
     }
 
     .section-title p{
       margin:0;
       max-width: 78ch;
-      color: rgba(255,255,255,.55);
+      color: var(--muted-soft);
       font-size: 13px;
       line-height: 1.5;
     }
@@ -150,16 +150,16 @@
       font-size: 12px;
       padding: 6px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.10);
-      color: rgba(255,255,255,.70);
+      border: 1px solid var(--stroke);
+      background: var(--panel-strong);
+      color: var(--muted);
       margin-bottom: 10px;
     }
 
     .card a.inline{
       display:inline-block;
       margin-top: 10px;
-      color: rgba(216,193,138,.92);
+      color: var(--accent);
       text-decoration: none;
       font-weight: 600;
       font-size: 13px;
@@ -170,10 +170,10 @@
       margin-top: 16px;
       padding: 14px;
       border-radius: var(--radius-lg);
-      border: 1px solid rgba(216,193,138,.18);
-      background: linear-gradient(180deg, rgba(216,193,138,.10), rgba(255,255,255,.03));
+      border: 1px solid var(--accent-soft);
+      background: linear-gradient(180deg, var(--accent-soft), var(--panel));
       box-shadow: var(--shadow-md);
-      color: rgba(255,255,255,.78);
+      color: var(--text);
       font-size: 14px;
       line-height: 1.55;
     }
@@ -189,13 +189,13 @@
     .email {
       padding: 12px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.25);
-      color: rgba(255,255,255,.90);
+      border: 1px solid var(--stroke);
+      background: var(--panel-strong);
+      color: var(--text);
       min-width: 240px;
       outline: none;
     }
-    .email::placeholder { color: rgba(255,255,255,.45); }
+    .email::placeholder { color: var(--muted-soft); }
 
     @media (max-width: 900px){
       .section-title{ flex-direction: column; align-items: flex-start; }
@@ -211,13 +211,14 @@
       <div class="mark">Φ</div>
       <div>
         <strong>PLATO</strong><br/>
-        <span style="font-size:12px;color:rgba(255,255,255,.55)">platophilosophy.com</span>
+        <span style="font-size:12px;color:var(--muted-soft)">platophilosophy.com</span>
       </div>
     </a>
 
-    <div style="display:flex; gap:10px; align-items:center;">
-      <a class="btn secondary" href="dialogue-sample.html">Dialogue sample</a>
-      <a class="btn" href="#waitlist">Join the waitlist</a>
+    <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+      <a class="btn" href="resources/guides/start-here.html">Start Here</a>
+      <button class="btn secondary" id="themeToggle" type="button" aria-label="Toggle theme">Theme</button>
+      <a class="btn secondary" href="#waitlist">Waitlist</a>
     </div>
   </div>
 </header>
@@ -236,14 +237,14 @@
         clear introductions, structured explanations, and guided pathways for reading Plato.
       </p>
 
-      <p style="margin-top:10px; font-size:13px; color:rgba(255,255,255,.55);">
+      <p style="margin-top:10px; font-size:13px; color:var(--muted-soft);">
         No prior knowledge required · Launching 2026 · English
       </p>
 
       <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="btn" href="#paths">Choose a learning path</a>
+        <a class="btn" href="resources/guides/start-here.html">Start Here</a>
+        <a class="btn secondary" href="#paths">Choose a learning path</a>
         <a class="btn secondary" href="#library">Browse the library</a>
-        <a class="btn secondary" href="#waitlist">Get updates by email</a>
       </div>
 
       <div class="callout">
@@ -275,8 +276,7 @@
         <div class="path-box" id="pathBox"></div>
 
         <div class="mini-links">
-          <a class="btn secondary" href="dialogue-sample.html">See the dialogue sample</a>
-          <a class="btn" href="#waitlist">Join the waitlist</a>
+          <a class="btn" href="#waitlist" style="background: linear-gradient(180deg, var(--accent-soft), var(--panel));">Chat with Plato (Coming Soon)</a>
         </div>
 
       </div>
@@ -301,52 +301,58 @@
 
       <div class="grid-3">
 
+        <div class="card" style="border:2px solid var(--accent); background: linear-gradient(180deg, var(--accent-soft), var(--panel));">
+          <div class="tag" style="background:var(--accent);color:var(--bg);">For Beginners</div>
+          <h3>Beginner's Path</h3>
+          <p>6-page guided introduction to philosophy and Plato's unique approach. Perfect starting point.</p>
+          <a class="inline" href="beginner/why-philosophy.html">Begin journey →</a>
+        </div>
+
         <div class="card">
           <div class="tag">Start</div>
           <h3>Start Here</h3>
           <p>A gentle entry point: what Plato is doing, how dialogues work, and how to begin.</p>
-          <a class="inline" href="start-here.html">Open →</a>
+          <a class="inline" href="resources/guides/start-here.html">Open →</a>
         </div>
 
         <div class="card">
           <div class="tag">Life</div>
-          <h3>Plato’s Life</h3>
+          <h3>Plato's Life</h3>
           <p>Athens, family, Socrates, travels, the Academy — the story behind the dialogues.</p>
-          <a class="inline" href="#">Browse →</a>
+          <a class="inline" href="resources/platophilosophy/index.html">Browse →</a>
         </div>
 
         <div class="card">
           <div class="tag">Philosophy</div>
           <h3>Core Ideas</h3>
           <p>Reality and appearance, Forms, knowledge, soul, ethics, politics, education.</p>
-          <a class="inline" href="#">Browse →</a>
+          <a class="inline" href="resources/references/glossary.html">Explore concepts →</a>
         </div>
 
         <div class="card">
           <div class="tag">Texts</div>
           <h3>Dialogues Library</h3>
-          <p>Plato’s dialogues in translation, with short introductions and suggested first readings.</p>
-          <a class="inline" href="#">Browse →</a>
+          <p>Plato's dialogues in translation, with short introductions and suggested first readings.</p>
+          <a class="inline" href="resources/references/dialogues.html">Browse →</a>
         </div>
 
         <div class="card">
           <div class="tag">Concepts</div>
           <h3>Glossary</h3>
           <p>Key terms explained in clear language, linked to where they appear in the dialogues.</p>
-          <a class="inline" href="#">Explore →</a>
+          <a class="inline" href="resources/references/glossary.html">Explore →</a>
         </div>
 
         <div class="card">
           <div class="tag">Method</div>
           <h3>How to Read a Dialogue</h3>
           <p>Practical guidance: questions to ask, how to take notes, common pitfalls.</p>
-          <a class="inline" href="#">Read →</a>
+          <a class="inline" href="resources/guides/start-here.html">Read →</a>
         </div>
 
       </div>
 
-      <div style="margin-top:22px; display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="btn" href="#waitlist">Get updates</a>
+      <div style="margin-top:22px;">
         <a class="btn secondary" href="index.html">Back to homepage</a>
       </div>
 
@@ -389,20 +395,20 @@
 
 <footer>
   <div class="wrap">
-    <p style="color:rgba(255,255,255,.75);">
+    <p style="color:var(--muted);">
       PLATO is an independent project for studying Platonic thought.
     </p>
-    <p style="margin-top:8px; color:rgba(255,255,255,.55);">
+    <p style="margin-top:8px; color:var(--muted-soft);">
       Clear paths for beginners. Deeper routes for advanced readers. Dialogue as a way of learning.
     </p>
 
-    <p style="margin-top:12px; font-size:12px; color:rgba(255,255,255,.55);">
-      <a href="/privacy.html" style="color:rgba(255,255,255,.55);">Privacy</a> ·
-      <a href="/terms.html" style="color:rgba(255,255,255,.55);">Terms</a> ·
-      <a href="mailto:contact@platophilosophy.com" style="color:rgba(255,255,255,.55);">Contact</a>
+    <p style="margin-top:12px; font-size:12px; color:var(--muted-soft);">
+      <a href="/privacy.html" style="color:inherit;">Privacy</a> ·
+      <a href="/terms.html" style="color:inherit;">Terms</a> ·
+      <a href="mailto:contact@platophilosophy.com" style="color:inherit;">Contact</a>
     </p>
 
-    <p style="margin-top:14px; font-size:12px; color:rgba(255,255,255,.45);">
+    <p style="margin-top:14px; font-size:12px; color:var(--muted-soft); opacity:.85;">
       © <span id="y"></span> platophilosophy.com
     </p>
   </div>
@@ -411,22 +417,39 @@
 <script>
   document.getElementById("y").textContent = new Date().getFullYear();
 
+  // Theme toggle
+  (function(){
+    const root = document.documentElement;
+    const saved = localStorage.getItem("theme");
+    if(saved) root.setAttribute("data-theme", saved);
+
+    const btn = document.getElementById("themeToggle");
+    if(!btn) return;
+
+    btn.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme") || "light";
+      const next = current === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+    });
+  })();
+
   const pathBox = document.getElementById("pathBox");
 
   const paths = {
     beginner: {
       title: "Beginner path",
-      desc: "A gentle route for first contact with Plato and philosophical reading.",
+      desc: "A 6-page guided introduction to philosophy and Plato's unique approach. Perfect for first-time readers.",
       bullets: [
-        "Start Here: how to read a dialogue, what to expect, how to take notes.",
-        "A first short dialogue (guided).",
-        "Glossary support: learn terms as they appear.",
-        "Optional: historical context (Athens, Socrates)."
+        "Why philosophy exists as a discipline.",
+        "What makes Plato distinctive: dialogue form and method.",
+        "How to read primary texts vs summaries.",
+        "Three paths forward: historical, conceptual, or textual."
       ],
       links: [
-        { label: "Start Here", href: "start-here.html" },
-        { label: "Dialogue sample", href: "dialogue-sample.html" },
-        { label: "Join the waitlist", href: "#waitlist" }
+        { label: "Begin journey", href: "beginner/why-philosophy.html" },
+        { label: "Start Here", href: "resources/guides/start-here.html" },
+        { label: "Plato's Life", href: "resources/platophilosophy/index.html" }
       ]
     },
     life: {
@@ -439,9 +462,9 @@
         "Founding the Academy and its method."
       ],
       links: [
-        { label: "Start Here", href: "start-here.html" },
-        { label: "Browse life pages", href: "#" },
-        { label: "Get updates", href: "#waitlist" }
+        { label: "Start Here", href: "resources/guides/start-here.html" },
+        { label: "Plato's Life", href: "resources/platophilosophy/index.html" },
+        { label: "Timeline", href: "resources/platophilosophy/timeline.html" }
       ]
     },
     philosophy: {
@@ -454,8 +477,8 @@
         "Education as transformation (the Cave)."
       ],
       links: [
-        { label: "Browse core ideas", href: "#" },
-        { label: "Glossary", href: "#" },
+        { label: "Browse core ideas", href: "resources/references/glossary.html" },
+        { label: "Dialogues", href: "resources/references/dialogues.html" },
         { label: "Get updates", href: "#waitlist" }
       ]
     },
@@ -469,9 +492,9 @@
         "Use dialogue to test concepts without shortcuts."
       ],
       links: [
-        { label: "How to read a dialogue", href: "#" },
-        { label: "Dialogue sample", href: "dialogue-sample.html" },
-        { label: "Join the waitlist", href: "#waitlist" }
+        { label: "How to read a dialogue", href: "resources/guides/start-here.html" },
+        { label: "Greek Essentials", href: "resources/guides/greek-essentials.html" },
+        { label: "Reading Pathways", href: "resources/guides/reading-pathways.html" }
       ]
     }
   };
