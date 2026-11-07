@@ -19,7 +19,7 @@
   <!-- Main Pages -->
   <url>
     <loc>https://platophilosophy.com/resources.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -69,7 +69,7 @@
 
   <url>
     <loc>https://platophilosophy.com/beginner/pathways.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -91,7 +91,7 @@
 
   <url>
     <loc>https://platophilosophy.com/resources/guides/maps-and-timelines.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -105,7 +105,7 @@
 
   <url>
     <loc>https://platophilosophy.com/resources/guides/reading-pathways.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -120,7 +120,7 @@
 
   <url>
     <loc>https://platophilosophy.com/resources/references/glossary.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -177,14 +177,14 @@
 
   <url>
     <loc>https://platophilosophy.com/resources/platophilosophy/founding-academy.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://platophilosophy.com/resources/platophilosophy/academy-daily-life.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -212,7 +212,7 @@
 
   <url>
     <loc>https://platophilosophy.com/resources/platophilosophy/timeline.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -343,6 +343,13 @@
     <lastmod>2026-01-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://platophilosophy.com/links.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>
