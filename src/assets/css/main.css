@@ -272,6 +272,22 @@ header{
 
 .card p{ font-size: .95rem; }
 
+/* Card with a single link: the whole card is clickable */
+.card.card-link{
+  position: relative;
+  transition: border-color .2s ease, transform .2s ease;
+}
+.card.card-link:hover{
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.card.card-link a::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-md);
+}
+
 /* ---------- Grids ---------- */
 
 .grid-3{
