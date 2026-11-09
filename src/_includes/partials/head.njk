@@ -1,0 +1,29 @@
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title | safe }}</title>
+{%- if description %}
+  <meta name="description" content="{{ description | safe }}" />
+{%- endif %}
+{%- if robots %}
+  <meta name="robots" content="{{ robots | safe }}" />
+{%- endif %}
+{%- if canonical %}
+  <link rel="canonical" href="{{ site.url }}{{ canonical }}" />
+{%- endif %}
+{%- for tag in og %}
+  <meta property="{{ tag[0] }}" content="{{ tag[1] | safe }}" />
+{%- endfor %}
+{%- for tag in twitter %}
+  <meta name="{{ tag[0] }}" content="{{ tag[1] | safe }}" />
+{%- endfor %}
+{%- if site.hreflang and translationKey %}
+{%- for p in collections.all %}{% if p.data.translationKey == translationKey %}
+  <link rel="alternate" hreflang="{{ p.data.lang }}" href="{{ site.url }}{{ p.url }}" />
+{%- endif %}{% endfor %}
+{%- endif %}
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon/favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/main.css">

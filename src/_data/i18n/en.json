@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "startHere": "Start Here",
+    "resources": "Resources",
+    "waitlist": "Waitlist",
+    "theme": "Theme",
+    "themeAria": "Toggle theme"
+  },
+  "breadcrumb": {
+    "aria": "Breadcrumb"
+  },
+  "footer": {
+    "about": "PLATO is an independent project for studying Platonic thought.",
+    "tagline": "Clear paths for beginners. Deeper routes for advanced readers. Dialogue as a way of learning.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "contact": "Contact",
+    "licensePrefix": "Text licensed under"
+  }
+}

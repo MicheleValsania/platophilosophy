@@ -1,0 +1,14 @@
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/index.html">
+      <div class="mark">Φ</div>
+      <div><strong>{{ site.name }}</strong><br/><span style="font-size:12px;color:var(--muted-soft)">{{ site.domain }}</span></div>
+    </a>
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+      <a class="btn secondary" href="/resources/guides/start-here.html">{{ "nav.startHere" | t(lang) }}</a>
+      <a class="btn secondary" href="/resources.html">{{ "nav.resources" | t(lang) }}</a>
+      <button class="btn secondary" id="themeToggle" type="button" aria-label="{{ 'nav.themeAria' | t(lang) }}">{{ "nav.theme" | t(lang) }}</button>
+      <a class="btn secondary" href="{{ waitlistHref or '/index.html#waitlist' }}">{{ "nav.waitlist" | t(lang) }}</a>
+    </div>
+  </div>
+</header>
