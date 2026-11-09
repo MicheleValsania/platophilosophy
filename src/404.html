@@ -1,0 +1,114 @@
+---
+lang: "en"
+title: "404 - Page Not Found | PLATO"
+description: "The page you're looking for doesn't exist. Return to platophilosophy.com to explore Plato's philosophy."
+robots: "noindex, follow"
+og: []
+twitter: []
+translationKey: "404"
+---
+{% extends "layouts/base.njk" %}
+{% block head %}
+  <style>
+    .error-section{
+      min-height:70vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+    .error-code{
+      font-size:120px;
+      font-weight:700;
+      font-family:var(--font-serif);
+      color:var(--accent);
+      line-height:1;
+      margin-bottom:24px;
+      opacity:.8;
+    }
+    .error-message{
+      font-size:28px;
+      font-family:var(--font-serif);
+      margin-bottom:16px;
+      color:var(--text);
+    }
+    .error-desc{
+      max-width:60ch;
+      margin:0 auto 32px;
+      color:var(--muted);
+      line-height:1.7;
+    }
+    .suggestion-card{
+      background:var(--panel);
+      border:1px solid var(--stroke);
+      border-radius:12px;
+      padding:16px 20px;
+      text-align:left;
+      transition:all .3s;
+    }
+    .suggestion-card:hover{
+      background:var(--panel-strong);
+      border-color:var(--accent-soft);
+      transform:translateY(-2px);
+    }
+    @media (max-width:768px){
+      .error-code{font-size:80px;}
+      .error-message{font-size:22px;}
+    }
+  </style>
+{% endblock %}
+{% block content %}
+<main>
+  <section class="error-section">
+    <div class="wrap">
+
+      <div class="error-code">404</div>
+      <h1 class="error-message">Page Not Found</h1>
+
+      <p class="error-desc">
+        The page you're looking for doesn't exist or has been moved.
+        Perhaps like Socrates searching for wisdom, we must admit:
+        <em>"I know that I know nothing about this URL."</em>
+      </p>
+
+      <div style="margin-top:32px;">
+        <a href="/index.html" class="btn">Return Home</a>
+        <a href="/resources.html" class="btn secondary" style="margin-left:12px;">Browse Resources</a>
+      </div>
+
+      <div style="margin-top:60px;max-width:800px;margin-left:auto;margin-right:auto;">
+        <h2 style="font-size:1.3rem;margin-bottom:24px;color:var(--text);">Suggested Paths</h2>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
+
+          <a href="/beginner/why-philosophy.html" class="suggestion-card" style="text-decoration:none;color:inherit;">
+            <div style="font-size:32px;margin-bottom:8px;">📚</div>
+            <h3 style="margin:0 0 8px;font-size:17px;color:var(--text);">Beginner's Path</h3>
+            <p style="margin:0;font-size:14px;color:var(--muted);line-height:1.6;">
+              Start from the beginning with our 6-page introduction to philosophy and Plato.
+            </p>
+          </a>
+
+          <a href="/resources/platophilosophy/index.html" class="suggestion-card" style="text-decoration:none;color:inherit;">
+            <div style="font-size:32px;margin-bottom:8px;">🏛️</div>
+            <h3 style="margin:0 0 8px;font-size:17px;color:var(--text);">Plato's Life</h3>
+            <p style="margin:0;font-size:14px;color:var(--muted);line-height:1.6;">
+              Explore Plato's biography from birth in 428 BC to his death and legacy.
+            </p>
+          </a>
+
+          <a href="/resources/references/dialogues.html" class="suggestion-card" style="text-decoration:none;color:inherit;">
+            <div style="font-size:32px;margin-bottom:8px;">📖</div>
+            <h3 style="margin:0 0 8px;font-size:17px;color:var(--text);">Dialogues Library</h3>
+            <p style="margin:0;font-size:14px;color:var(--muted);line-height:1.6;">
+              Browse Plato's dialogues with introductions and reading guidance.
+            </p>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+{% endblock %}

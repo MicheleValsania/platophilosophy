@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+{% include "partials/head.njk" %}
+{%- block head %}{% endblock %}
+</head>
+<body>
+{% include "partials/header.njk" %}
+{% include "partials/breadcrumb.njk" %}
+{%- block content %}{% endblock %}
+{% include "partials/footer.njk" %}
+{% include "partials/theme-toggle.njk" %}
+{%- block scripts %}{% endblock %}
+<script data-goatcounter="https://plato.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
