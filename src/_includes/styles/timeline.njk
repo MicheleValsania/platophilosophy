@@ -1,0 +1,17 @@
+{% include "styles/philosophy-pages.njk" %}
+  <style>
+    .tl-legend{list-style:none;margin:24px 0 8px;padding:16px;display:grid;gap:8px;background:var(--panel);border:1px solid var(--stroke);border-radius:var(--radius-md);max-width:78ch;font-size:14px;color:var(--muted)}
+    .tl-tag{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600;border:1px solid var(--stroke);color:var(--text);margin-right:6px}
+    .tl-context{background:rgba(120,140,170,.18)}
+    .tl-life{background:var(--accent-soft)}
+    .tl-works{background:rgba(110,160,120,.20)}
+    .tl-legacy{background:rgba(160,120,160,.20)}
+    .timeline{list-style:none;margin:28px 0 0;padding:0 0 0 18px;border-left:2px solid var(--stroke);max-width:84ch}
+    .tl-event{position:relative;display:grid;grid-template-columns:170px 1fr;gap:16px;padding:0 0 26px 16px}
+    .tl-event::before{content:"";position:absolute;left:-26px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--bg)}
+    .tl-date{font-weight:700;color:var(--accent);font-size:14px;line-height:1.5}
+    .tl-body h3{font-family:var(--font-serif);font-size:19px;margin:8px 0 6px;color:var(--text)}
+    .tl-body p{margin:0 0 6px;color:var(--muted);line-height:1.6}
+    .tl-link{font-size:13px;font-weight:600;color:var(--accent)}
+    @media (max-width:640px){.tl-event{grid-template-columns:1fr;gap:4px}}
+  </style>

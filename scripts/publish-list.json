@@ -394,6 +394,182 @@
         "it": "Arte e poesia in Platone: la sfida della Repubblica ai poeti, i tre letti, gli effetti sul pubblico e l'ispirazione nello Ione e nel Fedro.",
         "fr": "Art et poésie chez Platon : le défi de la République aux poètes, les trois lits, l'effet sur le public et l'inspiration dans l'Ion et le Phèdre."
       }
+    },
+    {
+      "key": "biography-athens-in-428-bc",
+      "type": "article",
+      "url": "/resources/platophilosophy/athens-in-428-bc.html",
+      "sources": {
+        "en": "editorial/drafts/biography-athens-in-428-bc/en-reader-v0.1.md",
+        "it": "editorial/drafts/biography-athens-in-428-bc/it-reader-v0.1.md",
+        "fr": "editorial/drafts/biography-athens-in-428-bc/fr-reader-v0.1.md"
+      },
+      "section": "biography",
+      "navigation": "biography",
+      "description": "lead"
+    },
+    {
+      "key": "biography-family-and-birth",
+      "type": "article",
+      "url": "/resources/platophilosophy/family-and-birth.html",
+      "sources": {
+        "en": "editorial/drafts/biography-family-and-birth/en-reader-v0.1.md",
+        "it": "editorial/drafts/biography-family-and-birth/it-reader-v0.1.md",
+        "fr": "editorial/drafts/biography-family-and-birth/fr-reader-v0.1.md"
+      },
+      "section": "biography",
+      "navigation": "biography",
+      "description": "lead"
+    },
+    {
+      "key": "biography-youth-and-education",
+      "type": "article",
+      "url": "/resources/platophilosophy/youth-and-education.html",
+      "sources": {
+        "en": "editorial/drafts/biography-youth-and-education/en-reader-v0.1.md",
+        "it": "editorial/drafts/biography-youth-and-education/it-reader-v0.1.md",
+        "fr": "editorial/drafts/biography-youth-and-education/fr-reader-v0.1.md"
+      },
+      "section": "biography",
+      "navigation": "biography",
+      "description": "lead"
+    },
+    {
+      "key": "biography-meeting-socrates",
+      "type": "article",
+      "url": "/resources/platophilosophy/meeting-socrates.html",
+      "sources": {
+        "en": "editorial/drafts/biography-meeting-socrates/en-reader-v0.1.md",
+        "it": "editorial/drafts/biography-meeting-socrates/it-reader-v0.1.md",
+        "fr": "editorial/drafts/biography-meeting-socrates/fr-reader-v0.1.md"
+      },
+      "section": "biography",
+      "navigation": "biography",
+      "description": "lead"
+    },
+    {
+      "key": "biography-trial-of-socrates",
+      "type": "article",
+      "url": "/resources/platophilosophy/trial-of-socrates.html",
+      "sources": {
+        "en": "editorial/drafts/biography-trial-of-socrates/en-reader-v0.1.md",
+        "it": "editorial/drafts/biography-trial-of-socrates/it-reader-v0.1.md",
+        "fr": "editorial/drafts/biography-trial-of-socrates/fr-reader-v0.1.md"
+      },
+      "section": "biography",
+      "navigation": "biography",
+      "description": "lead"
+    },
+    {
+      "key": "biography-founding-academy",
+      "type": "article",
+      "url": "/resources/platophilosophy/founding-academy.html",
+      "sources": {
+        "en": "editorial/drafts/biography-founding-academy/en-reader-v0.1.md",
+        "it": "editorial/drafts/biography-founding-academy/it-reader-v0.1.md",
+        "fr": "editorial/drafts/biography-founding-academy/fr-reader-v0.1.md"
+      },
+      "section": "biography",
+      "navigation": "biography",
+      "description": "lead"
+    },
+    {
+      "key": "biography-academy-daily-life",
+      "type": "article",
+      "url": "/resources/platophilosophy/academy-daily-life.html",
+      "sources": {
+        "en": "editorial/drafts/biography-academy-daily-life/en-reader-v0.1.md",
+        "it": "editorial/drafts/biography-academy-daily-life/it-reader-v0.1.md",
+        "fr": "editorial/drafts/biography-academy-daily-life/fr-reader-v0.1.md"
+      },
+      "section": "biography",
+      "navigation": "biography",
+      "description": "lead"
+    },
+    {
+      "key": "biography-sicilian-adventures",
+      "type": "article",
+      "url": "/resources/platophilosophy/sicilian-adventures.html",
+      "sources": {
+        "en": "editorial/drafts/biography-sicilian-adventures/en-reader-v0.1.md",
+        "it": "editorial/drafts/biography-sicilian-adventures/it-reader-v0.1.md",
+        "fr": "editorial/drafts/biography-sicilian-adventures/fr-reader-v0.1.md"
+      },
+      "section": "biography",
+      "navigation": "biography",
+      "description": "lead"
+    },
+    {
+      "key": "biography-later-years",
+      "type": "article",
+      "url": "/resources/platophilosophy/later-years.html",
+      "sources": {
+        "en": "editorial/drafts/biography-later-years/en-reader-v0.1.md",
+        "it": "editorial/drafts/biography-later-years/it-reader-v0.1.md",
+        "fr": "editorial/drafts/biography-later-years/fr-reader-v0.1.md"
+      },
+      "section": "biography",
+      "navigation": "biography",
+      "description": "lead"
+    },
+    {
+      "key": "biography-death-and-legacy",
+      "type": "article",
+      "url": "/resources/platophilosophy/death-and-legacy.html",
+      "sources": {
+        "en": "editorial/drafts/biography-death-and-legacy/en-reader-v0.1.md",
+        "it": "editorial/drafts/biography-death-and-legacy/it-reader-v0.1.md",
+        "fr": "editorial/drafts/biography-death-and-legacy/fr-reader-v0.1.md"
+      },
+      "section": "biography",
+      "navigation": "biography",
+      "description": "lead"
+    },
+    {
+      "key": "biography-timeline",
+      "type": "biography-timeline",
+      "url": "/resources/platophilosophy/timeline.html",
+      "sources": {
+        "en": "editorial/drafts/biography-timeline/en-reader-v0.1.md",
+        "it": "editorial/drafts/biography-timeline/it-reader-v0.1.md",
+        "fr": "editorial/drafts/biography-timeline/fr-reader-v0.1.md"
+      },
+      "data": {
+        "file": "editorial/data/biography-timeline-trilingual-v0.1.json"
+      },
+      "section": "biography",
+      "navigation": "biography",
+      "description": "lead"
+    },
+    {
+      "key": "biography-index",
+      "type": "biography-index",
+      "url": "/resources/platophilosophy/index.html",
+      "sources": {
+        "en": "editorial/drafts/biography-index/en-reader-v0.1.md",
+        "it": "editorial/drafts/biography-index/it-reader-v0.1.md",
+        "fr": "editorial/drafts/biography-index/fr-reader-v0.1.md"
+      },
+      "section": "resources",
+      "navigation": "none",
+      "description": "lead"
+    },
+    {
+      "key": "philosophy-index",
+      "type": "article",
+      "url": "/resources/philosophy/index.html",
+      "sources": {
+        "en": "editorial/drafts/philosophy-index/en-reader-v0.1.md",
+        "it": "editorial/drafts/philosophy-index/it-reader-v0.1.md",
+        "fr": "editorial/drafts/philosophy-index/fr-reader-v0.1.md"
+      },
+      "section": "resources",
+      "navigation": "none",
+      "description": {
+        "en": "Plato's philosophy in fifteen chapters: reality and knowledge, the soul, virtue and love, the city, education and art, with passages to read.",
+        "it": "La filosofia di Platone in quindici capitoli: realtà e conoscenza, anima, virtù e amore, la città, l'educazione e l'arte, con i passi da leggere.",
+        "fr": "La philosophie de Platon en quinze chapitres : réalité et connaissance, âme, vertu et amour, la cité, l'éducation et l'art, avec les passages à lire."
+      }
     }
   ]
 }

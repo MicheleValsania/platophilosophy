@@ -1,0 +1,60 @@
+---
+layout: layouts/base.njk
+pageStyles: styles/philosophy-pages.njk
+ogAuto: true
+---
+{%- set tl = "biography-timeline" | keyUrl(lang) -%}
+<main>
+  <section style="padding:20px 0 30px;">
+    <div class="wrap">
+      <div style="max-width:78ch;">
+        <h1 style="margin-top:14px;font-size:38px;line-height:1.15;">{{ title }}</h1>
+{%- if lead %}
+        <p class="meta-line" style="font-size:16px;">{{ lead | safe }}</p>
+{%- endif %}
+      </div>
+      <article class="reading">
+{{ content | safe }}
+      </article>
+    </div>
+  </section>
+
+  <section style="padding:10px 0;">
+    <div class="wrap">
+      <h2 style="font-family:var(--font-serif);">{{ timelineSection.heading }}</h2>
+      <p style="margin-top:12px;max-width:75ch;color:var(--muted);">{{ timelineSection.text | safe }}</p>
+      <p style="margin-top:16px;"><a class="btn" href="{{ tl.url }}"{% if tl.fallback %} hreflang="en"{% endif %}>{{ timelineSection.button }}{% if tl.fallback %}<span class="lang-tag"> {{ "ui.englishOnly" | t(lang) }}</span>{% endif %} →</a></p>
+    </div>
+  </section>
+
+  <section style="padding:30px 0 10px;">
+    <div class="wrap">
+      <h2 style="font-family:var(--font-serif);">{{ chaptersSection.heading }}</h2>
+{%- for p in chaptersSection.text %}
+      <p style="margin-top:12px;max-width:75ch;color:var(--muted);">{{ p | safe }}</p>
+{%- endfor %}
+      <div class="grid-3" style="margin-top:24px;">
+{%- for c in chapters %}
+{%- set target = c.key | keyUrl(lang) %}
+        <div class="card card-link">
+          <div style="font-size:12px;color:var(--accent);font-weight:600;margin-bottom:8px;">{{ "ui.chapter" | t(lang) }} {{ c.order }}</div>
+          <h3>{{ c.title }}</h3>
+          <p style="color:var(--muted);">{{ c.description }}</p>
+          <p style="margin-top:10px;font-size:13px;font-weight:600;"><a href="{{ target.url }}" style="color:var(--accent);"{% if target.fallback %} hreflang="en"{% endif %}>{{ "ui.startReading" | t(lang) }}{% if target.fallback %}<span class="lang-tag"> {{ "ui.englishOnly" | t(lang) }}</span>{% endif %} →</a></p>
+        </div>
+{%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:30px 0 60px;">
+    <div class="wrap">
+      <h2 style="font-family:var(--font-serif);">{{ continueSection.heading }}</h2>
+      <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap;">
+{%- for l in continueSection.links %}
+        <a class="btn secondary" href="{{ l.url | localeUrl(lang) }}">{{ l.label }}</a>
+{%- endfor %}
+      </div>
+    </div>
+  </section>
+</main>
