@@ -1,0 +1,28 @@
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+   crossorigin=""></script>
+<script>
+  // Reference points only: no travel routes are drawn (routePolicy: no-reconstructed-routes)
+  const places = [
+{%- for p in places %}
+    { name: {{ p.name | dump | safe }}, text: {{ p.text | dump | safe }}, coords: [{{ p.lat }}, {{ p.lng }}], url: {{ (p.chapter | localeUrl(lang)) | dump | safe }} },
+{%- endfor %}
+  ];
+  const readMore = {{ ("ui.readMore" | t(lang)) | dump | safe }};
+  const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+  const map = L.map("map").setView([38.0, 23.0], 6);
+
+  // OpenStreetMap standard tiles (no API key required; attribution mandatory)
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 19
+  }).addTo(map);
+
+  places.forEach((p) => {
+    L.marker(p.coords, { title: p.name }).addTo(map).bindPopup(
+      `<div style="min-width:200px;"><strong>${esc(p.name)}</strong><br/>${esc(p.text)}` +
+      `<br/><br/><a href="${p.url}" style="color:var(--accent);font-weight:600;font-size:13px;">${esc(readMore)} →</a></div>`);
+  });
+  map.fitBounds(places.map((p) => p.coords), { padding: [30, 30] });
+</script>

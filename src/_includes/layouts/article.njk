@@ -9,7 +9,9 @@ ogAuto: true
   <section style="padding:20px 0 60px;">
     <div class="wrap">
       <div style="max-width:78ch;">
+{%- if kicker %}
         <div class="kicker"><span class="kdot"></span>{{ kicker }}</div>
+{%- endif %}
         <h1 style="margin-top:14px;font-size:38px;line-height:1.15;">{{ title }}</h1>
 {%- if lead %}
         <p class="meta-line">{{ lead | safe }}</p>

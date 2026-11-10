@@ -97,6 +97,18 @@ function localizeLinks(html, page, lang) {
   return html.slice(0, start) + main + html.slice(end);
 }
 
+// ---------- Nunjucks syntax check of every include (Eleventy may otherwise render a broken include as empty) ----------
+{
+  const nunjucks = require("nunjucks");
+  const walk = (dir) => fs.readdirSync(dir, { withFileTypes: true }).flatMap((d) =>
+    d.isDirectory() ? walk(path.join(dir, d.name)) : d.name.endsWith(".njk") ? [path.join(dir, d.name)] : []);
+  for (const file of walk(path.join(__dirname, "src/_includes"))) {
+    const src = fs.readFileSync(file, "utf8").replace(/^---[\s\S]*?\n---\n/, "");
+    try { nunjucks.parser.parse(src); }
+    catch (e) { throw new Error(`Nunjucks syntax error in ${path.relative(__dirname, file)}: ${e.message}`); }
+  }
+}
+
 module.exports = function (eleventyConfig) {
   // Static files copied byte for byte
   eleventyConfig.addPassthroughCopy("src/assets");
