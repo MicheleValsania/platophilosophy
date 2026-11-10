@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "start": "Par où commencer",
+    "resources": "Ressources",
+    "beginner": "Parcours débutant",
+    "biography": "La vie de Platon",
+    "philosophy": "Philosophie",
+    "dialogues": "Dialogues",
+    "glossary": "Glossaire",
+    "guides": "Guides",
+    "roadmap": "Feuille de route"
+  },
+  "ui": {
+    "theme": "Thème",
+    "themeToggle": "Changer entre thème clair et sombre",
+    "language": "Langue",
+    "menu": "Menu",
+    "breadcrumbHome": "Accueil",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "readMore": "En savoir plus",
+    "open": "Ouvrir",
+    "startReading": "Commencer la lecture",
+    "readingTime": "Temps de lecture",
+    "minute": "minute",
+    "minutes": "minutes",
+    "chapter": "Chapitre",
+    "step": "Étape",
+    "of": "sur",
+    "allResources": "Toutes les ressources",
+    "noTranslation": "Cette page n'est pas encore disponible dans la langue choisie.",
+    "originalEnglish": "Voir l'original en anglais",
+    "emailPlaceholder": "Adresse e-mail",
+    "waitlist": "Liste d'attente",
+    "joinWaitlist": "S'inscrire sur la liste d'attente",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "contact": "Contact",
+    "skipContent": "Aller au contenu principal",
+    "mapMarker": "Lieu sur la carte",
+    "uncertainty": "Le degré de certitude historique dépend des sources",
+    "englishOnly": "(EN)",
+    "breadcrumb": "Fil d'Ariane"
+  },
+  "footer": {
+    "statement": "PLATO est un projet indépendant consacré à l'étude de la pensée platonicienne.",
+    "tagline": "Des parcours clairs pour débuter, des pistes approfondies pour aller plus loin. Le dialogue comme forme d'apprentissage.",
+    "licensePrefix": "Textes sous licence"
+  },
+  "section": {
+    "references": "Références",
+    "glossaryTerms": "termes"
+  }
+}

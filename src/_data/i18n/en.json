@@ -1,20 +1,56 @@
 {
   "nav": {
-    "startHere": "Start Here",
+    "home": "Home",
+    "start": "Start Here",
     "resources": "Resources",
-    "waitlist": "Waitlist",
-    "theme": "Theme",
-    "themeAria": "Toggle theme"
+    "beginner": "Beginner's Path",
+    "biography": "Plato's Life",
+    "philosophy": "Philosophy",
+    "dialogues": "Dialogues",
+    "glossary": "Glossary",
+    "guides": "Guides",
+    "roadmap": "Roadmap"
   },
-  "breadcrumb": {
-    "aria": "Breadcrumb"
+  "ui": {
+    "theme": "Theme",
+    "themeToggle": "Switch between light and dark theme",
+    "language": "Language",
+    "menu": "Menu",
+    "breadcrumbHome": "Home",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "readMore": "Read more",
+    "open": "Open",
+    "startReading": "Start reading",
+    "readingTime": "Reading time",
+    "minute": "minute",
+    "minutes": "minutes",
+    "chapter": "Chapter",
+    "step": "Step",
+    "of": "of",
+    "allResources": "All resources",
+    "noTranslation": "This page is not yet available in the selected language.",
+    "originalEnglish": "View the English original",
+    "emailPlaceholder": "Email address",
+    "waitlist": "Waitlist",
+    "joinWaitlist": "Join the waitlist",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact",
+    "skipContent": "Skip to main content",
+    "mapMarker": "Map location",
+    "uncertainty": "Historical certainty varies by source",
+    "englishOnly": "(EN)",
+    "breadcrumb": "Breadcrumb"
   },
   "footer": {
-    "about": "PLATO is an independent project for studying Platonic thought.",
+    "statement": "PLATO is an independent project for studying Platonic thought.",
     "tagline": "Clear paths for beginners. Deeper routes for advanced readers. Dialogue as a way of learning.",
-    "privacy": "Privacy",
-    "terms": "Terms",
-    "contact": "Contact",
     "licensePrefix": "Text licensed under"
+  },
+  "section": {
+    "references": "References",
+    "glossaryTerms": "terms"
   }
 }

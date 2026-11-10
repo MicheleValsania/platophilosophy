@@ -17,4 +17,19 @@
       localStorage.setItem("theme", next);
     });
   })();
+
+  // Header pop-ups (menu, language): one open at a time; close on outside click or Escape
+  (function(){
+    const pops = document.querySelectorAll("details.nav-pop");
+    pops.forEach((d) => d.addEventListener("toggle", () => {
+      if (d.open) pops.forEach((o) => { if (o !== d) o.open = false; });
+    }));
+    document.addEventListener("click", (e) => {
+      pops.forEach((d) => { if (d.open && !d.contains(e.target)) d.open = false; });
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape") return;
+      pops.forEach((d) => { if (d.open) { d.open = false; d.querySelector("summary").focus(); } });
+    });
+  })();
 </script>

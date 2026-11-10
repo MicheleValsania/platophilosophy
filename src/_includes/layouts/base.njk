@@ -1,16 +1,20 @@
 <!doctype html>
-<html lang="{{ lang }}">
+<html lang="{{ lang }}"{% if translationKey %} data-key="{{ translationKey }}"{% endif %}>
 <head>
 {% include "partials/head.njk" %}
-{%- block head %}{% endblock %}
+{%- block head %}{% if pageStyles %}
+  {% include pageStyles %}{% endif %}{% if jsonld %}
+  <script type="application/ld+json">{{ jsonld | dump | safe }}</script>{% endif %}{% endblock %}
 </head>
 <body>
 {% include "partials/header.njk" %}
 {% include "partials/breadcrumb.njk" %}
-{%- block content %}{% endblock %}
+{%- block content %}{{ content | safe }}{% endblock %}
 {% include "partials/footer.njk" %}
 {% include "partials/theme-toggle.njk" %}
-{%- block scripts %}{% endblock %}
+{%- block scripts %}{% if pageScripts %}{% include pageScripts %}{% endif %}{% endblock %}
+{%- if env.context == "production" %}
 <script data-goatcounter="https://plato.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+{%- endif %}
 </body>
 </html>

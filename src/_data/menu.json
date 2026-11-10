@@ -1,0 +1,12 @@
+[
+  { "id": "home", "url": "/index.html" },
+  { "id": "start", "url": "/resources/guides/start-here.html" },
+  { "id": "resources", "url": "/resources.html" },
+  { "id": "beginner", "url": "/beginner/why-philosophy.html" },
+  { "id": "biography", "url": "/resources/platophilosophy/index.html" },
+  { "id": "philosophy", "url": "/resources/philosophy/index.html" },
+  { "id": "dialogues", "url": "/resources/references/dialogues.html" },
+  { "id": "glossary", "url": "/resources/references/glossary.html" },
+  { "id": "guides", "url": "/resources.html#guides" },
+  { "id": "roadmap", "url": "/roadmap.html" }
+]

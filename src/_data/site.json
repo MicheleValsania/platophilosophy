@@ -4,5 +4,15 @@
   "domain": "platophilosophy.com",
   "email": "contact@platophilosophy.com",
   "formspreeId": "mojdzdap",
-  "hreflang": false
+  "hreflang": true,
+  "languages": {
+    "en": "English",
+    "it": "Italiano",
+    "fr": "Français"
+  },
+  "ogLocale": {
+    "en": "en_US",
+    "it": "it_IT",
+    "fr": "fr_FR"
+  }
 }

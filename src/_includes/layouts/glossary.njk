@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+pageStyles: styles/glossary.njk
+pageScripts: scripts/glossary.njk
+ogAuto: true
+---
+{%- set entries = glossary.records | glossaryEntries(lang) -%}
+<main>
+  <section style="padding:46px 0 18px;">
+    <div class="wrap">
+
+      <div class="kicker"><span class="kdot"></span> {{ kicker }}</div>
+      <h1 style="margin-top:16px;">{{ title }}</h1>
+
+      <div class="reading" style="max-width:78ch;margin-top:14px;color:var(--muted);">
+{{ content | safe }}
+      </div>
+
+      <nav class="alpha-nav" aria-label="{{ title }}">
+{%- for group in entries %}
+        <a href="#{{ group.letter }}" class="alpha-link">{{ group.letter }}</a>
+{%- endfor %}
+      </nav>
+{% for group in entries %}
+      <div class="letter-section" id="{{ group.letter }}">
+        <h2 class="letter-heading">{{ group.letter }}</h2>
+{%- for r in group.records %}
+
+        <div class="term" id="{{ r.id }}">
+          <div class="term-title">{{ r.headword }}{% if r.greek %} <span class="term-greek">({{ r.greek }}</span><span class="term-translit">{{ r.transliteration }})</span>{% endif %}</div>
+          <div class="term-def">{{ r.definition }}</div>
+        </div>
+{%- endfor %}
+
+      </div>
+{% endfor %}
+      <div class="hr"></div>
+
+      <div class="nav-row">
+        <a class="btn secondary" href="{{ '/resources.html' | localeUrl(lang) }}#references">← {{ "section.references" | t(lang) }}</a>
+        <a class="btn" href="{{ '/resources/references/dialogues.html' | localeUrl(lang) }}">{{ "ui.next" | t(lang) }}: {{ "nav.dialogues" | t(lang) }} →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
