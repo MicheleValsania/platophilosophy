@@ -381,7 +381,10 @@ for (const page of list.pages) {
         // map and location cards from the dataset, before the closing "related resources" paragraph
         const data = dataset();
         if (data.routePolicy !== "no-reconstructed-routes") fail(`${page.data.file}: unexpected routePolicy "${data.routePolicy}"`);
-        fm.places = data.places.map((p) => ({ id: p.id, name: p.name[lang], text: p.text[lang], lat: p.lat, lng: p.lng, chapter: p.sourcePage }));
+        // the map texts end up inside a script, where the site's French spacing does not reach: apply it here
+        const fr = (x) => (lang !== "fr" ? x : x.replace(/[ \u00a0]+([;:?!])/g, "\u202f$1").replace(/(?<=[\p{L}\p{N})\]»])([;:?!])(?=\s|$)/gu, "\u202f$1")
+          .replace(/«[ \u00a0]*/g, "«\u202f").replace(/[ \u00a0]*»/g, "\u202f»"));
+        fm.places = data.places.map((p) => ({ id: p.id, name: fr(p.name[lang]), text: fr(p.text[lang]), lat: p.lat, lng: p.lng, chapter: p.sourcePage }));
         fm.pageStyles = "styles/map.njk";
         fm.pageScripts = "scripts/map.njk";
         const cards = ['<div id="map" role="region" aria-label="' + esc(a.title) + '"></div>', '<div class="location-cards">',

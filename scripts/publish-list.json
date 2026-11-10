@@ -390,7 +390,7 @@
       "navigation": "philosophy",
       "pageTitle": {
         "en": "Philosopher-Rulers: Knowledge and the Burden of Power | PLATO",
-        "it": "Filosofi al governo: conoscenza e responsabilità del potere | PLATO",
+        "it": "I filosofi al governo: sapere e potere | PLATO",
         "fr": "Les philosophes au pouvoir : savoir et responsabilité | PLATO"
       },
       "description": {
@@ -630,7 +630,11 @@
       },
       "section": "start",
       "navigation": "beginner",
-      "description": "beginner-path"
+      "description": {
+        "en": "Why philosophical questions about justice, knowledge and the good life remain open, and how Plato's dialogues teach us to examine them.",
+        "it": "Perché le domande filosofiche su giustizia, conoscenza e vita buona restano aperte, e come i dialoghi di Platone insegnano a esaminarle.",
+        "fr": "Pourquoi les questions philosophiques sur la justice, la connaissance et la vie bonne restent ouvertes, et comment Platon apprend à les examiner."
+      }
     },
     {
       "key": "beginner-what-makes-plato-different",
@@ -643,7 +647,11 @@
       },
       "section": "start",
       "navigation": "beginner",
-      "description": "beginner-path"
+      "description": {
+        "en": "What sets Plato apart: philosophical argument, drama and myth combined in dialogues in which the author never speaks in his own voice.",
+        "it": "Che cosa distingue Platone: argomentazione filosofica, dramma e mito uniti in dialoghi in cui l'autore non parla mai in prima persona.",
+        "fr": "Ce qui distingue Platon : l'argument philosophique, le drame et le mythe réunis dans des dialogues où l'auteur ne parle jamais en son nom."
+      }
     },
     {
       "key": "beginner-dialogue-form",
@@ -656,7 +664,11 @@
       },
       "section": "start",
       "navigation": "beginner",
-      "description": "beginner-path"
+      "description": {
+        "en": "How to read a Platonic dialogue: characters, setting, objections and endings in aporia, and why the form matters for the argument.",
+        "it": "Come leggere un dialogo platonico: personaggi, ambientazione, obiezioni e finali aporetici, e perché la forma conta per l'argomento.",
+        "fr": "Comment lire un dialogue de Platon : personnages, cadre, objections et fins aporétiques, et pourquoi la forme compte pour l'argument."
+      }
     },
     {
       "key": "beginner-socratic-method",
@@ -669,7 +681,11 @@
       },
       "section": "start",
       "navigation": "beginner",
-      "description": "beginner-path"
+      "description": {
+        "en": "The Socratic elenchus explained: how definitions are tested, what Socrates claims to know, and the limits of questioning.",
+        "it": "L'élenchos socratico spiegato: come si mettono alla prova le definizioni, che cosa Socrate dice di sapere e i limiti della confutazione.",
+        "fr": "L'elenchos socratique expliqué : comment les définitions sont mises à l'épreuve, ce que Socrate dit savoir et les limites du questionnement."
+      }
     },
     {
       "key": "beginner-reading-vs-summary",
@@ -682,7 +698,11 @@
       },
       "section": "start",
       "navigation": "beginner",
-      "description": "beginner-path"
+      "description": {
+        "en": "Why reading Plato's dialogues differs from reading a summary, and how to use guides, glossaries and translations without replacing the text.",
+        "it": "Perché leggere i dialoghi di Platone è diverso dal leggerne un riassunto, e come usare guide, glossari e traduzioni senza sostituire il testo.",
+        "fr": "Pourquoi lire les dialogues de Platon diffère de lire un résumé, et comment utiliser guides, glossaires et traductions sans remplacer le texte."
+      }
     },
     {
       "key": "beginner-pathways",
@@ -695,7 +715,11 @@
       },
       "section": "start",
       "navigation": "beginner",
-      "description": "beginner-path"
+      "description": {
+        "en": "Three ways to continue after the Beginner's Path: Plato's life and times, the main philosophical questions, or a first dialogue.",
+        "it": "Tre modi per proseguire dopo il percorso per principianti: la vita e l'epoca di Platone, le grandi questioni filosofiche o un primo dialogo.",
+        "fr": "Trois façons de poursuivre après le parcours débutant : la vie et l'époque de Platon, les grandes questions philosophiques ou un premier dialogue."
+      }
     },
     {
       "key": "guide-start-here",
