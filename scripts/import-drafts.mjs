@@ -87,6 +87,7 @@ const targetUrl = (key, url, lang) => (publishedLangs.get(key)?.has(lang) ? loca
 
 const SECTIONS = {
   resources: null,
+  start: { label: "nav.start", url: "/resources/guides/start-here.html", key: "guide-start-here" },
   biography: { label: "nav.biography", url: "/resources/platophilosophy/index.html", key: "biography-index" },
   philosophy: { label: "nav.philosophy", url: "/resources/philosophy/index.html", key: "philosophy-index" },
   references: { label: "section.references", url: "/resources.html#references", key: "site-resources" },
@@ -143,6 +144,20 @@ function biographyNav(key, lang) {
     previous: item(ch[i - 1]) || { key: "biography-index", label: t(lang, "nav.biography") },
     next: item(ch[i + 1]) || { key: "biography-timeline", label: biographyIndex.timeline.title[lang] },
   };
+}
+
+let beginnerPath;
+function beginnerStep(key) {
+  beginnerPath ??= JSON.parse(fs.readFileSync(path.join(PRIVATE, "editorial/data/beginner-path-trilingual-v0.1.json"), "utf8"));
+  if (beginnerPath.status !== "approved") fail(`beginner-path-trilingual-v0.1.json: status is "${beginnerPath.status}"`);
+  const step = beginnerPath.steps.find((s) => s.translationKey === key);
+  if (!step) fail(`${key} not found in beginner-path-trilingual-v0.1.json`);
+  return step;
+}
+function beginnerNav(key, lang) {
+  const step = beginnerStep(key);
+  const item = (k) => k && { key: k, label: beginnerStep(k).title[lang] };
+  return { previous: item(step.previous), next: item(step.next) };
 }
 
 // "## Heading" sections of a draft: [{ heading, blocks }] (blocks before the first heading: heading null)
@@ -250,9 +265,12 @@ for (const page of list.pages) {
       const a = splitArticle(draft.body, rel);
       const crumbs = breadcrumb(page.section, lang, a.title);
       const nav = page.navigation === "biography" ? biographyNav(page.key, lang)
-        : page.navigation === "philosophy" ? philosophyNav(page.key, lang) : {};
-      // Description: approved separately in publish-list.json, or the draft's own (approved) lead
-      const description = page.description === "lead" ? a.lead.replace(/<[^>]+>/g, "") : page.description[lang];
+        : page.navigation === "philosophy" ? philosophyNav(page.key, lang)
+        : page.navigation === "beginner" ? beginnerNav(page.key, lang) : {};
+      // Description: approved separately in publish-list.json, the draft's own lead, or the approved dataset entry
+      const description = page.description === "lead" ? a.lead.replace(/<[^>]+>/g, "")
+        : page.description === "beginner-path" ? beginnerStep(page.key).description[lang]
+        : page.description[lang];
       if (!description) fail(`${rel}: no description (publish-list.json) and no lead`);
       if (description.length > 155) fail(`${rel}: description longer than 155 characters`);
       fm = {

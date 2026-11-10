@@ -570,6 +570,84 @@
         "it": "La filosofia di Platone in quindici capitoli: realtà e conoscenza, anima, virtù e amore, la città, l'educazione e l'arte, con i passi da leggere.",
         "fr": "La philosophie de Platon en quinze chapitres : réalité et connaissance, âme, vertu et amour, la cité, l'éducation et l'art, avec les passages à lire."
       }
+    },
+    {
+      "key": "beginner-why-philosophy",
+      "type": "article",
+      "url": "/beginner/why-philosophy.html",
+      "sources": {
+        "en": "editorial/drafts/beginner-why-philosophy/en-reader-v0.1.md",
+        "it": "editorial/drafts/beginner-why-philosophy/it-reader-v0.1.md",
+        "fr": "editorial/drafts/beginner-why-philosophy/fr-reader-v0.1.md"
+      },
+      "section": "start",
+      "navigation": "beginner",
+      "description": "beginner-path"
+    },
+    {
+      "key": "beginner-what-makes-plato-different",
+      "type": "article",
+      "url": "/beginner/what-makes-plato-different.html",
+      "sources": {
+        "en": "editorial/drafts/beginner-what-makes-plato-different/en-reader-v0.1.md",
+        "it": "editorial/drafts/beginner-what-makes-plato-different/it-reader-v0.1.md",
+        "fr": "editorial/drafts/beginner-what-makes-plato-different/fr-reader-v0.1.md"
+      },
+      "section": "start",
+      "navigation": "beginner",
+      "description": "beginner-path"
+    },
+    {
+      "key": "beginner-dialogue-form",
+      "type": "article",
+      "url": "/beginner/dialogue-form.html",
+      "sources": {
+        "en": "editorial/drafts/beginner-dialogue-form/en-reader-v0.1.md",
+        "it": "editorial/drafts/beginner-dialogue-form/it-reader-v0.1.md",
+        "fr": "editorial/drafts/beginner-dialogue-form/fr-reader-v0.1.md"
+      },
+      "section": "start",
+      "navigation": "beginner",
+      "description": "beginner-path"
+    },
+    {
+      "key": "beginner-socratic-method",
+      "type": "article",
+      "url": "/beginner/socratic-method.html",
+      "sources": {
+        "en": "editorial/drafts/beginner-socratic-method/en-reader-v0.1.md",
+        "it": "editorial/drafts/beginner-socratic-method/it-reader-v0.1.md",
+        "fr": "editorial/drafts/beginner-socratic-method/fr-reader-v0.1.md"
+      },
+      "section": "start",
+      "navigation": "beginner",
+      "description": "beginner-path"
+    },
+    {
+      "key": "beginner-reading-vs-summary",
+      "type": "article",
+      "url": "/beginner/reading-vs-summary.html",
+      "sources": {
+        "en": "editorial/drafts/beginner-reading-vs-summary/en-reader-v0.1.md",
+        "it": "editorial/drafts/beginner-reading-vs-summary/it-reader-v0.1.md",
+        "fr": "editorial/drafts/beginner-reading-vs-summary/fr-reader-v0.1.md"
+      },
+      "section": "start",
+      "navigation": "beginner",
+      "description": "beginner-path"
+    },
+    {
+      "key": "beginner-pathways",
+      "type": "article",
+      "url": "/beginner/pathways.html",
+      "sources": {
+        "en": "editorial/drafts/beginner-pathways/en-reader-v0.1.md",
+        "it": "editorial/drafts/beginner-pathways/it-reader-v0.1.md",
+        "fr": "editorial/drafts/beginner-pathways/fr-reader-v0.1.md"
+      },
+      "section": "start",
+      "navigation": "beginner",
+      "description": "beginner-path"
     }
   ]
 }
