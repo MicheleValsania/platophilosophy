@@ -1,11 +1,17 @@
 ---
-lang: "en"
-title: "404 - Page Not Found | PLATO"
-description: "The page you're looking for doesn't exist. Return to platophilosophy.com to explore Plato's philosophy."
+langs: ["en", "it", "fr"]
+pagination:
+  data: langs
+  size: 1
+  alias: L
+eleventyComputed:
+  permalink: "{{ '/404.html' if L == 'en' else '/' + L + '/404.html' }}"
+  lang: "{{ L }}"
+  title: "{{ 'notFound.pageTitle' | t(L) }}"
+  description: "{{ 'notFound.description' | t(L) }}"
 robots: "noindex, follow"
 og: []
 twitter: []
-translationKey: "site-404"
 ---
 {% extends "layouts/base.njk" %}
 {% block head %}
@@ -63,48 +69,26 @@ translationKey: "site-404"
     <div class="wrap">
 
       <div class="error-code">404</div>
-      <h1 class="error-message">Page Not Found</h1>
+      <h1 class="error-message">{{ "notFound.heading" | t(lang) }}</h1>
 
-      <p class="error-desc">
-        The page you're looking for doesn't exist or has been moved.
-        Perhaps like Socrates searching for wisdom, we must admit:
-        <em>"I know that I know nothing about this URL."</em>
-      </p>
+      <p class="error-desc">{{ "notFound.text" | t(lang) }}</p>
 
       <div style="margin-top:32px;">
-        <a href="/index.html" class="btn">Return Home</a>
-        <a href="/resources.html" class="btn secondary" style="margin-left:12px;">Browse Resources</a>
+        <a href="{{ '/index.html' | localeUrl(lang) | prettyHome }}" class="btn">{{ "notFound.home" | t(lang) }}</a>
+        <a href="{{ '/resources.html' | localeUrl(lang) }}" class="btn secondary" style="margin-left:12px;">{{ "notFound.resources" | t(lang) }}</a>
       </div>
 
       <div style="margin-top:60px;max-width:800px;margin-left:auto;margin-right:auto;">
-        <h2 style="font-size:1.3rem;margin-bottom:24px;color:var(--text);">Suggested Paths</h2>
+        <h2 style="font-size:1.3rem;margin-bottom:24px;color:var(--text);">{{ "notFound.suggested" | t(lang) }}</h2>
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
-
-          <a href="/beginner/why-philosophy.html" class="suggestion-card" style="text-decoration:none;color:inherit;">
-            <div style="font-size:32px;margin-bottom:8px;">📚</div>
-            <h3 style="margin:0 0 8px;font-size:17px;color:var(--text);">Beginner's Path</h3>
-            <p style="margin:0;font-size:14px;color:var(--muted);line-height:1.6;">
-              Start from the beginning with our 6-page introduction to philosophy and Plato.
-            </p>
+{%- for s in [["beginner", "/beginner/why-philosophy.html", "📚"], ["biography", "/resources/platophilosophy/index.html", "🏛️"], ["dialogues", "/resources/references/dialogues.html", "📖"]] %}
+          <a href="{{ s[1] | localeUrl(lang) }}" class="suggestion-card" style="text-decoration:none;color:inherit;">
+            <div style="font-size:32px;margin-bottom:8px;" aria-hidden="true">{{ s[2] }}</div>
+            <h3 style="margin:0 0 8px;font-size:17px;color:var(--text);">{{ ("nav." + s[0]) | t(lang) }}</h3>
+            <p style="margin:0;font-size:14px;color:var(--muted);line-height:1.6;">{{ ("notFound." + s[0]) | t(lang) }}</p>
           </a>
-
-          <a href="/resources/platophilosophy/index.html" class="suggestion-card" style="text-decoration:none;color:inherit;">
-            <div style="font-size:32px;margin-bottom:8px;">🏛️</div>
-            <h3 style="margin:0 0 8px;font-size:17px;color:var(--text);">Plato's Life</h3>
-            <p style="margin:0;font-size:14px;color:var(--muted);line-height:1.6;">
-              Explore Plato's biography from birth in 428 BC to his death and legacy.
-            </p>
-          </a>
-
-          <a href="/resources/references/dialogues.html" class="suggestion-card" style="text-decoration:none;color:inherit;">
-            <div style="font-size:32px;margin-bottom:8px;">📖</div>
-            <h3 style="margin:0 0 8px;font-size:17px;color:var(--text);">Dialogues Library</h3>
-            <p style="margin:0;font-size:14px;color:var(--muted);line-height:1.6;">
-              Browse Plato's dialogues with introductions and reading guidance.
-            </p>
-          </a>
-
+{%- endfor %}
         </div>
       </div>
 

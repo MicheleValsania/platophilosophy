@@ -52,5 +52,57 @@
   "section": {
     "references": "Riferimenti",
     "glossaryTerms": "termini"
+  },
+  "dialogues": {
+    "selection": "Percorso di lettura",
+    "selectionNote": "Venticinque dialoghi e la Lettera VII, con suggerimenti su da dove partire.",
+    "filter": "Mostra",
+    "filterAll": "Tutti",
+    "groups": {
+      "traditional-early": "Tradizionalmente giovanili",
+      "traditional-middle": "Tradizionalmente della maturità",
+      "traditional-late": "Gruppo tardo",
+      "letters": "Lettere"
+    },
+    "corpus": "Il corpus completo",
+    "corpusNote": "Tutte le opere tramandate sotto il nome di Platone, nell'ordine antico di Trasillo.",
+    "tetralogy": "Tetralogia",
+    "appendix": "Opere fuori dalle tetralogie",
+    "appendixNote": "Opere più brevi che già Trasillo aveva escluso come spurie.",
+    "other": "Altre opere attribuite",
+    "letters": "Le tredici Lettere",
+    "attribution": {
+      "generally-authentic": "Generalmente autentica",
+      "disputed": "Di autenticità discussa",
+      "generally-spurious": "Generalmente ritenuta non platonica",
+      "mixed": "Varia da un testo all'altro"
+    },
+    "difficulty": {
+      "Easy": "Facile",
+      "Medium": "Media",
+      "Hard": "Impegnativa",
+      "Very Hard": "Molto impegnativa"
+    },
+    "time": "Tempo di lettura",
+    "level": "Difficoltà",
+    "estimate": "stima editoriale",
+    "textIn": {
+      "en": "Testo inglese",
+      "it": "Testo italiano"
+    },
+    "inSelection": "Nel percorso di lettura",
+    "external": "si apre un sito esterno"
+  },
+  "notFound": {
+    "pageTitle": "Pagina non trovata | PLATO",
+    "description": "Questa pagina non esiste o è stata spostata.",
+    "heading": "Pagina non trovata",
+    "text": "Questa pagina non esiste o è stata spostata. Socrate non pretendeva di sapere ciò che non sapeva: anche noi ammettiamo di non sapere dove sia finito questo indirizzo.",
+    "home": "Pagina iniziale",
+    "resources": "Esplora le risorse",
+    "suggested": "Percorsi consigliati",
+    "beginner": "Sei brevi tappe tra le domande filosofiche e il modo di scrivere di Platone.",
+    "biography": "Undici capitoli e una cronologia, dall'Atene del 428 a.C. all'eredità di Platone.",
+    "dialogues": "Tutte le opere tramandate sotto il nome di Platone, con un percorso di lettura."
   }
 }

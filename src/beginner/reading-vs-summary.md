@@ -6,15 +6,15 @@ lang: "en"
 translationKey: "beginner-reading-vs-summary"
 title: "Reading vs Being Told"
 pageTitle: "Reading vs Being Told | PLATO"
-description: "Using summaries without replacing primary texts"
+description: "Why reading Plato's dialogues differs from reading a summary, and how to use guides, glossaries and translations without replacing the text."
 kicker: "Beginner's Path · Step 5 of 6"
 canonical: "/beginner/reading-vs-summary.html"
 breadcrumb: {"links":[{"label":"Home","url":"/index.html"},{"label":"Resources","url":"/resources.html"},{"label":"Start Here","url":"/resources/guides/start-here.html"}],"current":"Reading vs Being Told"}
 previous: {"key":"beginner-socratic-method","label":"The Socratic Method"}
 next: {"key":"beginner-pathways","label":"Choose Your Path"}
-jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Reading vs Being Told","description":"Using summaries without replacing primary texts","inLanguage":"en","url":"https://platophilosophy.com/beginner/reading-vs-summary.html","mainEntityOfPage":"https://platophilosophy.com/beginner/reading-vs-summary.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-10T00:47:49+01:00"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://platophilosophy.com/index.html"},{"@type":"ListItem","position":2,"name":"Resources","item":"https://platophilosophy.com/resources.html"},{"@type":"ListItem","position":3,"name":"Start Here","item":"https://platophilosophy.com/resources/guides/start-here.html"},{"@type":"ListItem","position":4,"name":"Reading vs Being Told"}]}]
+jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Reading vs Being Told","description":"Why reading Plato's dialogues differs from reading a summary, and how to use guides, glossaries and translations without replacing the text.","inLanguage":"en","url":"https://platophilosophy.com/beginner/reading-vs-summary.html","mainEntityOfPage":"https://platophilosophy.com/beginner/reading-vs-summary.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-10T21:29:04+01:00"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://platophilosophy.com/index.html"},{"@type":"ListItem","position":2,"name":"Resources","item":"https://platophilosophy.com/resources.html"},{"@type":"ListItem","position":3,"name":"Start Here","item":"https://platophilosophy.com/resources/guides/start-here.html"},{"@type":"ListItem","position":4,"name":"Reading vs Being Told"}]}]
 sitemap: {"order":7,"loc":"/beginner/reading-vs-summary.html","changefreq":"monthly","priority":"0.8"}
-importedFrom: {"path":"editorial/drafts/beginner-reading-vs-summary/en-reader-v0.1.md","commit":"2401f3e7b6d6daa7e5aa959c2a5be69eda5d3c4c"}
+importedFrom: {"path":"editorial/drafts/beginner-reading-vs-summary/en-reader-v0.1.md","commit":"688cdf8303898e59df1e321f897e987c739b67d3"}
 ---
 A summary of the *Republic* might explain the Forms, justice and philosopher-rulers in a few minutes. That is useful when you need orientation. But a summary is not the same experience as **reading the dialogue**.
 
@@ -42,10 +42,10 @@ A translation also involves editorial choices. If an unfamiliar term matters to 
 
 ## A practical first reading
 
-Try a shorter dialogue or closely related text: the *Euthyphro* asks what piety is; the *Crito* examines whether Socrates should escape; the *Apology* presents his defense at trial. Reading times vary greatly by edition, translation and reader, so there is no fixed thirty-minute target.
+Try a shorter dialogue or closely related text: the *Euthyphro* asks what piety is; the *Crito* examines whether Socrates should escape; the *Apology* presents his defense at trial. There is no hurry: reading times vary greatly with the edition, the translation and the reader.
 
 Begin with one question. Record one answer, one objection and one point that still puzzles you. Then consider whether your own view changed.
 
-Later, the *Meno*, *Phaedo*, *Symposium* and *Republic* open broader problems. Works such as the *Sophist* and *Timaeus* introduce different forms of philosophical inquiry; the *Parmenides* and *Theaetetus* are not securely dated to Plato's very last years.
+Later, the *Meno*, *Phaedo*, *Symposium* and *Republic* open broader problems. Works such as the *Sophist* and *Timaeus* introduce different forms of philosophical inquiry.
 
 **Try it:** read five pages of a dialogue before opening a summary. Then compare what you noticed with what the summary emphasizes.

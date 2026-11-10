@@ -1,0 +1,12 @@
+<script>
+  // Optional filter of the reading selection by the traditional chronological groups
+  (function(){
+    const chips = document.querySelectorAll('.filter .chip');
+    const cards = document.querySelectorAll('.cards .card');
+    chips.forEach((chip) => chip.addEventListener('click', () => {
+      const g = chip.dataset.group;
+      chips.forEach((c) => c.setAttribute('aria-pressed', String(c === chip)));
+      cards.forEach((card) => { card.hidden = g !== 'all' && card.dataset.group !== g; });
+    }));
+  })();
+</script>

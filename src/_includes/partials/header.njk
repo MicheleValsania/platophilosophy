@@ -1,14 +1,14 @@
 {%- set alts = translationKey | alternates -%}
 <header>
   <div class="wrap nav">
-    <a class="brand" href="{{ '/index.html' | localeUrl(lang) }}">
+    <a class="brand" href="{{ '/index.html' | localeUrl(lang) | prettyHome }}">
       <div class="mark">Φ</div>
       <div><strong>{{ site.name }}</strong><br/><span style="font-size:12px;color:var(--muted-soft)">{{ site.domain }}</span></div>
     </a>
     <div class="nav-actions">
       <a class="btn secondary nav-text" href="{{ '/resources/guides/start-here.html' | localeUrl(lang) }}">{{ "nav.start" | t(lang) }}</a>
       <a class="btn secondary nav-text" href="{{ '/resources.html' | localeUrl(lang) }}">{{ "nav.resources" | t(lang) }}</a>
-      <a class="btn secondary nav-text" href="{{ waitlistHref or ('/index.html' | localeUrl(lang)) + '#waitlist' }}">{{ "ui.waitlist" | t(lang) }}</a>
+      <a class="btn secondary nav-text" href="{{ waitlistHref or ('/index.html' | localeUrl(lang) | prettyHome) + '#waitlist' }}">{{ "ui.waitlist" | t(lang) }}</a>
       <button class="btn secondary btn-icon" id="themeToggle" type="button" aria-label="{{ 'ui.themeToggle' | t(lang) }}" title="{{ 'ui.themeToggle' | t(lang) }}"><span aria-hidden="true">◐</span></button>
 {%- if alts.length > 1 %}
       <details class="nav-pop lang-menu">
@@ -25,9 +25,9 @@
         <nav class="pop-panel" aria-label="{{ 'ui.menu' | t(lang) }}">
           <ul role="list">
 {%- for item in menu %}
-            <li><a href="{{ item.url | localeUrl(lang) }}">{{ ("nav." + item.id) | t(lang) }}</a></li>
+            <li><a href="{{ item.url | localeUrl(lang) | prettyHome }}">{{ ("nav." + item.id) | t(lang) }}</a></li>
 {%- endfor %}
-            <li><a href="{{ ('/index.html' | localeUrl(lang)) + '#waitlist' }}">{{ "ui.joinWaitlist" | t(lang) }}</a></li>
+            <li><a href="{{ ('/index.html' | localeUrl(lang) | prettyHome) + '#waitlist' }}">{{ "ui.joinWaitlist" | t(lang) }}</a></li>
           </ul>
         </nav>
       </details>

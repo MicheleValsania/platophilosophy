@@ -1,0 +1,3 @@
+# Netlify: 404 page in the visitor's language (applies only when no file matches)
+/it/*  /it/404.html  404
+/fr/*  /fr/404.html  404

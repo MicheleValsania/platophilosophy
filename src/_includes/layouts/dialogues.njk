@@ -1,0 +1,109 @@
+---
+layout: layouts/base.njk
+pageStyles: styles/dialogues.njk
+pageScripts: scripts/dialogues.njk
+ogAuto: true
+---
+{%- set D = "dialogues" -%}
+{%- macro badge(status) -%}
+<span class="attr attr-{{ status }}">{{ ("dialogues.attribution." + status) | t(lang) }}</span>
+{%- endmacro -%}
+<main>
+  <section style="padding:46px 0 18px;">
+    <div class="wrap">
+
+      <div class="kicker"><span class="kdot"></span> {{ kicker }}</div>
+      <h1 style="margin-top:16px;">{{ title }}</h1>
+
+      <div class="reading" style="max-width:78ch;margin-top:14px;color:var(--muted);">
+{{ content | safe }}
+      </div>
+
+      <nav class="toc" aria-label="{{ title }}">
+        <a href="#selection">{{ "dialogues.selection" | t(lang) }}</a>
+        <a href="#corpus">{{ "dialogues.corpus" | t(lang) }}</a>
+      </nav>
+
+      <h2 id="selection" class="section-title">{{ "dialogues.selection" | t(lang) }}</h2>
+      <p class="section-note">{{ "dialogues.selectionNote" | t(lang) }}</p>
+
+      <div class="filter" role="group" aria-label="{{ 'dialogues.filter' | t(lang) }}">
+        <span class="filter-label">{{ "dialogues.filter" | t(lang) }}:</span>
+        <button type="button" class="chip" data-group="all" aria-pressed="true">{{ "dialogues.filterAll" | t(lang) }}</button>
+{%- for g in ["traditional-early", "traditional-middle", "traditional-late", "letters"] %}
+        <button type="button" class="chip" data-group="{{ g }}" aria-pressed="false">{{ ("dialogues.groups." + g) | t(lang) }}</button>
+{%- endfor %}
+      </div>
+
+      <div class="cards">
+{%- for c in dialogues.selection %}
+        <article class="card" id="read-{{ c.id }}" data-group="{{ c.group }}">
+          <h3>{{ c.titles[lang] }}</h3>
+          <p class="card-group">{{ ("dialogues.groups." + c.group) | t(lang) }}</p>
+          <p class="card-text">{{ c.summaries[lang] }}</p>
+          <p class="card-meta">
+            <span>{{ "dialogues.time" | t(lang) }}: ≈ {{ c.time.min }}{% if c.time.plus %}+{% endif %} min</span>
+            <span>{{ "dialogues.level" | t(lang) }}: {{ ("dialogues.difficulty." + c.difficulty) | t(lang) }}</span>
+            <span class="muted">({{ "dialogues.estimate" | t(lang) }})</span>
+          </p>
+{%- if c.links.length %}
+          <p class="card-links">
+{%- for l in c.links %}
+            <a href="{{ l.url }}" target="_blank" rel="noopener" hreflang="{{ l.locale }}">{{ ("dialogues.textIn." + l.locale) | t(lang) }} · {{ l.provider }}<span class="sr-only"> ({{ "dialogues.external" | t(lang) }})</span> ↗</a>
+{%- endfor %}
+          </p>
+{%- endif %}
+        </article>
+{%- endfor %}
+      </div>
+
+      <h2 id="corpus" class="section-title">{{ "dialogues.corpus" | t(lang) }}</h2>
+      <p class="section-note">{{ "dialogues.corpusNote" | t(lang) }}</p>
+
+{%- for tet in dialogues.tetralogies %}
+      <h3 class="tetralogy" id="tetralogy-{{ tet.number }}">{{ "dialogues.tetralogy" | t(lang) }} {{ tet.number | roman }}</h3>
+      <ul class="works" role="list">
+{%- for w in tet.works %}
+        <li class="work" id="{{ w.id }}">
+          <div class="work-head"><span class="work-title">{{ w.titles[lang] }}</span> {{ badge(w.attribution) }}{% if w.inSelection %} <a class="in-sel" href="#read-{{ w.id }}">{{ "dialogues.inSelection" | t(lang) }}</a>{% endif %}</div>
+          <p class="work-text">{{ w.summaries[lang] }}</p>
+{%- if w.items.length %}
+          <ul class="items" role="list">
+{%- for x in w.items %}
+            <li id="{{ x.id }}"><div class="work-head"><span class="work-title">{{ x.titles[lang] }}</span> {{ badge(x.attribution) }}{% if x.inSelection %} <a class="in-sel" href="#read-{{ x.id }}">{{ "dialogues.inSelection" | t(lang) }}</a>{% endif %}</div>
+              <p class="work-text">{{ x.summaries[lang] }}</p></li>
+{%- endfor %}
+          </ul>
+{%- endif %}
+        </li>
+{%- endfor %}
+      </ul>
+{%- endfor %}
+
+      <h3 class="tetralogy" id="appendix">{{ "dialogues.appendix" | t(lang) }}</h3>
+      <p class="section-note">{{ "dialogues.appendixNote" | t(lang) }}</p>
+      <ul class="works" role="list">
+{%- for w in dialogues.appendix %}
+        <li class="work" id="{{ w.id }}"><div class="work-head"><span class="work-title">{{ w.titles[lang] }}</span> {{ badge(w.attribution) }}</div>
+          <p class="work-text">{{ w.summaries[lang] }}</p></li>
+{%- endfor %}
+      </ul>
+
+      <h3 class="tetralogy" id="other">{{ "dialogues.other" | t(lang) }}</h3>
+      <ul class="works" role="list">
+{%- for w in dialogues.other %}
+        <li class="work" id="{{ w.id }}"><div class="work-head"><span class="work-title">{{ w.titles[lang] }}</span> {{ badge(w.attribution) }}</div>
+          <p class="work-text">{{ w.summaries[lang] }}</p></li>
+{%- endfor %}
+      </ul>
+
+      <div class="hr"></div>
+
+      <div class="nav-row">
+        <a class="btn secondary" href="{{ '/resources.html' | localeUrl(lang) }}#references">← {{ "section.references" | t(lang) }}</a>
+        <a class="btn" href="{{ '/resources/references/glossary.html' | localeUrl(lang) }}">{{ "ui.next" | t(lang) }}: {{ "nav.glossary" | t(lang) }} →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
