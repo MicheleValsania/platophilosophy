@@ -131,9 +131,12 @@ module.exports = function (eleventyConfig) {
       if (!key || !lang || item.data.eleventyExcludeFromCollections) continue;
       const entry = registry.byKey.get(key) || {};
       if (entry[lang]) throw new Error(`Duplicate translationKey "${key}" for "${lang}": ${entry[lang]} and ${item.url}`);
-      entry[lang] = item.url;
+      // the canonical URL is the public address of the page (e.g. /resources/philosophy/index.html,
+      // not the directory form /resources/philosophy/ that Eleventy uses for index files)
+      entry[lang] = item.data.canonical || item.url;
       registry.byKey.set(key, entry);
       registry.byUrl.set(normalizeUrl(item.url), key);
+      if (item.data.canonical) registry.byUrl.set(normalizeUrl(item.data.canonical), key);
     }
     for (const [key, entry] of registry.byKey) {
       for (const l of LANGS) if (entry[l] && !entry.en) throw new Error(`Page ${entry[l]} (${l}) has no English counterpart for "${key}"`);
