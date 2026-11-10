@@ -1,0 +1,54 @@
+---
+layout: layouts/base.njk
+pageStyles: styles/timeline.njk
+ogAuto: true
+---
+{%- set prev = previous.key | keyUrl(lang) if previous else null -%}
+{%- set nxt = next.key | keyUrl(lang) if next else null -%}
+<main>
+  <section style="padding:20px 0 60px;">
+    <div class="wrap">
+      <div style="max-width:78ch;">
+        <div class="kicker"><span class="kdot"></span>{{ kicker }}</div>
+        <h1 style="margin-top:14px;font-size:38px;line-height:1.15;">{{ title }}</h1>
+{%- if lead %}
+        <p class="meta-line">{{ lead | safe }}</p>
+{%- endif %}
+      </div>
+      <article class="reading">
+{{ content | safe }}
+      </article>
+
+      <ul class="tl-legend" role="list">
+{%- for c in legend %}
+        <li><span class="tl-tag tl-{{ c.category }}">{{ c.label }}</span> {{ c.text | safe }}</li>
+{%- endfor %}
+      </ul>
+
+      <ol class="timeline" role="list">
+{%- for e in events %}
+{%- set ch = e.chapter | localeUrl(lang) %}
+        <li class="tl-event" id="{{ e.id }}">
+          <div class="tl-date">{{ e.date }}</div>
+          <div class="tl-body">
+            <span class="tl-tag tl-{{ e.category }}">{% for c in legend %}{% if c.category == e.category %}{{ c.label }}{% endif %}{% endfor %}</span>
+            <h3>{{ e.title }}</h3>
+            <p>{{ e.description }}</p>
+            <a class="tl-link" href="{{ ch }}"{% if lang != 'en' and ch == e.chapter %} hreflang="en"{% endif %}>{{ readChapter }}{% if lang != 'en' and ch == e.chapter %}<span class="lang-tag"> {{ "ui.englishOnly" | t(lang) }}</span>{% endif %} →</a>
+          </div>
+        </li>
+{%- endfor %}
+      </ol>
+
+      <div class="hr"></div>
+      <div class="nav-row">
+{%- if prev %}
+        <a class="btn secondary" href="{{ prev.url }}"{% if prev.fallback %} hreflang="en"{% endif %}>← {{ previous.label }}{% if prev.fallback %}<span class="lang-tag"> {{ "ui.englishOnly" | t(lang) }}</span>{% endif %}</a>
+{%- endif %}
+{%- if nxt %}
+        <a class="btn" href="{{ nxt.url }}"{% if nxt.fallback %} hreflang="en"{% endif %}>{{ next.label }}{% if nxt.fallback %}<span class="lang-tag"> {{ "ui.englishOnly" | t(lang) }}</span>{% endif %} →</a>
+{%- endif %}
+      </div>
+    </div>
+  </section>
+</main>

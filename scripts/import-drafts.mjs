@@ -86,6 +86,7 @@ const localUrl = (url, lang) => (lang === "en" ? url : `/${lang}${url}`);
 const targetUrl = (key, url, lang) => (publishedLangs.get(key)?.has(lang) ? localUrl(url, lang) : url);
 
 const SECTIONS = {
+  resources: null,
   biography: { label: "nav.biography", url: "/resources/platophilosophy/index.html", key: "biography-index" },
   philosophy: { label: "nav.philosophy", url: "/resources/philosophy/index.html", key: "philosophy-index" },
   references: { label: "section.references", url: "/resources.html#references", key: "site-resources" },
@@ -94,14 +95,12 @@ const t = (lang, k) => k.split(".").reduce((o, x) => o[x], i18n[lang]);
 
 function breadcrumb(sectionId, lang, current) {
   const s = SECTIONS[sectionId];
-  return {
-    links: [
-      { label: t(lang, "ui.breadcrumbHome"), url: "/index.html" },
-      { label: t(lang, "nav.resources"), url: "/resources.html" },
-      { label: t(lang, s.label), url: s.url },
-    ],
-    current,
-  };
+  const links = [
+    { label: t(lang, "ui.breadcrumbHome"), url: "/index.html" },
+    { label: t(lang, "nav.resources"), url: "/resources.html" },
+  ];
+  if (s) links.push({ label: t(lang, s.label), url: s.url });
+  return { links, current };
 }
 
 function jsonld(page, lang, title, description, url, crumbs, date) {
@@ -137,13 +136,29 @@ function biographyNav(key, lang) {
   biographyIndex ??= JSON.parse(fs.readFileSync(path.join(PRIVATE, "editorial/data/biography-index-trilingual-v0.1.json"), "utf8"));
   const ch = [...biographyIndex.chapters].sort((a, b) => a.order - b.order);
   const i = ch.findIndex((c) => c.translationKey === key);
-  if (i < 0) fail(`${key} not found in biography-index-trilingual-v0.1.json`);
   const item = (c) => c && { key: c.translationKey, label: c.title[lang] };
+  if (key === "biography-timeline") return { previous: item(ch[ch.length - 1]), next: { key: "biography-index", label: t(lang, "nav.biography") } };
+  if (i < 0) fail(`${key} not found in biography-index-trilingual-v0.1.json`);
   return {
     previous: item(ch[i - 1]) || { key: "biography-index", label: t(lang, "nav.biography") },
-    next: item(ch[i + 1]) || { key: "biography-timeline", label: null },
+    next: item(ch[i + 1]) || { key: "biography-timeline", label: biographyIndex.timeline.title[lang] },
   };
 }
+
+// "## Heading" sections of a draft: [{ heading, blocks }] (blocks before the first heading: heading null)
+function sections(body) {
+  const out = [{ heading: null, blocks: [] }];
+  for (const block of body.trim().split(/\n{2,}/)) {
+    const h = block.match(/^## (.+)$/);
+    if (h) out.push({ heading: h[1].trim(), blocks: [] });
+    else out[out.length - 1].blocks.push(block.trim());
+  }
+  return out;
+}
+// Paragraphs addressed to editors (they mention the private datasets) are never published
+const forReaders = (blocks) => blocks.filter((b) => !/editorial\//.test(b));
+const bullets = (block) => block.split("\n").map((l) => l.match(/^- \*\*(.+?)\*\*(?:\s+—\s+(.*))?$/)).filter(Boolean)
+  .map((m) => ({ label: m[1], text: m[2] ? inline(m[2]) : "" }));
 
 let philosophyChapters;
 function philosophyNav(key, lang) {
@@ -231,19 +246,63 @@ for (const page of list.pages) {
     const url = localUrl(page.url, lang);
 
     let fm, body;
-    if (page.type === "article") {
+    if (["article", "biography-index", "biography-timeline"].includes(page.type)) {
       const a = splitArticle(draft.body, rel);
       const crumbs = breadcrumb(page.section, lang, a.title);
-      const nav = page.navigation === "biography" ? biographyNav(page.key, lang) : philosophyNav(page.key, lang);
-      if (nav.next && !nav.next.label) nav.next.label = t(lang, "nav.biography");
+      const nav = page.navigation === "biography" ? biographyNav(page.key, lang)
+        : page.navigation === "philosophy" ? philosophyNav(page.key, lang) : {};
+      // Description: approved separately in publish-list.json, or the draft's own (approved) lead
+      const description = page.description === "lead" ? a.lead.replace(/<[^>]+>/g, "") : page.description[lang];
+      if (!description) fail(`${rel}: no description (publish-list.json) and no lead`);
+      if (description.length > 155) fail(`${rel}: description longer than 155 characters`);
       fm = {
         layout: "layouts/article.njk", templateEngineOverride: "md", lang, translationKey: page.key,
-        title: a.title, pageTitle: page.pageTitle[lang], description: page.description[lang],
+        title: a.title, pageTitle: page.pageTitle?.[lang] || `${a.title} | PLATO`, description,
         kicker: a.kicker, lead: a.lead, canonical: url, breadcrumb: crumbs,
         previous: nav.previous, next: nav.next,
-        jsonld: jsonld(page, lang, a.title, page.description[lang], url, crumbs, prov.date),
+        jsonld: jsonld(page, lang, a.title, description, url, crumbs, prov.date),
       };
       body = a.body;
+      if (page.type === "biography-index") {
+        // intro, then "timeline", "chapters" and "continue" sections; chapter cards come from the dataset
+        const [intro, timeline, chapters, more] = sections(a.body);
+        if (!timeline || !chapters || !more) fail(`${rel}: expected three "##" sections (timeline, chapters, continue)`);
+        biographyIndex ??= JSON.parse(fs.readFileSync(path.join(PRIVATE, "editorial/data/biography-index-trilingual-v0.1.json"), "utf8"));
+        const tlText = forReaders(timeline.blocks);
+        const moreLinks = bullets(more.blocks.join("\n"));
+        if (moreLinks.length !== 2) fail(`${rel}: expected two links under "${more.heading}"`);
+        Object.assign(fm, {
+          layout: "layouts/biography-index.njk",
+          timelineSection: { heading: timeline.heading, text: inline(tlText.filter((b) => !/^\*\*[^*]+\*\*$/.test(b)).join(" ")),
+            button: (tlText.find((b) => /^\*\*[^*]+\*\*$/.test(b)) || "").slice(2, -2) },
+          chaptersSection: { heading: chapters.heading, text: forReaders(chapters.blocks).map(inline) },
+          chapters: [...biographyIndex.chapters].sort((x, y) => x.order - y.order)
+            .map((c) => ({ order: c.order, key: c.translationKey, title: c.title[lang], description: c.description[lang] })),
+          continueSection: { heading: more.heading, links: [
+            { label: moreLinks[0].label, url: "/resources.html" },
+            { label: moreLinks[1].label, url: "/resources/guides/start-here.html" }] },
+        });
+        body = intro.blocks.join("\n\n") + "\n";
+      }
+      if (page.type === "biography-timeline") {
+        // intro paragraphs, then the event-label legend; events come from the dataset
+        const parts = sections(a.body);
+        // two 5-item lists: period headings, then event labels (4 categories + "read the chapter")
+        const legend = parts.map((s) => bullets(s.blocks.join("\n"))).filter((b) => b.length === 5).pop();
+        if (!legend) fail(`${rel}: event-label list (5 items) not found`);
+        const data = JSON.parse(fs.readFileSync(path.join(PRIVATE, page.data.file), "utf8"));
+        if (data.status !== "approved") fail(`${page.data.file}: dataset status is "${data.status}"`);
+        const cats = ["context", "life", "works", "legacy"];
+        Object.assign(fm, {
+          layout: "layouts/biography-timeline.njk",
+          legend: cats.map((c, n) => ({ category: c, label: legend[n].label, text: legend[n].text })),
+          readChapter: legend[4].label,
+          events: data.events.map((e) => ({ id: e.id, category: e.category, date: e[`${lang}Date`], title: e[`${lang}Title`],
+            description: e[`${lang}Description`], chapter: `/resources/platophilosophy/${e.sourcePage}` })),
+        });
+        provenance(page.data.file);
+        body = forReaders(parts[0].blocks).join("\n\n") + "\n";
+      }
     } else if (page.type === "glossary") {
       const data = JSON.parse(fs.readFileSync(path.join(PRIVATE, page.data.file), "utf8"));
       if (data.status !== "approved") fail(`${page.data.file}: dataset status is "${data.status}"`);
