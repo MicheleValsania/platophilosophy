@@ -12,8 +12,8 @@ canonical: "/fr/beginner/reading-vs-summary.html"
 breadcrumb: {"links":[{"label":"Accueil","url":"/index.html"},{"label":"Ressources","url":"/resources.html"},{"label":"Par où commencer","url":"/resources/guides/start-here.html"}],"current":"Lire ou se faire raconter"}
 previous: {"key":"beginner-socratic-method","label":"La méthode socratique"}
 next: {"key":"beginner-pathways","label":"Choisir son parcours"}
-jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Lire ou se faire raconter","description":"Utiliser les résumés sans remplacer les textes","inLanguage":"fr","url":"https://platophilosophy.com/fr/beginner/reading-vs-summary.html","mainEntityOfPage":"https://platophilosophy.com/fr/beginner/reading-vs-summary.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-10T00:47:49+01:00"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://platophilosophy.com/index.html"},{"@type":"ListItem","position":2,"name":"Ressources","item":"https://platophilosophy.com/resources.html"},{"@type":"ListItem","position":3,"name":"Par où commencer","item":"https://platophilosophy.com/resources/guides/start-here.html"},{"@type":"ListItem","position":4,"name":"Lire ou se faire raconter"}]}]
-importedFrom: {"path":"editorial/drafts/beginner-reading-vs-summary/fr-reader-v0.1.md","commit":"2401f3e7b6d6daa7e5aa959c2a5be69eda5d3c4c"}
+jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Lire ou se faire raconter","description":"Utiliser les résumés sans remplacer les textes","inLanguage":"fr","url":"https://platophilosophy.com/fr/beginner/reading-vs-summary.html","mainEntityOfPage":"https://platophilosophy.com/fr/beginner/reading-vs-summary.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-10T21:29:04+01:00"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://platophilosophy.com/index.html"},{"@type":"ListItem","position":2,"name":"Ressources","item":"https://platophilosophy.com/resources.html"},{"@type":"ListItem","position":3,"name":"Par où commencer","item":"https://platophilosophy.com/resources/guides/start-here.html"},{"@type":"ListItem","position":4,"name":"Lire ou se faire raconter"}]}]
+importedFrom: {"path":"editorial/drafts/beginner-reading-vs-summary/fr-reader-v0.1.md","commit":"688cdf8303898e59df1e321f897e987c739b67d3"}
 ---
 Un résumé de la *République* peut présenter en quelques minutes les Formes, la justice et les philosophes-gouvernants. C'est utile pour s'orienter. Mais un résumé n'offre pas la même expérience que **la lecture du dialogue**.
 
@@ -41,10 +41,10 @@ Une traduction implique aussi des choix éditoriaux. Lorsqu'un terme peu familie
 
 ## Une première lecture concrète
 
-Essayez un dialogue court ou un texte proche : l'*Euthyphron* demande ce qu'est la piété ; le *Criton* examine si Socrate doit s'évader ; l'*Apologie* présente sa défense au procès. Le temps de lecture varie beaucoup selon l'édition, la traduction et le lecteur : il n'existe pas d'objectif universel de trente minutes.
+Essayez un dialogue court ou un texte proche : l'*Euthyphron* demande ce qu'est la piété ; le *Criton* examine si Socrate doit s'évader ; l'*Apologie* présente sa défense au procès. Rien ne presse : le temps de lecture varie beaucoup selon l'édition, la traduction et le lecteur.
 
 Commencez par une question. Notez une réponse, une objection et une difficulté qui demeure. Demandez-vous ensuite si votre point de vue a changé.
 
-Plus tard, le *Ménon*, le *Phédon*, le *Banquet* et la *République* ouvrent des problèmes plus vastes. Des œuvres comme le *Sophiste* et le *Timée* explorent d'autres formes d'enquête ; le *Parménide* et le *Théétète* ne peuvent être datés avec certitude des toutes dernières années de Platon.
+Plus tard, le *Ménon*, le *Phédon*, le *Banquet* et la *République* ouvrent des problèmes plus vastes. Des œuvres comme le *Sophiste* et le *Timée* explorent d'autres formes d'enquête.
 
 **À essayer :** lisez cinq pages d'un dialogue avant d'ouvrir un résumé. Comparez ensuite ce que vous avez remarqué avec ce que le résumé souligne.

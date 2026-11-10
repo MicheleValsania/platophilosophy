@@ -12,8 +12,8 @@ canonical: "/it/beginner/reading-vs-summary.html"
 breadcrumb: {"links":[{"label":"Pagina iniziale","url":"/index.html"},{"label":"Risorse","url":"/resources.html"},{"label":"Da dove cominciare","url":"/resources/guides/start-here.html"}],"current":"Leggere o farsi raccontare"}
 previous: {"key":"beginner-socratic-method","label":"Il metodo socratico"}
 next: {"key":"beginner-pathways","label":"Scegli il tuo percorso"}
-jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Leggere o farsi raccontare","description":"Usare i riassunti senza sostituire i testi","inLanguage":"it","url":"https://platophilosophy.com/it/beginner/reading-vs-summary.html","mainEntityOfPage":"https://platophilosophy.com/it/beginner/reading-vs-summary.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-10T00:47:49+01:00"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Pagina iniziale","item":"https://platophilosophy.com/index.html"},{"@type":"ListItem","position":2,"name":"Risorse","item":"https://platophilosophy.com/resources.html"},{"@type":"ListItem","position":3,"name":"Da dove cominciare","item":"https://platophilosophy.com/resources/guides/start-here.html"},{"@type":"ListItem","position":4,"name":"Leggere o farsi raccontare"}]}]
-importedFrom: {"path":"editorial/drafts/beginner-reading-vs-summary/it-reader-v0.1.md","commit":"2401f3e7b6d6daa7e5aa959c2a5be69eda5d3c4c"}
+jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Leggere o farsi raccontare","description":"Usare i riassunti senza sostituire i testi","inLanguage":"it","url":"https://platophilosophy.com/it/beginner/reading-vs-summary.html","mainEntityOfPage":"https://platophilosophy.com/it/beginner/reading-vs-summary.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-10T21:29:04+01:00"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Pagina iniziale","item":"https://platophilosophy.com/index.html"},{"@type":"ListItem","position":2,"name":"Risorse","item":"https://platophilosophy.com/resources.html"},{"@type":"ListItem","position":3,"name":"Da dove cominciare","item":"https://platophilosophy.com/resources/guides/start-here.html"},{"@type":"ListItem","position":4,"name":"Leggere o farsi raccontare"}]}]
+importedFrom: {"path":"editorial/drafts/beginner-reading-vs-summary/it-reader-v0.1.md","commit":"688cdf8303898e59df1e321f897e987c739b67d3"}
 ---
 Un riassunto della *Repubblica* può spiegare in pochi minuti le Idee, la giustizia e i filosofi-governanti. È utile per orientarsi. Ma il riassunto non offre la stessa esperienza della **lettura del dialogo**.
 
@@ -41,10 +41,10 @@ Anche una traduzione comporta scelte editoriali. Quando un termine poco familiar
 
 ## Una prima lettura pratica
 
-Prova un dialogo breve o un testo strettamente collegato: l'*Eutifrone* domanda che cosa sia la pietà; il *Critone* esamina se Socrate debba fuggire; l'*Apologia* presenta la difesa nel processo. I tempi cambiano molto secondo edizione, traduzione e lettore: non esiste un obiettivo fisso di trenta minuti.
+Prova un dialogo breve o un testo strettamente collegato: l'*Eutifrone* domanda che cosa sia la pietà; il *Critone* esamina se Socrate debba fuggire; l'*Apologia* presenta la difesa nel processo. Non c'è fretta: i tempi di lettura cambiano molto secondo l'edizione, la traduzione e il lettore.
 
 Comincia da una domanda. Annota una risposta, un'obiezione e un punto che ti lascia perplesso. Poi chiediti se la tua opinione sia cambiata.
 
-In seguito *Menone*, *Fedone*, *Simposio* e *Repubblica* aprono questioni più ampie. Opere come *Sofista* e *Timeo* introducono altre forme di ricerca filosofica; *Parmenide* e *Teeteto* non sono databili con certezza agli ultimissimi anni di Platone.
+In seguito *Menone*, *Fedone*, *Simposio* e *Repubblica* aprono questioni più ampie. Opere come *Sofista* e *Timeo* introducono altre forme di ricerca filosofica.
 
 **Prova:** leggi cinque pagine di un dialogo prima di aprire il riassunto. Poi confronta ciò che hai notato con ciò che il riassunto mette in evidenza.
