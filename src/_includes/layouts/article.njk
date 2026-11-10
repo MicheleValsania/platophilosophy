@@ -14,7 +14,7 @@ ogAuto: true
 {%- endif %}
         <h1 style="margin-top:14px;font-size:38px;line-height:1.15;">{{ title }}</h1>
 {%- if lead %}
-        <p class="meta-line">{{ lead | safe }}</p>
+        <p class="meta-line"{% if leadLarge %} style="font-size:18px;line-height:1.5;color:var(--muted);"{% endif %}>{{ lead | safe }}</p>
 {%- endif %}
       </div>
       <article class="reading">

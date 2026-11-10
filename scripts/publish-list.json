@@ -727,6 +727,81 @@
         "it": "Esplorare la geografia legata alla vita di Platone, ricordando che un luogo citato da un autore antico non è per forza un luogo da lui visitato.",
         "fr": "Explorer la géographie liée à la vie de Platon sans oublier qu'un lieu mentionné dans un récit antique n'est pas nécessairement un lieu qu'il a visité."
       }
+    },
+    {
+      "key": "site-home",
+      "type": "site-page",
+      "url": "/index.html",
+      "sources": {
+        "en": "editorial/drafts/site-home/en-reader-v0.1.md",
+        "it": "editorial/drafts/site-home/it-reader-v0.1.md",
+        "fr": "editorial/drafts/site-home/fr-reader-v0.1.md"
+      },
+      "section": "none",
+      "navigation": "none",
+      "description": "lead",
+      "schema": "website",
+      "canonical": {
+        "en": "/",
+        "it": "/it/",
+        "fr": "/fr/"
+      },
+      "pageTitle": {
+        "en": "Discover Plato, learn philosophy step by step | PLATO",
+        "it": "Scopri Platone, impara la filosofia passo dopo passo | PLATO",
+        "fr": "Découvrir Platon, apprendre la philosophie pas à pas | PLATO"
+      },
+      "cardLinks": [
+        "/beginner/why-philosophy.html",
+        "/resources/guides/start-here.html",
+        "/resources/references/dialogues.html",
+        "/resources/references/glossary.html",
+        "/resources/guides/greek-essentials.html",
+        "/resources/guides/maps-and-timelines.html",
+        "/resources/guides/reading-pathways.html"
+      ],
+      "waitlist": {
+        "en": "**Join the waitlist:**",
+        "it": "**Iscriviti alla lista d'attesa:**",
+        "fr": "**Inscrivez-vous à la liste d'attente :**"
+      }
+    },
+    {
+      "key": "site-resources",
+      "type": "site-page",
+      "url": "/resources.html",
+      "sources": {
+        "en": "editorial/drafts/site-resources/en-reader-v0.1.md",
+        "it": "editorial/drafts/site-resources/it-reader-v0.1.md",
+        "fr": "editorial/drafts/site-resources/fr-reader-v0.1.md"
+      },
+      "section": "none",
+      "navigation": "none",
+      "description": "lead",
+      "omit": {
+        "en": [
+          "**Note on new features:**"
+        ],
+        "it": [
+          "**Nota sulle nuove funzioni:**"
+        ],
+        "fr": [
+          "**Note sur les nouvelles fonctionnalités :**"
+        ]
+      }
+    },
+    {
+      "key": "site-roadmap",
+      "type": "site-page",
+      "url": "/roadmap.html",
+      "sources": {
+        "en": "editorial/drafts/site-roadmap/en-reader-v0.1.md",
+        "it": "editorial/drafts/site-roadmap/it-reader-v0.1.md",
+        "fr": "editorial/drafts/site-roadmap/fr-reader-v0.1.md"
+      },
+      "section": "home",
+      "navigation": "none",
+      "description": "lead"
     }
   ]
 }
