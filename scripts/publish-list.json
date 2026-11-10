@@ -648,6 +648,85 @@
       "section": "start",
       "navigation": "beginner",
       "description": "beginner-path"
+    },
+    {
+      "key": "guide-start-here",
+      "type": "article",
+      "url": "/resources/guides/start-here.html",
+      "sources": {
+        "en": "editorial/drafts/guide-start-here/en-reader-v0.1.md",
+        "it": "editorial/drafts/guide-start-here/it-reader-v0.1.md",
+        "fr": "editorial/drafts/guide-start-here/fr-reader-v0.1.md"
+      },
+      "section": "none",
+      "navigation": "none",
+      "description": "lead"
+    },
+    {
+      "key": "guide-greek-essentials",
+      "type": "greek-essentials",
+      "url": "/resources/guides/greek-essentials.html",
+      "sources": {
+        "en": "editorial/drafts/guide-greek-essentials/en-reader-v0.1.md",
+        "it": "editorial/drafts/guide-greek-essentials/it-reader-v0.1.md",
+        "fr": "editorial/drafts/guide-greek-essentials/fr-reader-v0.1.md"
+      },
+      "data": {
+        "file": "editorial/data/guide-greek-essentials-trilingual-v0.1.json"
+      },
+      "section": "guides",
+      "navigation": "frontmatter",
+      "description": "goal"
+    },
+    {
+      "key": "guide-reading-pathways",
+      "type": "article",
+      "url": "/resources/guides/reading-pathways.html",
+      "sources": {
+        "en": "editorial/drafts/guide-reading-pathways/en-reader-v0.1.md",
+        "it": "editorial/drafts/guide-reading-pathways/it-reader-v0.1.md",
+        "fr": "editorial/drafts/guide-reading-pathways/fr-reader-v0.1.md"
+      },
+      "section": "guides",
+      "navigation": "frontmatter",
+      "description": "goal"
+    },
+    {
+      "key": "guide-maps-and-timelines",
+      "type": "article",
+      "url": "/resources/guides/maps-and-timelines.html",
+      "sources": {
+        "en": "editorial/drafts/guide-maps-and-timelines/en-reader-v0.1.md",
+        "it": "editorial/drafts/guide-maps-and-timelines/it-reader-v0.1.md",
+        "fr": "editorial/drafts/guide-maps-and-timelines/fr-reader-v0.1.md"
+      },
+      "section": "guides",
+      "navigation": "frontmatter",
+      "description": {
+        "en": "Place the people, cities and political events around Plato in their historical context, recognizing how uncertain ancient travel reports remain.",
+        "it": "Collocare persone, città ed eventi politici legati a Platone nel loro contesto, riconoscendo le incertezze delle tradizioni antiche sui viaggi.",
+        "fr": "Situer les personnes, les cités et les événements politiques autour de Platon, sans oublier les incertitudes des récits antiques sur ses voyages."
+      }
+    },
+    {
+      "key": "guide-interactive-map",
+      "type": "map",
+      "url": "/resources/guides/interactive-map.html",
+      "sources": {
+        "en": "editorial/drafts/guide-interactive-map/en-reader-v0.1.md",
+        "it": "editorial/drafts/guide-interactive-map/it-reader-v0.1.md",
+        "fr": "editorial/drafts/guide-interactive-map/fr-reader-v0.1.md"
+      },
+      "data": {
+        "file": "editorial/data/guide-interactive-map-trilingual-v0.1.json"
+      },
+      "section": "guides",
+      "navigation": "frontmatter",
+      "description": {
+        "en": "Explore the geography connected with Plato's life while recognizing that a place mentioned by an ancient author is not necessarily a place Plato visited.",
+        "it": "Esplorare la geografia legata alla vita di Platone, ricordando che un luogo citato da un autore antico non è per forza un luogo da lui visitato.",
+        "fr": "Explorer la géographie liée à la vie de Platon sans oublier qu'un lieu mentionné dans un récit antique n'est pas nécessairement un lieu qu'il a visité."
+      }
     }
   ]
 }

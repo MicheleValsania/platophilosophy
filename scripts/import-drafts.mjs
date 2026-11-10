@@ -87,6 +87,7 @@ const targetUrl = (key, url, lang) => (publishedLangs.get(key)?.has(lang) ? loca
 
 const SECTIONS = {
   resources: null,
+  guides: { label: "nav.guides", url: "/resources.html#guides", key: "site-resources" },
   start: { label: "nav.start", url: "/resources/guides/start-here.html", key: "guide-start-here" },
   biography: { label: "nav.biography", url: "/resources/platophilosophy/index.html", key: "biography-index" },
   philosophy: { label: "nav.philosophy", url: "/resources/philosophy/index.html", key: "philosophy-index" },
@@ -95,6 +96,7 @@ const SECTIONS = {
 const t = (lang, k) => k.split(".").reduce((o, x) => o[x], i18n[lang]);
 
 function breadcrumb(sectionId, lang, current) {
+  if (sectionId === "none") return undefined;
   const s = SECTIONS[sectionId];
   const links = [
     { label: t(lang, "ui.breadcrumbHome"), url: "/index.html" },
@@ -120,7 +122,7 @@ function jsonld(page, lang, title, description, url, crumbs, date) {
       about: { "@type": "Person", name: "Plato" },
       dateModified: date,
     },
-    {
+    crumbs && {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -128,7 +130,27 @@ function jsonld(page, lang, title, description, url, crumbs, date) {
         { "@type": "ListItem", position: crumbs.links.length + 1, name: crumbs.current },
       ],
     },
-  ];
+  ].filter(Boolean);
+}
+
+// Approved title (# …) of another draft, for previous/next labels
+function draftTitle(key, lang) {
+  const dir = path.join(PRIVATE, "editorial/drafts", key);
+  const f = fs.existsSync(dir) && fs.readdirSync(dir).find((n) => n.startsWith(`${lang}-reader-`) &&
+    /^status:\s*approved/m.test(fs.readFileSync(path.join(dir, n), "utf8")));
+  if (!f) fail(`no approved ${lang} draft for ${key}`);
+  return fs.readFileSync(path.join(dir, f), "utf8").match(/^# (.+)$/m)[1].trim();
+}
+function frontMatterNav(draft, lang) {
+  const item = (k) => (k && k !== "null" ? { key: k, label: draftTitle(k, lang) } : undefined);
+  return { previous: item(draft.data.previous), next: item(draft.data.next) };
+}
+// "**Goal:** text" (Obiettivo, Objectif…) paragraph of a guide, used as its description
+function goal(body, rel) {
+  const m = body.match(/^\*\*[^*\n]+?\s?:\*\*\s*(.+)$/m);
+  if (!m) fail(`${rel}: no "**Goal:**" paragraph for the description`);
+  const text = m[1].replace(/\*\*?([^*]+)\*\*?/g, "$1").trim();
+  return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
 // ---------- navigation data ----------
@@ -261,15 +283,17 @@ for (const page of list.pages) {
     const url = localUrl(page.url, lang);
 
     let fm, body;
-    if (["article", "biography-index", "biography-timeline"].includes(page.type)) {
+    if (["article", "biography-index", "biography-timeline", "greek-essentials", "map"].includes(page.type)) {
       const a = splitArticle(draft.body, rel);
       const crumbs = breadcrumb(page.section, lang, a.title);
       const nav = page.navigation === "biography" ? biographyNav(page.key, lang)
         : page.navigation === "philosophy" ? philosophyNav(page.key, lang)
-        : page.navigation === "beginner" ? beginnerNav(page.key, lang) : {};
+        : page.navigation === "beginner" ? beginnerNav(page.key, lang)
+        : page.navigation === "frontmatter" ? frontMatterNav(draft, lang) : {};
       // Description: approved separately in publish-list.json, the draft's own lead, or the approved dataset entry
       const description = page.description === "lead" ? a.lead.replace(/<[^>]+>/g, "")
         : page.description === "beginner-path" ? beginnerStep(page.key).description[lang]
+        : page.description === "goal" ? goal(a.body, rel)
         : page.description[lang];
       if (!description) fail(`${rel}: no description (publish-list.json) and no lead`);
       if (description.length > 155) fail(`${rel}: description longer than 155 characters`);
@@ -281,6 +305,39 @@ for (const page of list.pages) {
         jsonld: jsonld(page, lang, a.title, description, url, crumbs, prov.date),
       };
       body = a.body;
+      const dataset = () => {
+        const data = JSON.parse(fs.readFileSync(path.join(PRIVATE, page.data.file), "utf8"));
+        if (data.status !== "approved") fail(`${page.data.file}: dataset status is "${data.status}"`);
+        if (data.translationKey !== page.key) fail(`${page.data.file}: translationKey "${data.translationKey}" is not "${page.key}"`);
+        provenance(page.data.file);
+        return data;
+      };
+      if (page.type === "greek-essentials") {
+        // the numbered list of terms in the draft is replaced by the full entries of the dataset
+        const entries = [...dataset().entries].sort((x, y) => x.order - y.order);
+        const html = ['<div class="greek-terms">', ...entries.map((e) =>
+          `<div class="concept-box" id="${e.id}"><p class="concept-title"><span lang="grc">${esc(e.greek)}</span> — <em>${esc(e.transliteration)}</em></p>` +
+          `<p class="concept-text"><strong>${esc(e.meaning[lang])}</strong></p><p class="concept-text">${esc(e.note[lang])}</p></div>`), "</div>"].join("\n");
+        const list = body.split(/\n{2,}/).find((b) => /^1\. \*\*/.test(b));
+        if (!list || (list.match(/^\d+\. /gm) || []).length !== entries.length) fail(`${rel}: numbered list of ${entries.length} terms not found`);
+        body = body.replace(list, html);
+      }
+      if (page.type === "map") {
+        // map and location cards from the dataset, before the closing "related resources" paragraph
+        const data = dataset();
+        if (data.routePolicy !== "no-reconstructed-routes") fail(`${page.data.file}: unexpected routePolicy "${data.routePolicy}"`);
+        fm.places = data.places.map((p) => ({ id: p.id, name: p.name[lang], text: p.text[lang], lat: p.lat, lng: p.lng, chapter: p.sourcePage }));
+        fm.pageStyles = "styles/map.njk";
+        fm.pageScripts = "scripts/map.njk";
+        const cards = ['<div id="map" role="region" aria-label="' + esc(a.title) + '"></div>', '<div class="location-cards">',
+          ...fm.places.map((p) => `<div class="location-card" id="${p.id}"><h4>${esc(p.name)}</h4><p>${esc(p.text)}</p><a href="${p.chapter}">${esc(t(lang, "ui.readMore"))} →</a></div>`),
+          "</div>"].join("\n");
+        const blocks = body.trim().split(/\n{2,}/);
+        const last = blocks[blocks.length - 1];
+        body = /^\*\*[^*]+\*\*/.test(last) && /\]\(/.test(last)
+          ? blocks.slice(0, -1).join("\n\n") + "\n\n" + cards + "\n\n" + last + "\n"
+          : body + "\n" + cards + "\n";
+      }
       if (page.type === "biography-index") {
         // intro, then "timeline", "chapters" and "continue" sections; chapter cards come from the dataset
         const [intro, timeline, chapters, more] = sections(a.body);
