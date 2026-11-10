@@ -114,6 +114,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   eleventyConfig.addPassthroughCopy("src/google5092346a2663c200.html");
+  eleventyConfig.addPassthroughCopy("src/_redirects");
   eleventyConfig.ignores.add("src/google5092346a2663c200.html");
 
   // Keep every current URL: /path/page.html, never /path/page/ (an explicit permalink, e.g. the sitemap, wins)
@@ -178,6 +179,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("gitDate", (inputPath) => gitDate(inputPath));
   // Home pages are addressed as /, /it/, /fr/ (canonical, hreflang, sitemap)
   eleventyConfig.addFilter("prettyHome", (url) => url.replace(/^((?:\/(?:it|fr))?\/)index\.html$/, "$1"));
+  eleventyConfig.addFilter("roman", (n) => ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"][n] || String(n));
   eleventyConfig.addFilter("isoDate", (d) => new Date(d).toISOString().slice(0, 10));
 
   // Sitemap entries in their declared order (English pages carry the sitemap data)

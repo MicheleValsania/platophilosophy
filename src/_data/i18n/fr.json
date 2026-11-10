@@ -52,5 +52,57 @@
   "section": {
     "references": "Références",
     "glossaryTerms": "termes"
+  },
+  "dialogues": {
+    "selection": "Parcours de lecture",
+    "selectionNote": "Vingt-cinq dialogues et la Lettre VII, avec des suggestions pour commencer.",
+    "filter": "Afficher",
+    "filterAll": "Tous",
+    "groups": {
+      "traditional-early": "Traditionnellement de jeunesse",
+      "traditional-middle": "Traditionnellement de maturité",
+      "traditional-late": "Groupe tardif",
+      "letters": "Lettres"
+    },
+    "corpus": "Le corpus complet",
+    "corpusNote": "Toutes les œuvres transmises sous le nom de Platon, dans l'ordre antique de Thrasylle.",
+    "tetralogy": "Tétralogie",
+    "appendix": "Œuvres hors des tétralogies",
+    "appendixNote": "Œuvres plus brèves que Thrasylle écartait déjà comme apocryphes.",
+    "other": "Autres œuvres attribuées",
+    "letters": "Les treize Lettres",
+    "attribution": {
+      "generally-authentic": "Généralement authentique",
+      "disputed": "D'authenticité discutée",
+      "generally-spurious": "Généralement considérée comme non platonicienne",
+      "mixed": "Variable selon les textes"
+    },
+    "difficulty": {
+      "Easy": "Facile",
+      "Medium": "Moyenne",
+      "Hard": "Exigeante",
+      "Very Hard": "Très exigeante"
+    },
+    "time": "Temps de lecture",
+    "level": "Difficulté",
+    "estimate": "estimation éditoriale",
+    "textIn": {
+      "en": "Texte anglais",
+      "it": "Texte italien"
+    },
+    "inSelection": "Dans le parcours de lecture",
+    "external": "ouvre un site externe"
+  },
+  "notFound": {
+    "pageTitle": "Page introuvable | PLATO",
+    "description": "Cette page n'existe pas ou a été déplacée.",
+    "heading": "Page introuvable",
+    "text": "Cette page n'existe pas ou a été déplacée. Socrate ne prétendait pas savoir ce qu'il ne savait pas : nous aussi, nous avouons ignorer où cette adresse est passée.",
+    "home": "Accueil",
+    "resources": "Parcourir les ressources",
+    "suggested": "Parcours suggérés",
+    "beginner": "Six courtes étapes pour découvrir les questions philosophiques et la manière d'écrire de Platon.",
+    "biography": "Onze chapitres et une chronologie, de l'Athènes de 428 av. J.-C. à l'héritage de Platon.",
+    "dialogues": "Toutes les œuvres transmises sous le nom de Platon, avec un parcours de lecture."
   }
 }

@@ -46,6 +46,54 @@
       }
     },
     {
+      "key": "references-dialogues",
+      "type": "dialogues",
+      "url": "/resources/references/dialogues.html",
+      "sources": {
+        "en": {
+          "file": "editorial/drafts/references/reader-introductions-en-v0.2.md",
+          "sourceKey": "references-introductions",
+          "section": "Dialogues:"
+        },
+        "it": {
+          "file": "editorial/drafts/references/reader-introductions-it-v0.2.md",
+          "sourceKey": "references-introductions",
+          "section": "Dialoghi:"
+        },
+        "fr": {
+          "file": "editorial/drafts/references/reader-introductions-fr-v0.2.md",
+          "sourceKey": "references-introductions",
+          "section": "Dialogues :"
+        }
+      },
+      "data": {
+        "corpus": {
+          "file": "editorial/data/platonic-corpus-v0.1.json",
+          "sourceKey": "references-platonic-corpus"
+        },
+        "selection": {
+          "file": "editorial/data/dialogues-catalogue-v0.1.json",
+          "sourceKey": "references-dialogues"
+        }
+      },
+      "section": "references",
+      "heading": {
+        "en": "Plato's Dialogues",
+        "it": "I dialoghi di Platone",
+        "fr": "Les dialogues de Platon"
+      },
+      "pageTitle": {
+        "en": "Plato's Dialogues: the Complete Corpus | PLATO",
+        "it": "I dialoghi di Platone: il corpus completo | PLATO",
+        "fr": "Les dialogues de Platon : le corpus complet | PLATO"
+      },
+      "description": {
+        "en": "Every work transmitted under Plato's name, in the ancient order of the tetralogies, with its authorship status and a reading selection for beginners.",
+        "it": "Tutte le opere tramandate sotto il nome di Platone, nell'ordine antico delle tetralogie, con lo stato dell'attribuzione e un percorso di lettura.",
+        "fr": "Toutes les œuvres transmises sous le nom de Platon, dans l'ordre antique des tétralogies, avec leur attribution et un parcours de lecture."
+      }
+    },
+    {
       "key": "references-glossary",
       "type": "glossary",
       "url": "/resources/references/glossary.html",
@@ -816,6 +864,24 @@
       "description": {
         "it": "Quali dati personali trattano il sito PLATO e l'app di dialogo, per quali finalità, e come esercitare i tuoi diritti.",
         "fr": "Quelles données personnelles le site PLATO et l'application de dialogue traitent, à quelles fins, et comment exercer vos droits."
+      }
+    },
+    {
+      "key": "site-links",
+      "type": "site-page",
+      "url": "/links.html",
+      "sources": {
+        "en": "editorial/drafts/site-links/en-reader-v0.1.md",
+        "it": "editorial/drafts/site-links/it-reader-v0.1.md",
+        "fr": "editorial/drafts/site-links/fr-reader-v0.1.md"
+      },
+      "section": "home",
+      "navigation": "none",
+      "description": "lead",
+      "pageTitle": {
+        "en": "External Resources | PLATO",
+        "it": "Risorse esterne | PLATO",
+        "fr": "Ressources externes | PLATO"
       }
     }
   ]

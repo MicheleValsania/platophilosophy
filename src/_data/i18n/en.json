@@ -52,5 +52,57 @@
   "section": {
     "references": "References",
     "glossaryTerms": "terms"
+  },
+  "dialogues": {
+    "selection": "Reading selection",
+    "selectionNote": "Twenty-five dialogues and the Seventh Letter, with suggestions on where to begin.",
+    "filter": "Show",
+    "filterAll": "All",
+    "groups": {
+      "traditional-early": "Traditionally early",
+      "traditional-middle": "Traditionally middle",
+      "traditional-late": "Late group",
+      "letters": "Letters"
+    },
+    "corpus": "The complete corpus",
+    "corpusNote": "All works transmitted under Plato's name, in the ancient order of Thrasyllus.",
+    "tetralogy": "Tetralogy",
+    "appendix": "Works outside the tetralogies",
+    "appendixNote": "Shorter works that Thrasyllus already set apart as spurious.",
+    "other": "Other attributed works",
+    "letters": "The thirteen Letters",
+    "attribution": {
+      "generally-authentic": "Generally accepted",
+      "disputed": "Disputed",
+      "generally-spurious": "Generally considered not by Plato",
+      "mixed": "Varies from item to item"
+    },
+    "difficulty": {
+      "Easy": "Easy",
+      "Medium": "Medium",
+      "Hard": "Demanding",
+      "Very Hard": "Very demanding"
+    },
+    "time": "Reading time",
+    "level": "Difficulty",
+    "estimate": "editorial estimate",
+    "textIn": {
+      "en": "English text",
+      "it": "Italian text"
+    },
+    "inSelection": "In the reading selection",
+    "external": "opens an external site"
+  },
+  "notFound": {
+    "pageTitle": "Page not found | PLATO",
+    "description": "This page does not exist or has moved.",
+    "heading": "Page not found",
+    "text": "This page does not exist or has moved. Socrates did not claim to know what he did not know: we too admit that we do not know where this address has gone.",
+    "home": "Home",
+    "resources": "Browse resources",
+    "suggested": "Suggested paths",
+    "beginner": "Six short steps into philosophical questions and Plato's way of writing.",
+    "biography": "Eleven chapters and a timeline, from Athens around 428 BC to Plato's legacy.",
+    "dialogues": "Every work transmitted under Plato's name, with a reading selection."
   }
 }
