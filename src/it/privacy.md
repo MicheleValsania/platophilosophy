@@ -7,10 +7,10 @@ translationKey: "legal-privacy"
 title: "Informativa sulla privacy"
 pageTitle: "Informativa sulla privacy | PLATO"
 description: "Quali dati personali trattano il sito PLATO e l'app di dialogo, per quali finalità, e come esercitare i tuoi diritti."
-kicker: "Ultimo aggiornamento: 9 novembre 2026"
+kicker: "Ultimo aggiornamento: 10 novembre 2026"
 canonical: "/it/privacy.html"
-jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Informativa sulla privacy","description":"Quali dati personali trattano il sito PLATO e l'app di dialogo, per quali finalità, e come esercitare i tuoi diritti.","inLanguage":"it","url":"https://platophilosophy.com/it/privacy.html","mainEntityOfPage":"https://platophilosophy.com/it/privacy.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-10T00:47:49+01:00"}]
-importedFrom: {"path":"editorial/drafts/legal-privacy/it-v2026-11-09.md","commit":"2401f3e7b6d6daa7e5aa959c2a5be69eda5d3c4c"}
+jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Informativa sulla privacy","description":"Quali dati personali trattano il sito PLATO e l'app di dialogo, per quali finalità, e come esercitare i tuoi diritti.","inLanguage":"it","url":"https://platophilosophy.com/it/privacy.html","mainEntityOfPage":"https://platophilosophy.com/it/privacy.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-10T02:40:27+01:00"}]
+importedFrom: {"path":"editorial/drafts/legal-privacy/it-v2026-11-09.md","commit":"cc7a940c8ad5a14f22c93fdce123ee8c445623a2"}
 ---
 Questa informativa spiega quali dati personali vengono trattati quando usi platophilosophy.com e, quando sarà disponibile, l'app di dialogo PLATO. È divisa in due parti: la **Parte A** riguarda il sito ed è già in vigore; la **Parte B** riguarda l'app, che non è ancora disponibile.
 
@@ -58,29 +58,31 @@ L'app non è ancora disponibile. Questa parte descrive i dati che è progettata 
 
 ### B1. Quali dati tratterà l'app
 
-- **Account:** indirizzo email e nome visualizzato. L'accesso è gestito da Firebase Authentication; non vediamo né conserviamo la tua password in chiaro.
-- **Dialoghi:** le domande che poni e le risposte generate, perché tu possa riprendere una conversazione e consultare la cronologia.
-- **Acquisti:** gli acquisti di oboli sono gestiti dall'App Store di Apple o da Google Play e amministrati tramite RevenueCat. Non riceviamo né conserviamo i dati della tua carta.
-- **Dati tecnici:** tipo di dispositivo, sistema operativo, versione dell'app e segnalazioni di arresto anomalo, per mantenere l'app funzionante.
+- **Account:** il tuo indirizzo email e, se lo scegli, un nome visualizzato. Non vediamo né conserviamo la tua password in chiaro.
+- **Conversazioni:** per risponderti, i messaggi della conversazione in corso vengono elaborati sui nostri server e inviati ad Anthropic (vedi B2). Le conversazioni filosofiche possono rivelare le tue convinzioni religiose o filosofiche. Per questo **non conserviamo i tuoi dialoghi, a meno che tu non scelga esplicitamente di salvarli** («Salva i miei dialoghi»). Questa scelta è separata dalla creazione dell'account e puoi revocarla in qualsiasi momento. Senza di essa, una conversazione esiste solo per la durata della sessione.
+- **Percorso di lettura:** una breve traccia di dove sei passato — opere e temi discussi, lingua preferita — che serve a proseguire il percorso da un dialogo all'altro. Non registra mai che cosa credi né quanto sei bravo: l'app non valuta i suoi utenti.
+- **Crediti e acquisti:** il saldo di oboli e la cronologia degli acquisti. I pagamenti sono gestiti dal fornitore dei pagamenti; non riceviamo né conserviamo i dati della tua carta.
+- **Dati tecnici:** segnalazioni di errore e log tecnici, per mantenere il servizio funzionante e sicuro.
 - **Assistenza:** i messaggi che ci invii.
 
-Basi giuridiche: l'esecuzione del contratto con te (account, dialoghi, acquisti), il nostro legittimo interesse (sicurezza, segnalazioni di errori, miglioramento dei contenuti) e il tuo consenso, quando l'app lo richiede.
+Basi giuridiche: l'esecuzione del contratto con te (account, conversazione in corso, crediti e acquisti); il tuo consenso esplicito per i dialoghi salvati (articolo 9, paragrafo 2, lettera a, del GDPR); il nostro legittimo interesse alla sicurezza e al buon funzionamento del servizio. Non usiamo mai i tuoi dialoghi per marketing o profilazione.
 
 ### B2. Fornitori di servizi dell'app
 
 - **Anthropic** (Stati Uniti): generazione delle risposte nei dialoghi. A questo scopo i tuoi messaggi vengono inviati all'API di Anthropic.
-- **Firebase / Google Cloud**: autenticazione, database e funzioni server.
-- **RevenueCat** (Stati Uniti): gestione degli acquisti in-app.
-- **Apple e Google**: distribuzione dell'app e pagamenti, secondo le rispettive informative.
+- **Hosting, account e database:** il fornitore sarà indicato qui prima del lancio (attualmente previsto: Firebase / Google Cloud).
+- **Pagamenti:** il fornitore sarà indicato qui prima che gli acquisti siano disponibili (attualmente previsti: Stripe per i pagamenti via web; Apple, Google e RevenueCat se usciranno app per dispositivi mobili).
 
 ### B3. Conservazione e cancellazione
 
-- **Account e dialoghi:** conservati finché l'account è attivo. Puoi cancellare l'account dall'app o scrivendoci.
+- **Dialoghi salvati:** conservati finché non li cancelli. Nell'app puoi cancellare un singolo dialogo, tutti i dialoghi o l'account, ed esportare le tue conversazioni.
+- **Account inattivi:** cancellati automaticamente dopo 24 mesi senza utilizzo.
+- **Log tecnici:** 30 giorni.
 - **Dopo la cancellazione:** i dati vengono rimossi entro 30 giorni, salvo quelli che la legge ci obbliga a conservare (per esempio i dati degli acquisti).
 
 ### B4. Età
 
-L'app è destinata a chi ha almeno 15 anni. Se ritieni che un minore di 15 anni ci abbia fornito dati personali, contattaci e li cancelleremo. Il sito invece può essere letto da chiunque senza fornire alcun dato.
+L'app è destinata a chi ha almeno 15 anni. Chi ha meno di 18 anni può acquistare oboli solo con il consenso di un genitore o di un tutore, e non effettuiamo mai profilazione commerciale dei minori. Se ritieni che un minore di 15 anni ci abbia fornito dati personali, contattaci e li cancelleremo. Il sito invece può essere letto da chiunque senza fornire alcun dato.
 
 ## I tuoi diritti
 

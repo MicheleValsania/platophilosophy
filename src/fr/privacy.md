@@ -7,10 +7,10 @@ translationKey: "legal-privacy"
 title: "Politique de confidentialité"
 pageTitle: "Politique de confidentialité | PLATO"
 description: "Quelles données personnelles le site PLATO et l'application de dialogue traitent, à quelles fins, et comment exercer vos droits."
-kicker: "Dernière mise à jour : 9 novembre 2026"
+kicker: "Dernière mise à jour : 10 novembre 2026"
 canonical: "/fr/privacy.html"
-jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Politique de confidentialité","description":"Quelles données personnelles le site PLATO et l'application de dialogue traitent, à quelles fins, et comment exercer vos droits.","inLanguage":"fr","url":"https://platophilosophy.com/fr/privacy.html","mainEntityOfPage":"https://platophilosophy.com/fr/privacy.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-10T00:47:49+01:00"}]
-importedFrom: {"path":"editorial/drafts/legal-privacy/fr-v2026-11-09.md","commit":"2401f3e7b6d6daa7e5aa959c2a5be69eda5d3c4c"}
+jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Politique de confidentialité","description":"Quelles données personnelles le site PLATO et l'application de dialogue traitent, à quelles fins, et comment exercer vos droits.","inLanguage":"fr","url":"https://platophilosophy.com/fr/privacy.html","mainEntityOfPage":"https://platophilosophy.com/fr/privacy.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-10T02:40:27+01:00"}]
+importedFrom: {"path":"editorial/drafts/legal-privacy/fr-v2026-11-09.md","commit":"cc7a940c8ad5a14f22c93fdce123ee8c445623a2"}
 ---
 Cette politique explique quelles données personnelles sont traitées lorsque vous utilisez platophilosophy.com et, une fois qu'elle sera disponible, l'application de dialogue PLATO. Elle comporte deux parties : la **partie A** concerne le site et s'applique dès maintenant ; la **partie B** concerne l'application, qui n'est pas encore disponible.
 
@@ -58,29 +58,31 @@ L'application n'est pas encore disponible. Cette partie décrit les données qu'
 
 ### B1. Données que traitera l'application
 
-- **Compte :** adresse e-mail et nom affiché. La connexion est gérée par Firebase Authentication ; nous ne voyons ni ne conservons votre mot de passe en clair.
-- **Dialogues :** les questions que vous posez et les réponses générées, afin que vous puissiez reprendre une conversation et consulter votre historique.
-- **Achats :** les achats d'oboles sont traités par l'App Store d'Apple ou Google Play et gérés via RevenueCat. Nous ne recevons ni ne conservons vos données de carte bancaire.
-- **Données techniques :** type d'appareil, système d'exploitation, version de l'application et rapports de plantage, pour assurer le bon fonctionnement de l'application.
+- **Compte :** votre adresse e-mail et, si vous en choisissez un, un nom affiché. Nous ne voyons ni ne conservons votre mot de passe en clair.
+- **Conversations :** pour vous répondre, les messages de la conversation en cours sont traités sur nos serveurs et transmis à Anthropic (voir B2). Les conversations philosophiques peuvent révéler vos convictions religieuses ou philosophiques. C'est pourquoi **nous ne conservons pas vos dialogues, sauf si vous choisissez explicitement de les enregistrer** (« Enregistrer mes dialogues »). Ce choix est distinct de la création du compte et peut être retiré à tout moment. Sans lui, une conversation n'existe que pendant la durée de votre session.
+- **Parcours de lecture :** une brève trace des chemins parcourus — œuvres et thèmes abordés, langue préférée — qui permet de poursuivre votre parcours d'un dialogue à l'autre. Elle n'enregistre jamais ce que vous croyez ni votre niveau : l'application n'évalue pas ses utilisateurs.
+- **Crédits et achats :** votre solde d'oboles et l'historique de vos achats. Les paiements sont traités par le prestataire de paiement ; nous ne recevons ni ne conservons vos données de carte bancaire.
+- **Données techniques :** rapports d'erreur et journaux techniques, pour assurer le bon fonctionnement et la sécurité du service.
 - **Assistance :** les messages que vous nous envoyez.
 
-Bases légales : l'exécution du contrat qui nous lie (compte, dialogues, achats), notre intérêt légitime (sécurité, rapports d'erreurs, amélioration des contenus) et votre consentement lorsque l'application le demande.
+Bases légales : l'exécution du contrat qui nous lie (compte, conversation en cours, crédits et achats) ; votre consentement explicite pour les dialogues enregistrés (article 9, paragraphe 2, point a, du RGPD) ; notre intérêt légitime à assurer la sécurité et le bon fonctionnement du service. Nous n'utilisons jamais vos dialogues à des fins de marketing ou de profilage.
 
 ### B2. Prestataires de l'application
 
 - **Anthropic** (États-Unis) : génération des réponses des dialogues. Vos messages sont transmis à l'API d'Anthropic à cette fin.
-- **Firebase / Google Cloud** : authentification, base de données et fonctions serveur.
-- **RevenueCat** (États-Unis) : gestion des achats intégrés.
-- **Apple et Google** : distribution de l'application et paiements, selon leurs propres politiques de confidentialité.
+- **Hébergement, comptes et base de données :** le prestataire sera indiqué ici avant le lancement (actuellement prévu : Firebase / Google Cloud).
+- **Paiements :** le prestataire sera indiqué ici avant l'ouverture des achats (actuellement prévus : Stripe pour les paiements sur le web ; Apple, Google et RevenueCat si des applications mobiles sont publiées).
 
 ### B3. Conservation et suppression
 
-- **Compte et dialogues :** conservés tant que votre compte est actif. Vous pouvez supprimer votre compte depuis l'application ou en nous écrivant.
+- **Dialogues enregistrés :** conservés jusqu'à ce que vous les supprimiez. Dans l'application, vous pouvez supprimer un dialogue, tous vos dialogues ou votre compte, et exporter vos conversations.
+- **Comptes inactifs :** supprimés automatiquement après 24 mois sans utilisation.
+- **Journaux techniques :** 30 jours.
 - **Après suppression :** les données sont effacées dans un délai de 30 jours, sauf celles que la loi nous oblige à conserver (par exemple les justificatifs d'achat).
 
 ### B4. Âge
 
-L'application est destinée aux personnes âgées d'au moins 15 ans. Si vous pensez qu'un enfant de moins de 15 ans nous a communiqué des données personnelles, contactez-nous et nous les supprimerons. Le site, lui, peut être consulté par tous sans fournir aucune donnée.
+L'application est destinée aux personnes âgées d'au moins 15 ans. Les mineurs de moins de 18 ans ne peuvent acheter des oboles qu'avec le consentement d'un parent ou d'un tuteur, et nous ne pratiquons jamais de profilage commercial des mineurs. Si vous pensez qu'un enfant de moins de 15 ans nous a communiqué des données personnelles, contactez-nous et nous les supprimerons. Le site, lui, peut être consulté par tous sans fournir aucune donnée.
 
 ## Vos droits
 
