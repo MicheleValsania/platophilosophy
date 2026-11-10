@@ -802,6 +802,21 @@
       "section": "home",
       "navigation": "none",
       "description": "lead"
+    },
+    {
+      "key": "legal-privacy",
+      "type": "article",
+      "url": "/privacy.html",
+      "sources": {
+        "it": "editorial/drafts/legal-privacy/it-v2026-11-09.md",
+        "fr": "editorial/drafts/legal-privacy/fr-v2026-11-09.md"
+      },
+      "section": "none",
+      "navigation": "none",
+      "description": {
+        "it": "Quali dati personali trattano il sito PLATO e l'app di dialogo, per quali finalità, e come esercitare i tuoi diritti.",
+        "fr": "Quelles données personnelles le site PLATO et l'application de dialogue traitent, à quelles fins, et comment exercer vos droits."
+      }
     }
   ]
 }
