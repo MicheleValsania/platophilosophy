@@ -463,6 +463,7 @@ for (const page of list.pages) {
     write(lang === "en" ? mdRel : `${lang}/${mdRel}`, frontMatter(fm) + body);
     count++;
   }
-  if (fs.existsSync(enHtml)) { fs.rmSync(enHtml); console.log("  removed src/" + page.url.replace(/^\//, "") + " (replaced by the imported version)"); }
+  // the English HTML page is replaced only when the English draft is imported too
+  if (page.sources.en && fs.existsSync(enHtml)) { fs.rmSync(enHtml); console.log("  removed src/" + page.url.replace(/^\//, "") + " (replaced by the imported version)"); }
 }
 console.log(`import-drafts: ${count} files written`);

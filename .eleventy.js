@@ -63,7 +63,7 @@ function frenchSpacing(html) {
   let skip = 0;
   return parts.map((part) => {
     if (part.startsWith("<")) {
-      const m = part.match(/^<(\/?)(script|style|code|pre|textarea)/i);
+      const m = part.match(/^<(\/?)(script|style|code|pre|textarea)\b/i);
       if (m) skip += m[1] ? -1 : 1;
       return part;
     }
