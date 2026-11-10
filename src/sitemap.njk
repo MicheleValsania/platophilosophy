@@ -3,19 +3,27 @@ permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 {%- for p in collections.all | sitemapEntries %}
+{%- set alts = p.data.translationKey | alternates %}
+{%- for v in alts %}
+{%- set vp = collections.all | byLang(p.data.translationKey, v.lang) %}
   <url>
-    <loc>{{ site.url }}{{ p.data.sitemap.loc }}</loc>
-{%- if p.data.sitemap.lastmod %}
-    <lastmod>{{ p.data.sitemap.lastmod }}</lastmod>
-{%- endif %}
+    <loc>{{ site.url }}{{ p.data.sitemap.loc if v.lang == "en" else v.url }}</loc>
+    <lastmod>{{ vp.inputPath | gitDate }}</lastmod>
 {%- if p.data.sitemap.changefreq %}
     <changefreq>{{ p.data.sitemap.changefreq }}</changefreq>
 {%- endif %}
 {%- if p.data.sitemap.priority %}
     <priority>{{ p.data.sitemap.priority }}</priority>
 {%- endif %}
+{%- if alts.length > 1 %}
+{%- for a in alts %}
+    <xhtml:link rel="alternate" hreflang="{{ a.lang }}" href="{{ site.url }}{{ p.data.sitemap.loc if a.lang == 'en' else a.url }}"/>
+{%- endfor %}
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ p.data.sitemap.loc }}"/>
+{%- endif %}
   </url>
+{%- endfor %}
 {%- endfor %}
 </urlset>

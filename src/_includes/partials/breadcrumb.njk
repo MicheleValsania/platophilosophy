@@ -1,7 +1,7 @@
 {%- if breadcrumb %}
-<nav aria-label="{{ 'breadcrumb.aria' | t(lang) }}" style="padding:12px 0;">
+<nav aria-label="{{ 'ui.breadcrumb' | t(lang) }}" style="padding:12px 0;">
   <div class="wrap" style="font-size:12px;color:var(--muted-soft);">
-    {% for item in breadcrumb.links %}<a href="{{ item.url }}" style="color:inherit;">{{ item.label | safe }}</a> › {% endfor %}<span style="color:var(--muted)">{{ breadcrumb.current | safe }}</span>
+    {% for item in breadcrumb.links %}<a href="{{ item.url | localeUrl(lang) }}" style="color:inherit;">{{ item.label | safe }}</a> › {% endfor %}<span style="color:var(--muted)">{{ breadcrumb.current | safe }}</span>
   </div>
 </nav>
 {%- endif %}

@@ -1,0 +1,76 @@
+{
+  "comment": "Pages imported from platophilosophy-private by scripts/import-drafts.mjs. Only files with status: approved are imported. Titles and descriptions here were approved separately (drafts have none).",
+  "pages": [
+    {
+      "key": "biography-travels",
+      "type": "article",
+      "url": "/resources/platophilosophy/travels.html",
+      "sources": {
+        "en": "editorial/drafts/biography-travels/en-reader-v0.1.md",
+        "it": "editorial/drafts/biography-travels/it-reader-v0.1.md",
+        "fr": "editorial/drafts/biography-travels/fr-reader-v0.1.md"
+      },
+      "section": "biography",
+      "navigation": "biography",
+      "pageTitle": {
+        "en": "Plato's Travels | PLATO",
+        "it": "I viaggi di Platone | PLATO",
+        "fr": "Les voyages de Platon | PLATO"
+      },
+      "description": {
+        "en": "Plato's travels after 399 BC: Megara, a disputed visit to Egypt, Cyrene, southern Italy and Sicily — what history supports and what later tradition adds.",
+        "it": "I viaggi di Platone dopo il 399 a.C.: Megara, il discusso viaggio in Egitto, Cirene, la Magna Grecia e la Sicilia, tra storia e tradizione posteriore.",
+        "fr": "Les voyages de Platon après 399 av. J.-C. : Mégare, l'Égypte (voyage discuté), Cyrène, l'Italie du Sud et la Sicile, entre histoire et tradition."
+      }
+    },
+    {
+      "key": "philosophy-theory-of-forms",
+      "type": "article",
+      "url": "/resources/philosophy/theory-of-forms.html",
+      "sources": {
+        "en": "editorial/drafts/philosophy-theory-of-forms/en-reader-v0.3.md",
+        "it": "editorial/drafts/philosophy-theory-of-forms/it-reader-v0.3.md",
+        "fr": "editorial/drafts/philosophy-theory-of-forms/fr-reader-v0.3.md"
+      },
+      "section": "philosophy",
+      "navigation": "philosophy",
+      "pageTitle": {
+        "en": "Theory of Forms | PLATO",
+        "it": "La teoria delle Idee | PLATO",
+        "fr": "La théorie des Formes | PLATO"
+      },
+      "description": {
+        "en": "Plato's Theory of Forms: what the Forms are, why the dialogues set sensible things apart from intelligible realities, and the Parmenides' objections.",
+        "it": "La teoria delle Idee: che cosa sono le Idee, perché i dialoghi distinguono il sensibile dall'intelligibile e quali obiezioni solleva il Parmenide.",
+        "fr": "La théorie des Formes de Platon : ce que sont les Formes, pourquoi les dialogues distinguent le sensible de l'intelligible, et les objections du Parménide."
+      }
+    },
+    {
+      "key": "references-glossary",
+      "type": "glossary",
+      "url": "/resources/references/glossary.html",
+      "sources": {
+        "en": { "file": "editorial/drafts/references/reader-introductions-en-v0.2.md", "sourceKey": "references-introductions", "section": "Glossary:" },
+        "it": { "file": "editorial/drafts/references/reader-introductions-it-v0.2.md", "sourceKey": "references-introductions", "section": "Glossario:" },
+        "fr": { "file": "editorial/drafts/references/reader-introductions-fr-v0.2.md", "sourceKey": "references-introductions", "section": "Glossaire" }
+      },
+      "data": { "file": "editorial/data/reference-glossary-v0.1.json", "sourceKey": "references-philosophical-glossary" },
+      "section": "references",
+      "heading": {
+        "en": "Glossary of Platonic Terms",
+        "it": "Glossario dei termini platonici",
+        "fr": "Glossaire des termes platoniciens"
+      },
+      "pageTitle": {
+        "en": "Glossary of Platonic Terms | PLATO",
+        "it": "Glossario dei termini platonici | PLATO",
+        "fr": "Glossaire des termes platoniciens | PLATO"
+      },
+      "description": {
+        "en": "31 key terms of Plato's philosophy, from eidos to psychē, with the Greek word, its transliteration and a short explanation in context.",
+        "it": "31 termini chiave della filosofia di Platone, da eidos a psychē, con la parola greca, la traslitterazione e una breve spiegazione nel contesto.",
+        "fr": "31 termes clés de la philosophie de Platon, d'eidos à psychē, avec le mot grec, sa translittération et une brève explication en contexte."
+      }
+    }
+  ]
+}

@@ -187,6 +187,7 @@ p{
 
   background: linear-gradient(180deg, rgba(216,193,138,.18), rgba(216,193,138,.08));
   color: var(--text);
+  font: inherit;
   font-weight: 600;
   letter-spacing: .2px;
   cursor: pointer;
@@ -254,6 +255,58 @@ header{
 
   border: 1px solid var(--accent-soft);
   box-shadow: var(--shadow-md);
+}
+
+/* ---------- Header actions: icons, menu and language pop-ups ---------- */
+
+.nav-actions{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.btn-icon{
+  min-width: 46px;
+  padding: 12px 14px;
+  line-height: 1;
+}
+.nav-pop{ position: relative; }
+.nav-pop > summary{ list-style: none; }
+.nav-pop > summary::-webkit-details-marker{ display: none; }
+.pop-panel{
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  z-index: 60;
+  min-width: 220px;
+  margin: 0;
+  padding: 8px;
+  list-style: none;
+  background: var(--bg);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+.pop-panel ul{ list-style: none; margin: 0; padding: 0; }
+.pop-panel a{
+  display: block;
+  padding: 9px 12px;
+  border-radius: 10px;
+  color: var(--text);
+  text-decoration: none;
+}
+.pop-panel a:hover,
+.pop-panel a[aria-current="true"]{ background: var(--accent-soft); }
+.btn:focus-visible,
+.pop-panel a:focus-visible,
+.nav-pop > summary:focus-visible{
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.lang-tag{ font-size: .8em; color: var(--muted-soft); }
+
+@media (max-width: 640px){
+  .nav-actions .nav-text{ display: none; }
 }
 
 /* ---------- Hero ---------- */

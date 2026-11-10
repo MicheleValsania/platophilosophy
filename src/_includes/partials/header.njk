@@ -1,14 +1,36 @@
+{%- set alts = translationKey | alternates -%}
 <header>
   <div class="wrap nav">
-    <a class="brand" href="/index.html">
+    <a class="brand" href="{{ '/index.html' | localeUrl(lang) }}">
       <div class="mark">Φ</div>
       <div><strong>{{ site.name }}</strong><br/><span style="font-size:12px;color:var(--muted-soft)">{{ site.domain }}</span></div>
     </a>
-    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
-      <a class="btn secondary" href="/resources/guides/start-here.html">{{ "nav.startHere" | t(lang) }}</a>
-      <a class="btn secondary" href="/resources.html">{{ "nav.resources" | t(lang) }}</a>
-      <button class="btn secondary" id="themeToggle" type="button" aria-label="{{ 'nav.themeAria' | t(lang) }}">{{ "nav.theme" | t(lang) }}</button>
-      <a class="btn secondary" href="{{ waitlistHref or '/index.html#waitlist' }}">{{ "nav.waitlist" | t(lang) }}</a>
+    <div class="nav-actions">
+      <a class="btn secondary nav-text" href="{{ '/resources/guides/start-here.html' | localeUrl(lang) }}">{{ "nav.start" | t(lang) }}</a>
+      <a class="btn secondary nav-text" href="{{ '/resources.html' | localeUrl(lang) }}">{{ "nav.resources" | t(lang) }}</a>
+      <a class="btn secondary nav-text" href="{{ waitlistHref or ('/index.html' | localeUrl(lang)) + '#waitlist' }}">{{ "ui.waitlist" | t(lang) }}</a>
+      <button class="btn secondary btn-icon" id="themeToggle" type="button" aria-label="{{ 'ui.themeToggle' | t(lang) }}" title="{{ 'ui.themeToggle' | t(lang) }}"><span aria-hidden="true">◐</span></button>
+{%- if alts.length > 1 %}
+      <details class="nav-pop lang-menu">
+        <summary class="btn secondary btn-icon" aria-label="{{ 'ui.language' | t(lang) }}: {{ site.languages[lang] }}" title="{{ 'ui.language' | t(lang) }}"><span aria-hidden="true">{{ lang | upper }}</span></summary>
+        <ul class="pop-panel" role="list">
+{%- for a in alts %}
+          <li><a href="{{ a.url }}" hreflang="{{ a.lang }}" lang="{{ a.lang }}"{% if a.lang == lang %} aria-current="true"{% endif %}>{{ site.languages[a.lang] }}</a></li>
+{%- endfor %}
+        </ul>
+      </details>
+{%- endif %}
+      <details class="nav-pop site-menu">
+        <summary class="btn secondary btn-icon" aria-label="{{ 'ui.menu' | t(lang) }}" title="{{ 'ui.menu' | t(lang) }}"><span aria-hidden="true">☰</span></summary>
+        <nav class="pop-panel" aria-label="{{ 'ui.menu' | t(lang) }}">
+          <ul role="list">
+{%- for item in menu %}
+            <li><a href="{{ item.url | localeUrl(lang) }}">{{ ("nav." + item.id) | t(lang) }}</a></li>
+{%- endfor %}
+            <li><a href="{{ ('/index.html' | localeUrl(lang)) + '#waitlist' }}">{{ "ui.joinWaitlist" | t(lang) }}</a></li>
+          </ul>
+        </nav>
+      </details>
     </div>
   </div>
 </header>

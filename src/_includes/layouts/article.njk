@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+pageStyles: styles/philosophy-pages.njk
+ogAuto: true
+---
+{%- set prev = previous.key | keyUrl(lang) if previous else null -%}
+{%- set nxt = next.key | keyUrl(lang) if next else null -%}
+<main>
+  <section style="padding:20px 0 60px;">
+    <div class="wrap">
+      <div style="max-width:78ch;">
+        <div class="kicker"><span class="kdot"></span>{{ kicker }}</div>
+        <h1 style="margin-top:14px;font-size:38px;line-height:1.15;">{{ title }}</h1>
+{%- if lead %}
+        <p class="meta-line">{{ lead | safe }}</p>
+{%- endif %}
+      </div>
+      <article class="reading">
+{{ content | safe }}
+      </article>
+{%- if prev or nxt %}
+      <div class="hr"></div>
+      <div class="nav-row">
+{%- if prev %}
+        <a class="btn secondary" href="{{ prev.url }}"{% if prev.fallback %} hreflang="en"{% endif %}>← {{ previous.label }}{% if prev.fallback %}<span class="lang-tag"> {{ "ui.englishOnly" | t(lang) }}</span>{% endif %}</a>
+{%- else %}
+        <span></span>
+{%- endif %}
+{%- if nxt %}
+        <a class="btn" href="{{ nxt.url }}"{% if nxt.fallback %} hreflang="en"{% endif %}>{{ "ui.next" | t(lang) }}: {{ next.label }}{% if nxt.fallback %}<span class="lang-tag"> {{ "ui.englishOnly" | t(lang) }}</span>{% endif %} →</a>
+{%- endif %}
+      </div>
+{%- endif %}
+    </div>
+  </section>
+</main>
