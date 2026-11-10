@@ -9,7 +9,7 @@ eleventyExcludeFromCollections: true
 {%- for v in alts %}
 {%- set vp = collections.all | byLang(p.data.translationKey, v.lang) %}
   <url>
-    <loc>{{ site.url }}{{ p.data.sitemap.loc if v.lang == "en" else v.url }}</loc>
+    <loc>{{ site.url }}{{ p.data.sitemap.loc if v.lang == "en" else (v.url | prettyHome) }}</loc>
     <lastmod>{{ vp.inputPath | gitDate }}</lastmod>
 {%- if p.data.sitemap.changefreq %}
     <changefreq>{{ p.data.sitemap.changefreq }}</changefreq>
@@ -19,7 +19,7 @@ eleventyExcludeFromCollections: true
 {%- endif %}
 {%- if alts.length > 1 %}
 {%- for a in alts %}
-    <xhtml:link rel="alternate" hreflang="{{ a.lang }}" href="{{ site.url }}{{ p.data.sitemap.loc if a.lang == 'en' else a.url }}"/>
+    <xhtml:link rel="alternate" hreflang="{{ a.lang }}" href="{{ site.url }}{{ p.data.sitemap.loc if a.lang == 'en' else (a.url | prettyHome) }}"/>
 {%- endfor %}
     <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ p.data.sitemap.loc }}"/>
 {%- endif %}

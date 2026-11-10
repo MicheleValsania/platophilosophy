@@ -14,9 +14,9 @@
 {%- endif %}
 {%- if site.hreflang and alts.length > 1 %}
 {%- for a in alts %}
-  <link rel="alternate" hreflang="{{ a.lang }}" href="{{ site.url }}{{ a.url }}" />
+  <link rel="alternate" hreflang="{{ a.lang }}" href="{{ site.url }}{{ a.url | prettyHome }}" />
 {%- endfor %}
-  <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ alts[0].url }}" />
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ alts[0].url | prettyHome }}" />
 {%- endif %}
 {%- if ogAuto %}
   <meta property="og:title" content="{{ title | safe }}" />

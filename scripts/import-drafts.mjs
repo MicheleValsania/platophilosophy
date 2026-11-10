@@ -57,7 +57,36 @@ function readDraft(rel) {
 }
 
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-const inline = (s) => esc(s).replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>").replace(/\*([^*]+)\*/g, "<em>$1</em>");
+const inline = (s) => esc(s).replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>").replace(/\*([^*]+)\*/g, "<em>$1</em>")
+  .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2">$1</a>');
+
+// "### Title\ntext" blocks become a grid of cards; a card with exactly one link is clickable as a whole
+function cardGrids(body, cardLinks = [], lang) {
+  let n = 0;
+  const blocks = body.trim().split(/\n{2,}/);
+  const out = [];
+  for (const b of blocks) {
+    const m = b.match(/^### (.+)\n([\s\S]+)$/);
+    if (!m) { out.push(b); continue; }
+    let text = inline(m[2].trim());
+    const extra = cardLinks[n++];
+    if (extra && !/<a /.test(text)) text += `</p><p style="margin-top:10px;font-size:13px;font-weight:600;"><a href="${extra}">${esc(t(lang, "ui.open"))} →</a>`;
+    const single = (text.match(/<a /g) || []).length === 1;
+    const card = `<div class="card${single ? " card-link" : ""}"><h3 style="margin-top:0;">${esc(m[1].trim())}</h3><p style="color:var(--muted);">${text}</p></div>`;
+    if (out.length && out[out.length - 1].startsWith('<div class="grid-3">')) out[out.length - 1] = out[out.length - 1].replace(/<\/div>$/, card + "</div>");
+    else out.push(`<div class="grid-3">${card}</div>`);
+  }
+  return out.join("\n\n") + "\n";
+}
+
+function waitlistForm(lang) {
+  const site = JSON.parse(fs.readFileSync(path.join(ROOT, "src/_data/site.json"), "utf8"));
+  return `<form id="waitlist-form" action="https://formspree.io/f/${site.formspreeId}" method="POST" style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;">` +
+    `<input type="hidden" name="_subject" value="PLATO waitlist signup (${lang})" />` +
+    `<input type="hidden" name="language" value="${lang}" />` +
+    `<input type="email" name="email" placeholder="${esc(t(lang, "ui.emailPlaceholder"))}" aria-label="${esc(t(lang, "ui.emailPlaceholder"))}" required style="padding:12px 14px;border-radius:999px;border:1px solid var(--stroke);background:rgba(0,0,0,.18);color:var(--text);min-width:260px;" />` +
+    `<button type="submit" class="btn">${esc(t(lang, "ui.joinWaitlist"))}</button></form>`;
+}
 
 // Split title (# …), kicker (*…*) and an all-bold lead paragraph from the body
 function splitArticle(body, rel) {
@@ -87,6 +116,7 @@ const targetUrl = (key, url, lang) => (publishedLangs.get(key)?.has(lang) ? loca
 
 const SECTIONS = {
   resources: null,
+  home: "home",
   guides: { label: "nav.guides", url: "/resources.html#guides", key: "site-resources" },
   start: { label: "nav.start", url: "/resources/guides/start-here.html", key: "guide-start-here" },
   biography: { label: "nav.biography", url: "/resources/platophilosophy/index.html", key: "biography-index" },
@@ -98,11 +128,9 @@ const t = (lang, k) => k.split(".").reduce((o, x) => o[x], i18n[lang]);
 function breadcrumb(sectionId, lang, current) {
   if (sectionId === "none") return undefined;
   const s = SECTIONS[sectionId];
-  const links = [
-    { label: t(lang, "ui.breadcrumbHome"), url: "/index.html" },
-    { label: t(lang, "nav.resources"), url: "/resources.html" },
-  ];
-  if (s) links.push({ label: t(lang, s.label), url: s.url });
+  const links = [{ label: t(lang, "ui.breadcrumbHome"), url: "/index.html" }];
+  if (s !== "home") links.push({ label: t(lang, "nav.resources"), url: "/resources.html" });
+  if (s && s !== "home") links.push({ label: t(lang, s.label), url: s.url });
   return { links, current };
 }
 
@@ -283,7 +311,7 @@ for (const page of list.pages) {
     const url = localUrl(page.url, lang);
 
     let fm, body;
-    if (["article", "biography-index", "biography-timeline", "greek-essentials", "map"].includes(page.type)) {
+    if (["article", "biography-index", "biography-timeline", "greek-essentials", "map", "site-page"].includes(page.type)) {
       const a = splitArticle(draft.body, rel);
       const crumbs = breadcrumb(page.section, lang, a.title);
       const nav = page.navigation === "biography" ? biographyNav(page.key, lang)
@@ -312,6 +340,33 @@ for (const page of list.pages) {
         provenance(page.data.file);
         return data;
       };
+      if (page.type === "site-page") {
+        // paragraphs excluded on purpose are listed in publish-list.json ("omit": paragraph openings per language)
+        for (const start of page.omit?.[lang] || []) {
+          const blocks = body.split(/\n{2,}/);
+          const hit = blocks.filter((b) => b.startsWith(start));
+          if (hit.length !== 1) fail(`${rel}: omit "${start}" matched ${hit.length} paragraphs`);
+          body = blocks.filter((b) => !b.startsWith(start)).join("\n\n") + "\n";
+        }
+        body = cardGrids(body, page.cardLinks, lang);
+        if (page.waitlist) {
+          // the form goes after the paragraph that invites readers to join, inside an anchor for #waitlist
+          const blocks = body.split(/\n{2,}/);
+          const i = blocks.findIndex((b) => b.startsWith(page.waitlist[lang]));
+          if (i < 0) fail(`${rel}: waitlist paragraph "${page.waitlist[lang]}" not found`);
+          blocks.splice(i, 1, `<div id="waitlist">\n\n${blocks[i]}\n\n${waitlistForm(lang)}\n\n</div>`);
+          body = blocks.join("\n\n") + "\n";
+          fm.waitlistHref = "#waitlist";
+        }
+        fm.leadLarge = true;
+        if (page.canonical) fm.canonical = page.canonical[lang];
+        if (page.schema === "website") {
+          fm.ogType = "website";
+          fm.jsonld = [{ "@context": "https://schema.org", "@type": "WebSite", name: "Plato Philosophy", alternateName: "PLATO",
+            url: SITE + fm.canonical, description, inLanguage: lang,
+            publisher: { "@type": "Organization", name: "PLATO Philosophy", url: SITE } }];
+        }
+      }
       if (page.type === "greek-essentials") {
         // the numbered list of terms in the draft is replaced by the full entries of the dataset
         const entries = [...dataset().entries].sort((x, y) => x.order - y.order);

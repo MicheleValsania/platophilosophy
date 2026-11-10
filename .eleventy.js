@@ -173,6 +173,8 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("gitDate", (inputPath) => gitDate(inputPath));
+  // Home pages are addressed as /, /it/, /fr/ (canonical, hreflang, sitemap)
+  eleventyConfig.addFilter("prettyHome", (url) => url.replace(/^((?:\/(?:it|fr))?\/)index\.html$/, "$1"));
   eleventyConfig.addFilter("isoDate", (d) => new Date(d).toISOString().slice(0, 10));
 
   // Sitemap entries in their declared order (English pages carry the sitemap data)
