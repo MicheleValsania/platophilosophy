@@ -50,11 +50,26 @@
       "type": "glossary",
       "url": "/resources/references/glossary.html",
       "sources": {
-        "en": { "file": "editorial/drafts/references/reader-introductions-en-v0.2.md", "sourceKey": "references-introductions", "section": "Glossary:" },
-        "it": { "file": "editorial/drafts/references/reader-introductions-it-v0.2.md", "sourceKey": "references-introductions", "section": "Glossario:" },
-        "fr": { "file": "editorial/drafts/references/reader-introductions-fr-v0.2.md", "sourceKey": "references-introductions", "section": "Glossaire" }
+        "en": {
+          "file": "editorial/drafts/references/reader-introductions-en-v0.2.md",
+          "sourceKey": "references-introductions",
+          "section": "Glossary:"
+        },
+        "it": {
+          "file": "editorial/drafts/references/reader-introductions-it-v0.2.md",
+          "sourceKey": "references-introductions",
+          "section": "Glossario:"
+        },
+        "fr": {
+          "file": "editorial/drafts/references/reader-introductions-fr-v0.2.md",
+          "sourceKey": "references-introductions",
+          "section": "Glossaire"
+        }
       },
-      "data": { "file": "editorial/data/reference-glossary-v0.1.json", "sourceKey": "references-philosophical-glossary" },
+      "data": {
+        "file": "editorial/data/reference-glossary-v0.1.json",
+        "sourceKey": "references-philosophical-glossary"
+      },
       "section": "references",
       "heading": {
         "en": "Glossary of Platonic Terms",
@@ -70,6 +85,314 @@
         "en": "31 key terms of Plato's philosophy, from eidos to psychē, with the Greek word, its transliteration and a short explanation in context.",
         "it": "31 termini chiave della filosofia di Platone, da eidos a psychē, con la parola greca, la traslitterazione e una breve spiegazione nel contesto.",
         "fr": "31 termes clés de la philosophie de Platon, d'eidos à psychē, avec le mot grec, sa translittération et une brève explication en contexte."
+      }
+    },
+    {
+      "key": "philosophy-the-cave-allegory",
+      "type": "article",
+      "url": "/resources/philosophy/the-cave-allegory.html",
+      "sources": {
+        "en": "editorial/drafts/philosophy-the-cave-allegory/en-reader-v0.1.md",
+        "it": "editorial/drafts/philosophy-the-cave-allegory/it-reader-v0.1.md",
+        "fr": "editorial/drafts/philosophy-the-cave-allegory/fr-reader-v0.1.md"
+      },
+      "section": "philosophy",
+      "navigation": "philosophy",
+      "pageTitle": {
+        "en": "The Allegory of the Cave | PLATO",
+        "it": "L'allegoria della caverna | PLATO",
+        "fr": "L'allégorie de la caverne | PLATO"
+      },
+      "description": {
+        "en": "Plato's Allegory of the Cave (Republic VII): prisoners, shadows and the difficult turn toward the light, read as an image of education and its risks.",
+        "it": "L'allegoria della caverna (Repubblica VII): prigionieri, ombre e la difficile conversione verso la luce, immagine dell'educazione e dei suoi rischi.",
+        "fr": "L'allégorie de la caverne (République VII) : prisonniers, ombres et difficile conversion vers la lumière, image de l'éducation et de ses risques."
+      }
+    },
+    {
+      "key": "philosophy-the-divided-line",
+      "type": "article",
+      "url": "/resources/philosophy/the-divided-line.html",
+      "sources": {
+        "en": "editorial/drafts/philosophy-the-divided-line/en-reader-v0.1.md",
+        "it": "editorial/drafts/philosophy-the-divided-line/it-reader-v0.1.md",
+        "fr": "editorial/drafts/philosophy-the-divided-line/fr-reader-v0.1.md"
+      },
+      "section": "philosophy",
+      "navigation": "philosophy",
+      "pageTitle": {
+        "en": "The Divided Line | PLATO",
+        "it": "La linea divisa | PLATO",
+        "fr": "La ligne divisée | PLATO"
+      },
+      "description": {
+        "en": "The Divided Line in Republic VI: four ways of grasping things, from images to understanding, and the place of mathematical thinking.",
+        "it": "La linea divisa nella Repubblica VI: quattro modi di cogliere le cose, dalle immagini all'intellezione, e il posto del pensiero matematico.",
+        "fr": "La ligne divisée au livre VI de la République : quatre manières de saisir les choses, des images à l'intellection, et la place de la pensée mathématique."
+      }
+    },
+    {
+      "key": "philosophy-appearance-vs-reality",
+      "type": "article",
+      "url": "/resources/philosophy/appearance-vs-reality.html",
+      "sources": {
+        "en": "editorial/drafts/philosophy-appearance-vs-reality/en-reader-v0.1.md",
+        "it": "editorial/drafts/philosophy-appearance-vs-reality/it-reader-v0.1.md",
+        "fr": "editorial/drafts/philosophy-appearance-vs-reality/fr-reader-v0.1.md"
+      },
+      "section": "philosophy",
+      "navigation": "philosophy",
+      "pageTitle": {
+        "en": "Appearance and Reality | PLATO",
+        "it": "Apparenza e realtà | PLATO",
+        "fr": "Apparence et réalité | PLATO"
+      },
+      "description": {
+        "en": "Appearance and reality in Plato: when appearances can be trusted, when they must be examined, and the distinction between being and becoming.",
+        "it": "Apparenza e realtà in Platone: quando ci si può fidare delle apparenze, quando vanno esaminate, e la distinzione tra essere e divenire.",
+        "fr": "Apparence et réalité chez Platon : quand se fier aux apparences, quand les examiner, et la distinction entre l'être et le devenir."
+      }
+    },
+    {
+      "key": "philosophy-knowledge-vs-opinion",
+      "type": "article",
+      "url": "/resources/philosophy/knowledge-vs-opinion.html",
+      "sources": {
+        "en": "editorial/drafts/philosophy-knowledge-vs-opinion/en-reader-v0.1.md",
+        "it": "editorial/drafts/philosophy-knowledge-vs-opinion/it-reader-v0.1.md",
+        "fr": "editorial/drafts/philosophy-knowledge-vs-opinion/fr-reader-v0.1.md"
+      },
+      "section": "philosophy",
+      "navigation": "philosophy",
+      "pageTitle": {
+        "en": "Knowledge and Opinion | PLATO",
+        "it": "Conoscenza e opinione | PLATO",
+        "fr": "Connaissance et opinion | PLATO"
+      },
+      "description": {
+        "en": "Knowledge and opinion in Plato: is a true opinion enough? What knowledge adds, from the Meno and the Republic to the Theaetetus.",
+        "it": "Conoscenza e opinione in Platone: basta un'opinione vera? Che cosa aggiunge la conoscenza, dal Menone e dalla Repubblica al Teeteto.",
+        "fr": "Connaissance et opinion chez Platon : une opinion vraie suffit-elle ? Ce qu'ajoute la connaissance, du Ménon et de la République au Théétète."
+      }
+    },
+    {
+      "key": "philosophy-recollection-learning",
+      "type": "article",
+      "url": "/resources/philosophy/recollection-learning.html",
+      "sources": {
+        "en": "editorial/drafts/philosophy-recollection-learning/en-reader-v0.1.md",
+        "it": "editorial/drafts/philosophy-recollection-learning/it-reader-v0.1.md",
+        "fr": "editorial/drafts/philosophy-recollection-learning/fr-reader-v0.1.md"
+      },
+      "section": "philosophy",
+      "navigation": "philosophy",
+      "pageTitle": {
+        "en": "Recollection and Learning | PLATO",
+        "it": "Reminiscenza e apprendimento | PLATO",
+        "fr": "Réminiscence et apprentissage | PLATO"
+      },
+      "description": {
+        "en": "Recollection and learning: Meno's challenge, the geometrical conversation in the Meno, and the Phaedo's idea that learning is recollection.",
+        "it": "Reminiscenza e apprendimento: la sfida di Menone, la conversazione geometrica nel Menone e l'idea del Fedone che imparare sia ricordare.",
+        "fr": "Réminiscence et apprentissage : le défi de Ménon, l'entretien géométrique du Ménon et l'idée du Phédon selon laquelle apprendre, c'est se ressouvenir."
+      }
+    },
+    {
+      "key": "philosophy-the-soul",
+      "type": "article",
+      "url": "/resources/philosophy/the-soul.html",
+      "sources": {
+        "en": "editorial/drafts/philosophy-the-soul/en-reader-v0.1.md",
+        "it": "editorial/drafts/philosophy-the-soul/it-reader-v0.1.md",
+        "fr": "editorial/drafts/philosophy-the-soul/fr-reader-v0.1.md"
+      },
+      "section": "philosophy",
+      "navigation": "philosophy",
+      "pageTitle": {
+        "en": "The Soul | PLATO",
+        "it": "L'anima | PLATO",
+        "fr": "L'âme | PLATO"
+      },
+      "description": {
+        "en": "Plato on the soul: inner conflict in the Republic, the winged chariot of the Phaedrus, the Phaedo's arguments for immortality and the Timaeus.",
+        "it": "L'anima in Platone: il conflitto interiore nella Repubblica, la biga alata del Fedro, gli argomenti del Fedone sull'immortalità e il Timeo.",
+        "fr": "L'âme chez Platon : le conflit intérieur dans la République, l'attelage ailé du Phèdre, les arguments du Phédon sur l'immortalité et le Timée."
+      }
+    },
+    {
+      "key": "philosophy-virtue-ethics",
+      "type": "article",
+      "url": "/resources/philosophy/virtue-ethics.html",
+      "sources": {
+        "en": "editorial/drafts/philosophy-virtue-ethics/en-reader-v0.1.md",
+        "it": "editorial/drafts/philosophy-virtue-ethics/it-reader-v0.1.md",
+        "fr": "editorial/drafts/philosophy-virtue-ethics/fr-reader-v0.1.md"
+      },
+      "section": "philosophy",
+      "navigation": "philosophy",
+      "pageTitle": {
+        "en": "Virtue and the Good Life | PLATO",
+        "it": "La virtù e la vita buona | PLATO",
+        "fr": "La vertu et la vie bonne | PLATO"
+      },
+      "description": {
+        "en": "Virtue and the good life in Plato: can virtue be taught, are the virtues one, and does justice make a life better even when injustice pays?",
+        "it": "La virtù e la vita buona in Platone: la virtù si può insegnare, le virtù sono una sola, e la giustizia rende migliore la vita anche quando non conviene?",
+        "fr": "La vertu et la vie bonne chez Platon : la vertu s'enseigne-t-elle, les vertus ne font-elles qu'une, et la justice rend-elle la vie meilleure ?"
+      }
+    },
+    {
+      "key": "philosophy-the-good",
+      "type": "article",
+      "url": "/resources/philosophy/the-good.html",
+      "sources": {
+        "en": "editorial/drafts/philosophy-the-good/en-reader-v0.1.md",
+        "it": "editorial/drafts/philosophy-the-good/it-reader-v0.1.md",
+        "fr": "editorial/drafts/philosophy-the-good/fr-reader-v0.1.md"
+      },
+      "section": "philosophy",
+      "navigation": "philosophy",
+      "pageTitle": {
+        "en": "The Form of the Good | PLATO",
+        "it": "L'Idea del Bene | PLATO",
+        "fr": "L'Idée du Bien | PLATO"
+      },
+      "description": {
+        "en": "The Form of the Good in Republic VI: the image of the sun, what \"beyond being\" may mean, and why the Good matters for political responsibility.",
+        "it": "L'Idea del Bene nella Repubblica VI: l'immagine del sole, che cosa può significare «al di là dell'essere» e perché il Bene conta per chi governa.",
+        "fr": "L'Idée du Bien au livre VI de la République : l'image du soleil, le sens possible de « au-delà de l'être » et l'importance du Bien pour gouverner."
+      }
+    },
+    {
+      "key": "philosophy-beauty-and-love",
+      "type": "article",
+      "url": "/resources/philosophy/beauty-and-love.html",
+      "sources": {
+        "en": "editorial/drafts/philosophy-beauty-and-love/en-reader-v0.1.md",
+        "it": "editorial/drafts/philosophy-beauty-and-love/it-reader-v0.1.md",
+        "fr": "editorial/drafts/philosophy-beauty-and-love/fr-reader-v0.1.md"
+      },
+      "section": "philosophy",
+      "navigation": "philosophy",
+      "pageTitle": {
+        "en": "Beauty and Love | PLATO",
+        "it": "Bellezza e amore | PLATO",
+        "fr": "Beauté et amour | PLATO"
+      },
+      "description": {
+        "en": "Beauty and love in the Symposium and the Phaedrus: eros between need and resource, the ascent toward Beauty, and Alcibiades' interruption.",
+        "it": "Bellezza e amore nel Simposio e nel Fedro: eros tra mancanza e risorsa, l'ascesa verso il Bello e l'irruzione di Alcibiade.",
+        "fr": "Beauté et amour dans le Banquet et le Phèdre : Éros entre manque et ressource, l'ascension vers le Beau et l'irruption d'Alcibiade."
+      }
+    },
+    {
+      "key": "philosophy-ideal-state",
+      "type": "article",
+      "url": "/resources/philosophy/ideal-state.html",
+      "sources": {
+        "en": "editorial/drafts/philosophy-ideal-state/en-reader-v0.1.md",
+        "it": "editorial/drafts/philosophy-ideal-state/it-reader-v0.1.md",
+        "fr": "editorial/drafts/philosophy-ideal-state/fr-reader-v0.1.md"
+      },
+      "section": "philosophy",
+      "navigation": "philosophy",
+      "pageTitle": {
+        "en": "The Just City | PLATO",
+        "it": "La città giusta | PLATO",
+        "fr": "La cité juste | PLATO"
+      },
+      "description": {
+        "en": "The just city of Plato's Republic: tasks and virtues, the myth of the metals, shared property, women guardians and the objections it invites.",
+        "it": "La città giusta della Repubblica: compiti e virtù, il mito dei metalli, la proprietà comune, le donne custodi e le obiezioni che suscita.",
+        "fr": "La cité juste de la République : fonctions et vertus, le mythe des métaux, la propriété commune, les femmes gardiennes et les objections qu'elle suscite."
+      }
+    },
+    {
+      "key": "philosophy-democracy-critique",
+      "type": "article",
+      "url": "/resources/philosophy/democracy-critique.html",
+      "sources": {
+        "en": "editorial/drafts/philosophy-democracy-critique/en-reader-v0.1.md",
+        "it": "editorial/drafts/philosophy-democracy-critique/it-reader-v0.1.md",
+        "fr": "editorial/drafts/philosophy-democracy-critique/fr-reader-v0.1.md"
+      },
+      "section": "philosophy",
+      "navigation": "philosophy",
+      "pageTitle": {
+        "en": "Plato's Critique of Democracy | PLATO",
+        "it": "La critica platonica della democrazia | PLATO",
+        "fr": "La critique platonicienne de la démocratie | PLATO"
+      },
+      "description": {
+        "en": "Plato's critique of democracy in the Republic: freedom, the democratic person, how tyranny could emerge and the ship of state, read against Athens.",
+        "it": "La critica platonica della democrazia nella Repubblica: libertà, uomo democratico, nascita della tirannide e la nave dello Stato, sullo sfondo di Atene.",
+        "fr": "La critique platonicienne de la démocratie : liberté, homme démocratique, naissance de la tyrannie et navire de l'État, sur fond de l'Athènes de Platon."
+      }
+    },
+    {
+      "key": "philosophy-philosopher-kings",
+      "type": "article",
+      "url": "/resources/philosophy/philosopher-kings.html",
+      "sources": {
+        "en": "editorial/drafts/philosophy-philosopher-kings/en-reader-v0.1.md",
+        "it": "editorial/drafts/philosophy-philosopher-kings/it-reader-v0.1.md",
+        "fr": "editorial/drafts/philosophy-philosopher-kings/fr-reader-v0.1.md"
+      },
+      "section": "philosophy",
+      "navigation": "philosophy",
+      "pageTitle": {
+        "en": "Philosopher-Rulers: Knowledge and the Burden of Power | PLATO",
+        "it": "Filosofi al governo: conoscenza e responsabilità del potere | PLATO",
+        "fr": "Les philosophes au pouvoir : savoir et responsabilité | PLATO"
+      },
+      "description": {
+        "en": "Philosopher-rulers in Plato's Republic: why philosophers should govern, why they would rather not, and why the ideal deserves critical questions.",
+        "it": "I filosofi al governo nella Repubblica: perché dovrebbero governare, perché preferirebbero non farlo e perché l'ideale merita domande critiche.",
+        "fr": "Les philosophes au pouvoir dans la République : pourquoi gouverner, pourquoi ils préféreraient s'en abstenir, et pourquoi cet idéal mérite d'être discuté."
+      }
+    },
+    {
+      "key": "philosophy-education-theory",
+      "type": "article",
+      "url": "/resources/philosophy/education-theory.html",
+      "sources": {
+        "en": "editorial/drafts/philosophy-education-theory/en-reader-v0.1.md",
+        "it": "editorial/drafts/philosophy-education-theory/it-reader-v0.1.md",
+        "fr": "editorial/drafts/philosophy-education-theory/fr-reader-v0.1.md"
+      },
+      "section": "philosophy",
+      "navigation": "philosophy",
+      "pageTitle": {
+        "en": "Education: Learning to Turn Around | PLATO",
+        "it": "Educare: imparare a rivolgere lo sguardo | PLATO",
+        "fr": "Éduquer : apprendre à changer de regard | PLATO"
+      },
+      "description": {
+        "en": "Education in Plato: turning the soul around, from stories, music and physical training to mathematics and dialectic. Is the teacher a midwife?",
+        "it": "L'educazione in Platone: rivolgere lo sguardo dell'anima, dai racconti, dalla musica e dalla ginnastica alla matematica e alla dialettica.",
+        "fr": "L'éducation chez Platon : tourner le regard de l'âme, des récits, de la musique et de la gymnastique jusqu'aux mathématiques et à la dialectique."
+      }
+    },
+    {
+      "key": "philosophy-art-poetry",
+      "type": "article",
+      "url": "/resources/philosophy/art-poetry.html",
+      "sources": {
+        "en": "editorial/drafts/philosophy-art-poetry/en-reader-v0.1.md",
+        "it": "editorial/drafts/philosophy-art-poetry/it-reader-v0.1.md",
+        "fr": "editorial/drafts/philosophy-art-poetry/fr-reader-v0.1.md"
+      },
+      "section": "philosophy",
+      "navigation": "philosophy",
+      "pageTitle": {
+        "en": "Art and Poetry: Images, Knowledge and Emotion | PLATO",
+        "it": "Arte e poesia: immagini, conoscenza ed emozioni | PLATO",
+        "fr": "Art et poésie : images, connaissance et émotions | PLATO"
+      },
+      "description": {
+        "en": "Art and poetry in Plato: the Republic's challenge to the poets, the three beds, the effect on audiences, and inspiration in the Ion and the Phaedrus.",
+        "it": "Arte e poesia in Platone: la sfida della Repubblica ai poeti, i tre letti, gli effetti sul pubblico e l'ispirazione nello Ione e nel Fedro.",
+        "fr": "Art et poésie chez Platon : le défi de la République aux poètes, les trois lits, l'effet sur le public et l'inspiration dans l'Ion et le Phèdre."
       }
     }
   ]
