@@ -41,7 +41,7 @@ Stiamo preparando **PLATO**, un'app per esplorare le domande di Platone attraver
 
 **Iscriviti alla lista d'attesa:** chi si iscrive riceverà **3 domande gratuite** per cominciare a esplorare il dialogo.
 
-<p style="margin-top:22px;"><a class="btn" href="https://stats.sender.net/forms/PENDING_IT/view">Iscriviti alla lista d'attesa →</a></p>
+<p style="margin-top:22px;"><a class="btn" href="https://stats.sender.net/forms/aM8Ln1/view">Iscriviti alla lista d'attesa →</a></p>
 
 <p style="color:var(--muted);font-size:14px;">Il modulo di iscrizione si apre su Sender, il servizio che gestisce la nostra lista. Poi conferma l'indirizzo dall'email che ricevi: se non la trovi, guarda nella cartella spam.</p>
 

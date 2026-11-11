@@ -42,7 +42,7 @@ We are preparing **PLATO**, an app for exploring Plato's questions through guide
 
 **Join the waitlist:** early-access members will receive **3 free questions** to begin exploring the dialogue experience.
 
-<p style="margin-top:22px;"><a class="btn" href="https://stats.sender.net/forms/PENDING_EN/view">Join the waitlist →</a></p>
+<p style="margin-top:22px;"><a class="btn" href="https://stats.sender.net/forms/e1wXkq/view">Join the waitlist →</a></p>
 
 <p style="color:var(--muted);font-size:14px;">The sign-up form opens on Sender, our mailing-list service. Then confirm your address from the email you receive — if you can't find it, check your spam folder.</p>
 
