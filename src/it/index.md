@@ -13,7 +13,7 @@ jsonld: [{"@context":"https://schema.org","@type":"WebSite","name":"Plato Philos
 waitlistHref: "#waitlist"
 leadLarge: true
 ogType: "website"
-importedFrom: {"path":"editorial/drafts/site-home/it-reader-v0.1.md","commit":"2401f3e7b6d6daa7e5aa959c2a5be69eda5d3c4c"}
+importedFrom: {"path":"editorial/drafts/site-home/it-reader-v0.1.md","commit":"60470e47804203ca032e5584e9d8143612bbd745"}
 ---
 La scrittura di Platone invita a interrogarsi sulla giustizia, sulla conoscenza, sulla virtù e sulla vita buona. Questo sito aiuta ad affrontare tali domande attraverso il contesto storico, la spiegazione delle idee e percorsi che conducono ai dialoghi stessi.
 
@@ -41,11 +41,13 @@ Stiamo preparando **PLATO**, un'app per esplorare le domande di Platone attraver
 
 **Iscriviti alla lista d'attesa:** chi si iscrive riceverà **3 domande gratuite** per cominciare a esplorare il dialogo.
 
-<form id="waitlist-form" action="https://formspree.io/f/mojdzdap" method="POST" style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;"><input type="hidden" name="_subject" value="PLATO waitlist signup (it)" /><input type="hidden" name="language" value="it" /><input type="email" name="email" placeholder="Indirizzo email" aria-label="Indirizzo email" required style="padding:12px 14px;border-radius:999px;border:1px solid var(--stroke);background:rgba(0,0,0,.18);color:var(--text);min-width:260px;" /><button type="submit" class="btn">Iscriviti alla lista d'attesa</button></form>
+<p style="margin-top:22px;"><a class="btn" href="https://stats.sender.net/forms/aM8Ln1/view">Iscriviti alla lista d'attesa →</a></p>
+
+<p style="color:var(--muted);font-size:14px;">Il modulo di iscrizione si apre su Sender, il servizio che gestisce la nostra lista. Poi conferma l'indirizzo dall'email che ricevi: se non la trovi, guarda nella cartella spam.</p>
 
 </div>
 
-*Niente spam: un'email al lancio, poi qualche aggiornamento occasionale. Puoi disiscriverti in qualsiasi momento — vedi l'[Informativa sulla privacy](/privacy.html).*
+*Niente spam: ti scriveremo per il lancio dell'app, per il tuo accesso e, ogni tanto, con qualche novità sul progetto. Puoi disiscriverti in qualsiasi momento — vedi l'[Informativa sulla privacy](/privacy.html).*
 
 ## Un progetto educativo indipendente
 

@@ -13,7 +13,7 @@ jsonld: [{"@context":"https://schema.org","@type":"WebSite","name":"Plato Philos
 waitlistHref: "#waitlist"
 leadLarge: true
 ogType: "website"
-importedFrom: {"path":"editorial/drafts/site-home/fr-reader-v0.1.md","commit":"2401f3e7b6d6daa7e5aa959c2a5be69eda5d3c4c"}
+importedFrom: {"path":"editorial/drafts/site-home/fr-reader-v0.1.md","commit":"60470e47804203ca032e5584e9d8143612bbd745"}
 ---
 L'écriture de Platon invite à interroger la justice, la connaissance, la vertu et la vie bonne. Ce site vous aide à aborder ces questions grâce au contexte historique, à l'explication des idées et à des parcours qui conduisent aux dialogues eux-mêmes.
 
@@ -41,11 +41,13 @@ Nous préparons **PLATO**, une application pour explorer les questions de Platon
 
 **Inscrivez-vous à la liste d'attente :** les inscrits recevront **3 questions gratuites** pour commencer à explorer le dialogue.
 
-<form id="waitlist-form" action="https://formspree.io/f/mojdzdap" method="POST" style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;"><input type="hidden" name="_subject" value="PLATO waitlist signup (fr)" /><input type="hidden" name="language" value="fr" /><input type="email" name="email" placeholder="Adresse e-mail" aria-label="Adresse e-mail" required style="padding:12px 14px;border-radius:999px;border:1px solid var(--stroke);background:rgba(0,0,0,.18);color:var(--text);min-width:260px;" /><button type="submit" class="btn">S'inscrire sur la liste d'attente</button></form>
+<p style="margin-top:22px;"><a class="btn" href="https://stats.sender.net/forms/bYE1DY/view">S'inscrire sur la liste d'attente →</a></p>
+
+<p style="color:var(--muted);font-size:14px;">Le formulaire d'inscription s'ouvre sur Sender, le service qui gère notre liste. Confirmez ensuite votre adresse depuis l'e-mail reçu ; si vous ne le trouvez pas, regardez dans vos courriers indésirables.</p>
 
 </div>
 
-*Pas de spam : un e-mail au lancement, puis quelques nouvelles occasionnelles. Vous pouvez vous désinscrire à tout moment — voir la [Politique de confidentialité](/privacy.html).*
+*Pas de spam : nous vous écrirons pour le lancement de l'application, votre accès et, de temps en temps, quelques nouvelles du projet. Vous pouvez vous désinscrire à tout moment — voir la [Politique de confidentialité](/privacy.html).*
 
 ## Un projet éducatif indépendant
 

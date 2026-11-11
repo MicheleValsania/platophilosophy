@@ -80,12 +80,12 @@ function cardGrids(body, cardLinks = [], lang) {
 }
 
 function waitlistForm(lang) {
+  // Sign-up happens on Sender's hosted form page (double opt-in there). No third-party script on our pages: no cookies.
   const site = JSON.parse(fs.readFileSync(path.join(ROOT, "src/_data/site.json"), "utf8"));
-  return `<form id="waitlist-form" action="https://formspree.io/f/${site.formspreeId}" method="POST" style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;">` +
-    `<input type="hidden" name="_subject" value="PLATO waitlist signup (${lang})" />` +
-    `<input type="hidden" name="language" value="${lang}" />` +
-    `<input type="email" name="email" placeholder="${esc(t(lang, "ui.emailPlaceholder"))}" aria-label="${esc(t(lang, "ui.emailPlaceholder"))}" required style="padding:12px 14px;border-radius:999px;border:1px solid var(--stroke);background:rgba(0,0,0,.18);color:var(--text);min-width:260px;" />` +
-    `<button type="submit" class="btn">${esc(t(lang, "ui.joinWaitlist"))}</button></form>`;
+  const url = site.waitlistForms?.[lang];
+  if (!/^https:\/\/stats\.sender\.net\/forms\/\w+\/view$/.test(url || "")) fail(`site.json: waitlistForms.${lang} missing or not a Sender form link`);
+  return `<p style="margin-top:22px;"><a class="btn" href="${url}">${esc(t(lang, "ui.joinWaitlist"))} →</a></p>\n\n` +
+    `<p style="color:var(--muted);font-size:14px;">${esc(t(lang, "ui.waitlistConfirm"))}</p>`;
 }
 
 // Split title (# …), kicker (*…*) and an all-bold lead paragraph from the body

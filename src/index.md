@@ -14,7 +14,7 @@ waitlistHref: "#waitlist"
 leadLarge: true
 ogType: "website"
 sitemap: {"order":0,"loc":"/","changefreq":"weekly","priority":"1.0"}
-importedFrom: {"path":"editorial/drafts/site-home/en-reader-v0.1.md","commit":"2401f3e7b6d6daa7e5aa959c2a5be69eda5d3c4c"}
+importedFrom: {"path":"editorial/drafts/site-home/en-reader-v0.1.md","commit":"60470e47804203ca032e5584e9d8143612bbd745"}
 ---
 Plato's writing invites readers to question what justice, knowledge, virtue and a good life might mean. This site helps you approach those questions with historical context, explanations of key ideas and paths to the dialogues themselves.
 
@@ -42,11 +42,13 @@ We are preparing **PLATO**, an app for exploring Plato's questions through guide
 
 **Join the waitlist:** early-access members will receive **3 free questions** to begin exploring the dialogue experience.
 
-<form id="waitlist-form" action="https://formspree.io/f/mojdzdap" method="POST" style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;"><input type="hidden" name="_subject" value="PLATO waitlist signup (en)" /><input type="hidden" name="language" value="en" /><input type="email" name="email" placeholder="Email address" aria-label="Email address" required style="padding:12px 14px;border-radius:999px;border:1px solid var(--stroke);background:rgba(0,0,0,.18);color:var(--text);min-width:260px;" /><button type="submit" class="btn">Join the waitlist</button></form>
+<p style="margin-top:22px;"><a class="btn" href="https://stats.sender.net/forms/e1wXkq/view">Join the waitlist →</a></p>
+
+<p style="color:var(--muted);font-size:14px;">The sign-up form opens on Sender, our mailing-list service. Then confirm your address from the email you receive — if you can't find it, check your spam folder.</p>
 
 </div>
 
-*No spam: one email at launch, then occasional updates. You can unsubscribe at any time — see the [Privacy Policy](/privacy.html).*
+*No spam: we will write to you about the app's launch, your access and, now and then, news about the project. You can unsubscribe at any time — see the [Privacy Policy](/privacy.html).*
 
 ## An independent educational project
 
