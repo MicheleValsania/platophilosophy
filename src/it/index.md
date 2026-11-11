@@ -13,7 +13,7 @@ jsonld: [{"@context":"https://schema.org","@type":"WebSite","name":"Plato Philos
 waitlistHref: "#waitlist"
 leadLarge: true
 ogType: "website"
-importedFrom: {"path":"editorial/drafts/site-home/it-reader-v0.1.md","commit":"2401f3e7b6d6daa7e5aa959c2a5be69eda5d3c4c"}
+importedFrom: {"path":"editorial/drafts/site-home/it-reader-v0.1.md","commit":"0e0073474ed1c4716bb6df3dd569868dfea99516"}
 ---
 La scrittura di Platone invita a interrogarsi sulla giustizia, sulla conoscenza, sulla virtù e sulla vita buona. Questo sito aiuta ad affrontare tali domande attraverso il contesto storico, la spiegazione delle idee e percorsi che conducono ai dialoghi stessi.
 
@@ -47,7 +47,7 @@ Stiamo preparando **PLATO**, un'app per esplorare le domande di Platone attraver
 
 </div>
 
-*Niente spam: un'email al lancio, poi qualche aggiornamento occasionale. Puoi disiscriverti in qualsiasi momento — vedi l'[Informativa sulla privacy](/privacy.html).*
+*Niente spam: ti scriveremo solo per il lancio dell'app e per il tuo accesso. Puoi disiscriverti in qualsiasi momento — vedi l'[Informativa sulla privacy](/privacy.html).*
 
 ## Un progetto educativo indipendente
 

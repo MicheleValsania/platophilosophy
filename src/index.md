@@ -14,7 +14,7 @@ waitlistHref: "#waitlist"
 leadLarge: true
 ogType: "website"
 sitemap: {"order":0,"loc":"/","changefreq":"weekly","priority":"1.0"}
-importedFrom: {"path":"editorial/drafts/site-home/en-reader-v0.1.md","commit":"2401f3e7b6d6daa7e5aa959c2a5be69eda5d3c4c"}
+importedFrom: {"path":"editorial/drafts/site-home/en-reader-v0.1.md","commit":"0e0073474ed1c4716bb6df3dd569868dfea99516"}
 ---
 Plato's writing invites readers to question what justice, knowledge, virtue and a good life might mean. This site helps you approach those questions with historical context, explanations of key ideas and paths to the dialogues themselves.
 
@@ -48,7 +48,7 @@ We are preparing **PLATO**, an app for exploring Plato's questions through guide
 
 </div>
 
-*No spam: one email at launch, then occasional updates. You can unsubscribe at any time — see the [Privacy Policy](/privacy.html).*
+*No spam: we will only write to you about the app's launch and your access to it. You can unsubscribe at any time — see the [Privacy Policy](/privacy.html).*
 
 ## An independent educational project
 
