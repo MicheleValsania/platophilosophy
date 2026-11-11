@@ -42,7 +42,9 @@ We are preparing **PLATO**, an app for exploring Plato's questions through guide
 
 **Join the waitlist:** early-access members will receive **3 free questions** to begin exploring the dialogue experience.
 
-<form id="waitlist-form" action="https://formspree.io/f/mojdzdap" method="POST" style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;"><input type="hidden" name="_subject" value="PLATO waitlist signup (en)" /><input type="hidden" name="language" value="en" /><input type="email" name="email" placeholder="Email address" aria-label="Email address" required style="padding:12px 14px;border-radius:999px;border:1px solid var(--stroke);background:rgba(0,0,0,.18);color:var(--text);min-width:260px;" /><button type="submit" class="btn">Join the waitlist</button></form>
+<p style="margin-top:22px;"><a class="btn" href="https://stats.sender.net/forms/PENDING_EN/view">Join the waitlist →</a></p>
+
+<p style="color:var(--muted);font-size:14px;">The sign-up form opens on Sender, our mailing-list service. Then confirm your address from the email you receive — if you can't find it, check your spam folder.</p>
 
 </div>
 

@@ -41,7 +41,9 @@ Stiamo preparando **PLATO**, un'app per esplorare le domande di Platone attraver
 
 **Iscriviti alla lista d'attesa:** chi si iscrive riceverà **3 domande gratuite** per cominciare a esplorare il dialogo.
 
-<form id="waitlist-form" action="https://formspree.io/f/mojdzdap" method="POST" style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;"><input type="hidden" name="_subject" value="PLATO waitlist signup (it)" /><input type="hidden" name="language" value="it" /><input type="email" name="email" placeholder="Indirizzo email" aria-label="Indirizzo email" required style="padding:12px 14px;border-radius:999px;border:1px solid var(--stroke);background:rgba(0,0,0,.18);color:var(--text);min-width:260px;" /><button type="submit" class="btn">Iscriviti alla lista d'attesa</button></form>
+<p style="margin-top:22px;"><a class="btn" href="https://stats.sender.net/forms/PENDING_IT/view">Iscriviti alla lista d'attesa →</a></p>
+
+<p style="color:var(--muted);font-size:14px;">Il modulo di iscrizione si apre su Sender, il servizio che gestisce la nostra lista. Poi conferma l'indirizzo dall'email che ricevi: se non la trovi, guarda nella cartella spam.</p>
 
 </div>
 

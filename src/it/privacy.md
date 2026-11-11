@@ -7,10 +7,10 @@ translationKey: "legal-privacy"
 title: "Informativa sulla privacy"
 pageTitle: "Informativa sulla privacy | PLATO"
 description: "Quali dati personali trattano il sito PLATO e l'app di dialogo, per quali finalità, e come esercitare i tuoi diritti."
-kicker: "Ultimo aggiornamento: 10 novembre 2026"
+kicker: "Ultimo aggiornamento: 11 novembre 2026"
 canonical: "/it/privacy.html"
-jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Informativa sulla privacy","description":"Quali dati personali trattano il sito PLATO e l'app di dialogo, per quali finalità, e come esercitare i tuoi diritti.","inLanguage":"it","url":"https://platophilosophy.com/it/privacy.html","mainEntityOfPage":"https://platophilosophy.com/it/privacy.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-10T02:40:27+01:00"}]
-importedFrom: {"path":"editorial/drafts/legal-privacy/it-v2026-11-09.md","commit":"cc7a940c8ad5a14f22c93fdce123ee8c445623a2"}
+jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Informativa sulla privacy","description":"Quali dati personali trattano il sito PLATO e l'app di dialogo, per quali finalità, e come esercitare i tuoi diritti.","inLanguage":"it","url":"https://platophilosophy.com/it/privacy.html","mainEntityOfPage":"https://platophilosophy.com/it/privacy.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-11T13:39:39+01:00"}]
+importedFrom: {"path":"editorial/drafts/legal-privacy/it-v2026-11-09.md","commit":"8628057be511ac2e0c28dd8d4181beb828fb3e05"}
 ---
 Questa informativa spiega quali dati personali vengono trattati quando usi platophilosophy.com e, quando sarà disponibile, l'app di dialogo PLATO. È divisa in due parti: la **Parte A** riguarda il sito ed è già in vigore; la **Parte B** riguarda l'app, che non è ancora disponibile.
 
@@ -24,7 +24,7 @@ Il titolare del trattamento è **Michele Valsania**, che cura PLATO come progett
 
 - **Navigazione.** Il fornitore di hosting (Netlify) tratta dati tecnici come l'indirizzo IP, il browser e la pagina richiesta, per mostrare le pagine e proteggere il servizio. Base giuridica: il nostro legittimo interesse a gestire un sito sicuro.
 - **Statistiche delle visite.** Usiamo GoatCounter per contare le pagine visitate. Non imposta cookie e non conserva il tuo indirizzo IP: usa IP e browser solo per un breve tempo, per stimare il paese di provenienza ed evitare di contare due volte la stessa visita, e conserva dati aggregati come pagine visitate, sito di provenienza, browser, dimensione dello schermo e paese. Base giuridica: il nostro legittimo interesse a capire quali pagine sono utili.
-- **Lista d'attesa.** Se ti iscrivi alla lista d'attesa, riceviamo il tuo indirizzo email tramite Formspree e gestiamo la lista con Sender. Lo usiamo per avvisarti del lancio dell'app e per inviarti aggiornamenti occasionali. Base giuridica: il tuo consenso, che puoi revocare in qualsiasi momento con il link di disiscrizione presente in ogni email o scrivendoci.
+- **Lista d'attesa.** Se ti iscrivi alla lista d'attesa, lo fai da una pagina con il modulo ospitata da Sender, che gestisce la lista e invia le nostre email. Sender ti manda poi un link per confermare l'indirizzo e registra quando ti sei iscritto e quando hai confermato. Usiamo il tuo indirizzo per avvisarti del lancio dell'app e, se hai scelto di riceverli, per inviarti aggiornamenti occasionali. La pagina di iscrizione è di Sender, che può usarvi dei cookie secondo la propria informativa; le nostre pagine non ne usano. Base giuridica: il tuo consenso, che puoi revocare in qualsiasi momento con il link di disiscrizione presente in ogni email o scrivendoci.
 - **Email che ci invii.** Se ci scrivi, usiamo il messaggio e il tuo indirizzo per risponderti. La nostra casella è ospitata da Infomaniak. Base giuridica: il nostro legittimo interesse a risponderti.
 - **Mappa interattiva.** La pagina della mappa carica la libreria Leaflet da unpkg e le tessere della mappa da OpenStreetMap. Il tuo browser si collega quindi a questi servizi, che ricevono il tuo indirizzo IP.
 
@@ -38,8 +38,7 @@ Il sito non imposta cookie. Se scegli il tema chiaro o scuro, la scelta viene sa
 
 - **Netlify** (Stati Uniti): hosting del sito.
 - **GoatCounter**: statistiche delle visite aggregate e senza cookie.
-- **Formspree** (Stati Uniti): ricezione delle iscrizioni alla lista d'attesa.
-- **Sender** (Unione europea): gestione della lista e invio delle email.
+- **Sender** (Unione europea): pagina di iscrizione alla lista d'attesa, gestione della lista e invio delle email.
 - **Infomaniak** (Svizzera): hosting della posta.
 - **unpkg** e **OpenStreetMap** (OpenStreetMap Foundation, Regno Unito): libreria software e tessere per la mappa interattiva.
 
