@@ -9,8 +9,8 @@ pageTitle: "Politique de confidentialité | PLATO"
 description: "Quelles données personnelles le site PLATO et l'application de dialogue traitent, à quelles fins, et comment exercer vos droits."
 kicker: "Dernière mise à jour : 11 novembre 2026"
 canonical: "/fr/privacy.html"
-jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Politique de confidentialité","description":"Quelles données personnelles le site PLATO et l'application de dialogue traitent, à quelles fins, et comment exercer vos droits.","inLanguage":"fr","url":"https://platophilosophy.com/fr/privacy.html","mainEntityOfPage":"https://platophilosophy.com/fr/privacy.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-11T14:06:36+01:00"}]
-importedFrom: {"path":"editorial/drafts/legal-privacy/fr-v2026-11-09.md","commit":"0e0073474ed1c4716bb6df3dd569868dfea99516"}
+jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Politique de confidentialité","description":"Quelles données personnelles le site PLATO et l'application de dialogue traitent, à quelles fins, et comment exercer vos droits.","inLanguage":"fr","url":"https://platophilosophy.com/fr/privacy.html","mainEntityOfPage":"https://platophilosophy.com/fr/privacy.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-11T14:11:25+01:00"}]
+importedFrom: {"path":"editorial/drafts/legal-privacy/fr-v2026-11-09.md","commit":"60470e47804203ca032e5584e9d8143612bbd745"}
 ---
 Cette politique explique quelles données personnelles sont traitées lorsque vous utilisez platophilosophy.com et, une fois qu'elle sera disponible, l'application de dialogue PLATO. Elle comporte deux parties : la **partie A** concerne le site et s'applique dès maintenant ; la **partie B** concerne l'application, qui n'est pas encore disponible.
 
@@ -24,7 +24,7 @@ Le responsable du traitement est **Michele Valsania**, qui mène PLATO comme pro
 
 - **Navigation.** Notre hébergeur (Netlify) traite des données techniques telles que votre adresse IP, votre navigateur et la page demandée, afin d'afficher les pages et de protéger le service. Base légale : notre intérêt légitime à exploiter un site sécurisé.
 - **Statistiques de fréquentation.** Nous utilisons GoatCounter pour compter les pages vues. Il ne dépose aucun cookie et ne conserve pas votre adresse IP : il n'utilise votre adresse IP et votre navigateur que brièvement, pour estimer votre pays et éviter de compter deux fois la même visite, et conserve des données agrégées telles que les pages consultées, le site de provenance, le navigateur, la taille d'écran et le pays. Base légale : notre intérêt légitime à savoir quelles pages sont utiles.
-- **Liste d'attente.** Si vous vous inscrivez à la liste d'attente, vous le faites sur une page de formulaire hébergée par Sender, qui gère la liste et envoie nos e-mails. Sender vous envoie ensuite un lien pour confirmer votre adresse et enregistre la date de votre inscription et de votre confirmation. Nous utilisons votre adresse uniquement pour vous prévenir du lancement de l'application et de votre accès. La page d'inscription appartient à Sender, qui peut y utiliser des cookies selon sa propre politique de confidentialité ; nos pages n'en déposent aucun. Base légale : votre consentement, que vous pouvez retirer à tout moment grâce au lien de désinscription présent dans chaque e-mail ou en nous écrivant.
+- **Liste d'attente.** Si vous vous inscrivez à la liste d'attente, vous le faites sur une page de formulaire hébergée par Sender, qui gère la liste et envoie nos e-mails. Sender vous envoie ensuite un lien pour confirmer votre adresse et enregistre la date de votre inscription et de votre confirmation. Nous utilisons votre adresse pour vous prévenir du lancement de l'application et de votre accès, et pour vous envoyer de temps en temps quelques nouvelles du projet. La page d'inscription appartient à Sender, qui peut y utiliser des cookies selon sa propre politique de confidentialité ; nos pages n'en déposent aucun. Base légale : votre consentement, que vous pouvez retirer à tout moment grâce au lien de désinscription présent dans chaque e-mail ou en nous écrivant.
 - **E-mails que vous nous envoyez.** Si vous nous écrivez, nous utilisons votre message et votre adresse pour vous répondre. Notre messagerie est hébergée par Infomaniak. Base légale : notre intérêt légitime à vous répondre.
 - **Carte interactive.** La page de la carte charge la bibliothèque Leaflet depuis unpkg et les tuiles cartographiques depuis OpenStreetMap. Votre navigateur se connecte donc à ces services, qui reçoivent votre adresse IP.
 
@@ -46,7 +46,7 @@ Certains prestataires sont établis hors de l'Espace économique européen. Dans
 
 ### A4. Durée de conservation
 
-- **Liste d'attente :** jusqu'à votre désinscription ou jusqu'à la clôture de la liste d'attente après le lancement.
+- **Liste d'attente :** jusqu'à votre désinscription ou jusqu'à ce que nous cessions d'envoyer des nouvelles du projet.
 - **E-mails :** le temps nécessaire au traitement de votre demande, et au plus deux ans après le dernier échange.
 - **Statistiques :** les données agrégées, qui ne permettent pas de vous identifier, peuvent être conservées sans limite de durée.
 - **Journaux du serveur :** pendant la durée limitée fixée par l'hébergeur.
