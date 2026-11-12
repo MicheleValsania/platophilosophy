@@ -7,12 +7,12 @@ translationKey: "legal-privacy"
 title: "Informativa sulla privacy"
 pageTitle: "Informativa sulla privacy | PLATO"
 description: "Quali dati personali trattano il sito PLATO e l'app di dialogo, per quali finalità, e come esercitare i tuoi diritti."
-kicker: "Ultimo aggiornamento: 11 novembre 2026"
+kicker: "Ultimo aggiornamento: 12 novembre 2026"
 canonical: "/it/privacy.html"
-jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Informativa sulla privacy","description":"Quali dati personali trattano il sito PLATO e l'app di dialogo, per quali finalità, e come esercitare i tuoi diritti.","inLanguage":"it","url":"https://platophilosophy.com/it/privacy.html","mainEntityOfPage":"https://platophilosophy.com/it/privacy.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-11T14:11:25+01:00"}]
-importedFrom: {"path":"editorial/drafts/legal-privacy/it-v2026-11-09.md","commit":"60470e47804203ca032e5584e9d8143612bbd745"}
+jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Informativa sulla privacy","description":"Quali dati personali trattano il sito PLATO e l'app di dialogo, per quali finalità, e come esercitare i tuoi diritti.","inLanguage":"it","url":"https://platophilosophy.com/it/privacy.html","mainEntityOfPage":"https://platophilosophy.com/it/privacy.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-12T11:32:59+01:00"}]
+importedFrom: {"path":"editorial/drafts/legal-privacy/it-v2026-11-12.md","commit":"3a2254c78fc3fedc4e7e7edbca79ea08ff1be562"}
 ---
-Questa informativa spiega quali dati personali vengono trattati quando usi platophilosophy.com e, quando sarà disponibile, l'app di dialogo PLATO. È divisa in due parti: la **Parte A** riguarda il sito ed è già in vigore; la **Parte B** riguarda l'app, che non è ancora disponibile.
+Questa informativa spiega quali dati personali vengono trattati quando usi platophilosophy.com e l'app di dialogo PLATO (app.platophilosophy.com). È divisa in due parti: la **Parte A** riguarda il sito; la **Parte B** riguarda l'app.
 
 ## Titolare del trattamento
 
@@ -24,8 +24,8 @@ Il titolare del trattamento è **Michele Valsania**, che cura PLATO come progett
 
 - **Navigazione.** Il fornitore di hosting (Netlify) tratta dati tecnici come l'indirizzo IP, il browser e la pagina richiesta, per mostrare le pagine e proteggere il servizio. Base giuridica: il nostro legittimo interesse a gestire un sito sicuro.
 - **Statistiche delle visite.** Usiamo GoatCounter per contare le pagine visitate. Non imposta cookie e non conserva il tuo indirizzo IP: usa IP e browser solo per un breve tempo, per stimare il paese di provenienza ed evitare di contare due volte la stessa visita, e conserva dati aggregati come pagine visitate, sito di provenienza, browser, dimensione dello schermo e paese. Base giuridica: il nostro legittimo interesse a capire quali pagine sono utili.
-- **Lista d'attesa.** Se ti iscrivi alla lista d'attesa, lo fai da una pagina con il modulo ospitata da Sender, che gestisce la lista e invia le nostre email. Sender ti manda poi un link per confermare l'indirizzo e registra quando ti sei iscritto e quando hai confermato. Usiamo il tuo indirizzo per avvisarti del lancio dell'app e del tuo accesso, e per inviarti ogni tanto qualche novità sul progetto. La pagina di iscrizione è di Sender, che può usarvi dei cookie secondo la propria informativa; le nostre pagine non ne usano. Base giuridica: il tuo consenso, che puoi revocare in qualsiasi momento con il link di disiscrizione presente in ogni email o scrivendoci.
-- **Email che ci invii.** Se ci scrivi, usiamo il messaggio e il tuo indirizzo per risponderti. La nostra casella è ospitata da Infomaniak. Base giuridica: il nostro legittimo interesse a risponderti.
+- **Lista d'attesa.** Se ti iscrivi alla lista d'attesa, lo fai da una pagina con il modulo ospitata da Sender, che gestisce la lista e invia le nostre email. Sender ti manda poi un link per confermare l'indirizzo e registra quando ti sei iscritto e quando hai confermato. Usiamo il tuo indirizzo per invitarti all'app, per avvisarti del lancio e per inviarti ogni tanto qualche novità sul progetto. Per invitarti copiamo il tuo indirizzo e la tua lingua da Sender nell'elenco degli invitati dell'app (vedi Parte B). La pagina di iscrizione è di Sender, che può usarvi dei cookie secondo la propria informativa; le nostre pagine non ne usano. Base giuridica: il tuo consenso, che puoi revocare in qualsiasi momento con il link di disiscrizione presente in ogni email o scrivendoci.
+- **Email che ci invii.** Se ci scrivi, usiamo il messaggio e il tuo indirizzo per risponderti. Se chiedi di partecipare alla beta e ti invitiamo, copiamo il tuo indirizzo e la lingua che preferisci nell'elenco degli invitati dell'app (vedi Parte B). La nostra casella è ospitata da Infomaniak. Base giuridica: il nostro legittimo interesse a risponderti.
 - **Mappa interattiva.** La pagina della mappa carica la libreria Leaflet da unpkg e le tessere della mappa da OpenStreetMap. Il tuo browser si collega quindi a questi servizi, che ricevono il tuo indirizzo IP.
 
 Non vendiamo i tuoi dati, non li usiamo per la pubblicità e non creiamo profili.
@@ -53,35 +53,38 @@ Alcuni fornitori si trovano fuori dallo Spazio economico europeo. In questi casi
 
 ## Parte B — L'app di dialogo PLATO
 
-L'app non è ancora disponibile. Questa parte descrive i dati che è progettata per trattare; la rivedremo prima del lancio e informeremo gli iscritti alla lista d'attesa di eventuali modifiche.
+L'app su app.platophilosophy.com è in beta chiusa, aperta alle persone invitate dalla lista d'attesa. Questa parte descrive che cosa tratta oggi. Le funzioni non ancora offerte, come i dialoghi salvati, la traccia del percorso di lettura o i pagamenti, non sono descritte qui: aggiorneremo questa informativa prima di introdurle.
 
-### B1. Quali dati tratterà l'app
+### B1. Quali dati tratta l'app e perché
 
-- **Account:** il tuo indirizzo email e, se lo scegli, un nome visualizzato. Non vediamo né conserviamo la tua password in chiaro.
-- **Conversazioni:** per risponderti, i messaggi della conversazione in corso vengono elaborati sui nostri server e inviati ad Anthropic (vedi B2). Le conversazioni filosofiche possono rivelare le tue convinzioni religiose o filosofiche. Per questo **non conserviamo i tuoi dialoghi, a meno che tu non scelga esplicitamente di salvarli** («Salva i miei dialoghi»). Questa scelta è separata dalla creazione dell'account e puoi revocarla in qualsiasi momento. Senza di essa, una conversazione esiste solo per la durata della sessione.
-- **Percorso di lettura:** una breve traccia di dove sei passato — opere e temi discussi, lingua preferita — che serve a proseguire il percorso da un dialogo all'altro. Non registra mai che cosa credi né quanto sei bravo: l'app non valuta i suoi utenti.
-- **Crediti e acquisti:** il saldo di oboli e la cronologia degli acquisti. I pagamenti sono gestiti dal fornitore dei pagamenti; non riceviamo né conserviamo i dati della tua carta.
-- **Dati tecnici:** segnalazioni di errore e log tecnici, per mantenere il servizio funzionante e sicuro.
-- **Assistenza:** i messaggi che ci invii.
+- **Invito e account.** Il tuo indirizzo email e la lingua, copiati dalla lista d'attesa o dalla tua richiesta quando ti invitiamo; poi il tuo indirizzo email, con cui accedi tramite un link che ti inviamo (non c'è password); la lingua che scegli; la data in cui hai confermato di avere almeno 15 anni; il numero di messaggi gratuiti che ti restano. Base giuridica: l'esecuzione del contratto con te.
+- **Conversazioni.** Per risponderti, i tuoi messaggi e le risposte di Platone della sessione in corso sono conservati sui nostri server e inviati ad Anthropic (vedi B2). **Non vengono salvati**: una sessione viene cancellata automaticamente due ore dopo l'ultimo messaggio (la rimozione si completa di norma entro 24 ore). Le conversazioni filosofiche possono rivelare le tue convinzioni religiose o filosofiche. Le trattiamo solo per risponderti: mai per pubblicità o profilazione, e non vengono usate per addestrare modelli di intelligenza artificiale. Base giuridica: l'esecuzione del contratto con te e il tuo consenso esplicito, che dai prima della prima conversazione e puoi revocare cancellando l'account (articolo 9, paragrafo 2, lettera a, del GDPR).
+- **Segnalazioni.** Se segnali una risposta, dopo un avviso nell'app, conserviamo quello scambio — la tua domanda, la risposta e l'eventuale nota che aggiungi — per poterlo esaminare e migliorare Platone. Base giuridica: il tuo consenso esplicito, dato quando invii la segnalazione.
+- **Dati tecnici.** Per ogni messaggio registriamo l'identificativo del tuo account, l'ora, la quantità di testo elaborata (in token), il costo e l'esito, **mai il testo**. Teniamo anche dei contatori per applicare i limiti, come i messaggi all'ora e la spesa giornaliera. Base giuridica: il nostro legittimo interesse alla sicurezza, alla prevenzione degli abusi e al controllo dei costi.
+- **Nel tuo browser.** L'app salva nell'archiviazione locale del browser la lingua, la conferma dell'età e, mentre aspetti il link di accesso, il tuo indirizzo email; anche il servizio di accesso vi conserva la tua sessione. Sono dati necessari al funzionamento dell'app e non servono a tracciarti. L'app non usa strumenti di statistica né di pubblicità.
 
-Basi giuridiche: l'esecuzione del contratto con te (account, conversazione in corso, crediti e acquisti); il tuo consenso esplicito per i dialoghi salvati (articolo 9, paragrafo 2, lettera a, del GDPR); il nostro legittimo interesse alla sicurezza e al buon funzionamento del servizio. Non usiamo mai i tuoi dialoghi per marketing o profilazione.
+### B2. Fornitori di servizi dell'app e trasferimenti internazionali
 
-### B2. Fornitori di servizi dell'app
+- **Google (Firebase e Google Cloud):** accesso, database, server e hosting dell'app, ed email di accesso. Il database e i server si trovano nell'Unione europea (Belgio); il servizio di accesso (Firebase Authentication) può conservare i dati dell'account fuori dall'Unione europea.
+- **Anthropic** (Stati Uniti): genera le risposte di Platone. I tuoi messaggi vengono elaborati fuori dall'Unione europea, secondo le condizioni commerciali di Anthropic, che non ne consentono l'uso per addestrare i suoi modelli.
 
-- **Anthropic** (Stati Uniti): generazione delle risposte nei dialoghi. A questo scopo i tuoi messaggi vengono inviati all'API di Anthropic.
-- **Hosting, account e database:** il fornitore sarà indicato qui prima del lancio (attualmente previsto: Firebase / Google Cloud).
-- **Pagamenti:** il fornitore sarà indicato qui prima che gli acquisti siano disponibili (attualmente previsti: Stripe per i pagamenti via web; Apple, Google e RevenueCat se usciranno app per dispositivi mobili).
+I trasferimenti fuori dallo Spazio economico europeo si basano sulle garanzie previste dal GDPR, come le clausole contrattuali tipo della Commissione europea o una decisione di adeguatezza.
 
-### B3. Conservazione e cancellazione
+### B3. Per quanto tempo conserviamo i dati
 
-- **Dialoghi salvati:** conservati finché non li cancelli. Nell'app puoi cancellare un singolo dialogo, tutti i dialoghi o l'account, ed esportare le tue conversazioni.
-- **Account inattivi:** cancellati automaticamente dopo 24 mesi senza utilizzo.
+- **Sessioni:** cancellate automaticamente due ore dopo l'ultimo messaggio.
+- **Segnalazioni:** 180 giorni.
 - **Log tecnici:** 30 giorni.
-- **Dopo la cancellazione:** i dati vengono rimossi entro 30 giorni, salvo quelli che la legge ci obbliga a conservare (per esempio i dati degli acquisti).
+- **Account:** finché non lo cancelli. Dalle impostazioni dell'app puoi cancellarlo in qualsiasi momento: vengono eliminati subito l'account, i messaggi rimasti, le sessioni, le segnalazioni e i log tecnici.
+- **Totali giornalieri** (numero di messaggi e costo complessivo per giorno), che non identificano nessuno, possono essere conservati più a lungo.
 
 ### B4. Età
 
-L'app è destinata a chi ha almeno 15 anni. Chi ha meno di 18 anni può acquistare oboli solo con il consenso di un genitore o di un tutore, e non effettuiamo mai profilazione commerciale dei minori. Se ritieni che un minore di 15 anni ci abbia fornito dati personali, contattaci e li cancelleremo. Il sito invece può essere letto da chiunque senza fornire alcun dato.
+L'app è destinata a chi ha almeno 15 anni; confermi la tua età prima della prima conversazione. Se pensi che un minore di 15 anni ci abbia fornito dati personali, scrivici e li cancelleremo. Il sito invece può essere consultato da chiunque senza fornire alcun dato.
+
+### B5. Risposte generate dall'intelligenza artificiale
+
+Le risposte di Platone sono generate da un'intelligenza artificiale e possono essere sbagliate. Non sono consulenze professionali di alcun tipo.
 
 ## I tuoi diritti
 
@@ -98,7 +101,7 @@ Scrivi a contact@platophilosophy.com: ti risponderemo entro un mese. Hai anche i
 
 ## Sicurezza
 
-Il sito è servito solo tramite HTTPS e ci affidiamo a fornitori affermati per hosting, posta e, in futuro, per l'app. Nessuna trasmissione su Internet è del tutto sicura, ma limitiamo i dati raccolti a quelli necessari per ciascuna funzione.
+Il sito è servito solo tramite HTTPS e ci affidiamo a fornitori affermati per hosting, posta e per l'app. Nessuna trasmissione su Internet è del tutto sicura, ma limitiamo i dati raccolti a quelli necessari per ciascuna funzione.
 
 ## Link ad altri siti
 
@@ -106,8 +109,8 @@ Il sito rimanda a risorse esterne, come la Stanford Encyclopedia of Philosophy o
 
 ## Modifiche
 
-Aggiorneremo questa pagina quando cambieranno le nostre pratiche e indicheremo in alto la data dell'ultima versione. Le modifiche importanti per gli iscritti alla lista d'attesa o per gli utenti dell'app saranno comunicate anche via email o nell'app.
+Aggiorneremo questa pagina quando cambieranno le nostre pratiche e indicheremo in alto la data dell'ultima versione. Le modifiche importanti saranno comunicate anche via email agli iscritti alla lista d'attesa, o nell'app.
 
 ---
 
-**In breve:** il sito non usa cookie e conta le visite senza tracciarti. Abbiamo il tuo indirizzo email solo se ti iscrivi alla lista d'attesa o ci scrivi, e puoi chiederci di cancellarlo in qualsiasi momento. Non vendiamo i tuoi dati.
+**In breve:** il sito non usa cookie e conta le visite senza tracciarti. L'app conserva le conversazioni solo durante la sessione e non le salva mai. Abbiamo il tuo indirizzo email solo se ti iscrivi alla lista d'attesa, usi l'app o ci scrivi, e puoi chiederci di cancellarlo in qualsiasi momento. Non vendiamo i tuoi dati.

@@ -805,9 +805,9 @@
       "type": "site-page",
       "url": "/index.html",
       "sources": {
-        "en": "editorial/drafts/site-home/en-reader-v0.1.md",
-        "it": "editorial/drafts/site-home/it-reader-v0.1.md",
-        "fr": "editorial/drafts/site-home/fr-reader-v0.1.md"
+        "en": "editorial/drafts/site-home/en-reader-v0.4.md",
+        "it": "editorial/drafts/site-home/it-reader-v0.4.md",
+        "fr": "editorial/drafts/site-home/fr-reader-v0.4.md"
       },
       "section": "none",
       "navigation": "none",
@@ -867,21 +867,39 @@
       "type": "site-page",
       "url": "/roadmap.html",
       "sources": {
-        "en": "editorial/drafts/site-roadmap/en-reader-v0.1.md",
-        "it": "editorial/drafts/site-roadmap/it-reader-v0.1.md",
-        "fr": "editorial/drafts/site-roadmap/fr-reader-v0.1.md"
+        "en": "editorial/drafts/site-roadmap/en-reader-v0.4.md",
+        "it": "editorial/drafts/site-roadmap/it-reader-v0.4.md",
+        "fr": "editorial/drafts/site-roadmap/fr-reader-v0.4.md"
       },
       "section": "home",
       "navigation": "none",
       "description": "lead"
     },
     {
+      "key": "site-dialogue",
+      "type": "site-page",
+      "url": "/dialogue.html",
+      "sources": {
+        "en": "editorial/drafts/site-dialogue/en-reader-v0.3.md",
+        "it": "editorial/drafts/site-dialogue/it-reader-v0.3.md",
+        "fr": "editorial/drafts/site-dialogue/fr-reader-v0.3.md"
+      },
+      "section": "home",
+      "navigation": "none",
+      "description": "lead",
+      "pageTitle": {
+        "en": "Talk with Plato: the PLATO dialogue app | PLATO",
+        "it": "Dialoga con Platone: l'app di dialogo PLATO | PLATO",
+        "fr": "Dialoguer avec Platon : l'application PLATO | PLATO"
+      }
+    },
+    {
       "key": "legal-privacy",
       "type": "article",
       "url": "/privacy.html",
       "sources": {
-        "it": "editorial/drafts/legal-privacy/it-v2026-11-09.md",
-        "fr": "editorial/drafts/legal-privacy/fr-v2026-11-09.md"
+        "it": "editorial/drafts/legal-privacy/it-v2026-11-12.md",
+        "fr": "editorial/drafts/legal-privacy/fr-v2026-11-12.md"
       },
       "section": "none",
       "navigation": "none",

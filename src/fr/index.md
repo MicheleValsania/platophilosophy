@@ -13,7 +13,7 @@ jsonld: [{"@context":"https://schema.org","@type":"WebSite","name":"Plato Philos
 waitlistHref: "#waitlist"
 leadLarge: true
 ogType: "website"
-importedFrom: {"path":"editorial/drafts/site-home/fr-reader-v0.1.md","commit":"60470e47804203ca032e5584e9d8143612bbd745"}
+importedFrom: {"path":"editorial/drafts/site-home/fr-reader-v0.4.md","commit":"4ebb86658290cdf19809bf10cc8d91a62718fe7e"}
 ---
 L'écriture de Platon invite à interroger la justice, la connaissance, la vertu et la vie bonne. Ce site vous aide à aborder ces questions grâce au contexte historique, à l'explication des idées et à des parcours qui conduisent aux dialogues eux-mêmes.
 
@@ -33,13 +33,13 @@ L'écriture de Platon invite à interroger la justice, la connaissance, la vertu
 
 Cet échange est un **exemple écrit pour ce site**, non une citation de Platon. Dans les dialogues, différents interlocuteurs examinent des questions, mettent des définitions à l'épreuve et restent parfois en désaccord sans parvenir à une réponse définitive.
 
-## Dialoguer avec Platon — bientôt disponible
+## Dialoguer avec Platon
 
-Nous préparons **PLATO**, une application pour explorer les questions de Platon à travers un dialogue guidé. Le lancement est prévu pour **fin novembre 2026**.
+**PLATO**, notre application pour explorer les questions de Platon par le dialogue, est en **bêta fermée** : nous invitons les participants par petits groupes. [Comment fonctionne le dialogue et comment demander à participer →](/dialogue.html)
 
 <div id="waitlist">
 
-**Inscrivez-vous à la liste d'attente :** les inscrits recevront **3 questions gratuites** pour commencer à explorer le dialogue.
+**Inscrivez-vous à la liste d'attente :** nous vous préviendrons de l'ouverture à tous, avec au moins **3 questions gratuites**.
 
 <p style="margin-top:22px;"><a class="btn" href="https://stats.sender.net/forms/bYE1DY/view">S'inscrire sur la liste d'attente →</a></p>
 

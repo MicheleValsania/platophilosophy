@@ -7,12 +7,12 @@ translationKey: "legal-privacy"
 title: "Politique de confidentialité"
 pageTitle: "Politique de confidentialité | PLATO"
 description: "Quelles données personnelles le site PLATO et l'application de dialogue traitent, à quelles fins, et comment exercer vos droits."
-kicker: "Dernière mise à jour : 11 novembre 2026"
+kicker: "Dernière mise à jour : 12 novembre 2026"
 canonical: "/fr/privacy.html"
-jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Politique de confidentialité","description":"Quelles données personnelles le site PLATO et l'application de dialogue traitent, à quelles fins, et comment exercer vos droits.","inLanguage":"fr","url":"https://platophilosophy.com/fr/privacy.html","mainEntityOfPage":"https://platophilosophy.com/fr/privacy.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-11T14:11:25+01:00"}]
-importedFrom: {"path":"editorial/drafts/legal-privacy/fr-v2026-11-09.md","commit":"60470e47804203ca032e5584e9d8143612bbd745"}
+jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Politique de confidentialité","description":"Quelles données personnelles le site PLATO et l'application de dialogue traitent, à quelles fins, et comment exercer vos droits.","inLanguage":"fr","url":"https://platophilosophy.com/fr/privacy.html","mainEntityOfPage":"https://platophilosophy.com/fr/privacy.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-12T11:32:59+01:00"}]
+importedFrom: {"path":"editorial/drafts/legal-privacy/fr-v2026-11-12.md","commit":"3a2254c78fc3fedc4e7e7edbca79ea08ff1be562"}
 ---
-Cette politique explique quelles données personnelles sont traitées lorsque vous utilisez platophilosophy.com et, une fois qu'elle sera disponible, l'application de dialogue PLATO. Elle comporte deux parties : la **partie A** concerne le site et s'applique dès maintenant ; la **partie B** concerne l'application, qui n'est pas encore disponible.
+Cette politique explique quelles données personnelles sont traitées lorsque vous utilisez platophilosophy.com et l'application de dialogue PLATO (app.platophilosophy.com). Elle comporte deux parties : la **partie A** concerne le site ; la **partie B** concerne l'application.
 
 ## Responsable du traitement
 
@@ -24,8 +24,8 @@ Le responsable du traitement est **Michele Valsania**, qui mène PLATO comme pro
 
 - **Navigation.** Notre hébergeur (Netlify) traite des données techniques telles que votre adresse IP, votre navigateur et la page demandée, afin d'afficher les pages et de protéger le service. Base légale : notre intérêt légitime à exploiter un site sécurisé.
 - **Statistiques de fréquentation.** Nous utilisons GoatCounter pour compter les pages vues. Il ne dépose aucun cookie et ne conserve pas votre adresse IP : il n'utilise votre adresse IP et votre navigateur que brièvement, pour estimer votre pays et éviter de compter deux fois la même visite, et conserve des données agrégées telles que les pages consultées, le site de provenance, le navigateur, la taille d'écran et le pays. Base légale : notre intérêt légitime à savoir quelles pages sont utiles.
-- **Liste d'attente.** Si vous vous inscrivez à la liste d'attente, vous le faites sur une page de formulaire hébergée par Sender, qui gère la liste et envoie nos e-mails. Sender vous envoie ensuite un lien pour confirmer votre adresse et enregistre la date de votre inscription et de votre confirmation. Nous utilisons votre adresse pour vous prévenir du lancement de l'application et de votre accès, et pour vous envoyer de temps en temps quelques nouvelles du projet. La page d'inscription appartient à Sender, qui peut y utiliser des cookies selon sa propre politique de confidentialité ; nos pages n'en déposent aucun. Base légale : votre consentement, que vous pouvez retirer à tout moment grâce au lien de désinscription présent dans chaque e-mail ou en nous écrivant.
-- **E-mails que vous nous envoyez.** Si vous nous écrivez, nous utilisons votre message et votre adresse pour vous répondre. Notre messagerie est hébergée par Infomaniak. Base légale : notre intérêt légitime à vous répondre.
+- **Liste d'attente.** Si vous vous inscrivez à la liste d'attente, vous le faites sur une page de formulaire hébergée par Sender, qui gère la liste et envoie nos e-mails. Sender vous envoie ensuite un lien pour confirmer votre adresse et enregistre la date de votre inscription et de votre confirmation. Nous utilisons votre adresse pour vous inviter à l'application, vous prévenir de son lancement et vous envoyer de temps en temps quelques nouvelles du projet. Pour vous inviter, nous copions votre adresse et votre langue depuis Sender dans la liste des invités de l'application (voir partie B). La page d'inscription appartient à Sender, qui peut y utiliser des cookies selon sa propre politique de confidentialité ; nos pages n'en déposent aucun. Base légale : votre consentement, que vous pouvez retirer à tout moment grâce au lien de désinscription présent dans chaque e-mail ou en nous écrivant.
+- **E-mails que vous nous envoyez.** Si vous nous écrivez, nous utilisons votre message et votre adresse pour vous répondre. Si vous demandez à participer à la bêta et que nous vous invitons, nous copions votre adresse et votre langue préférée dans la liste des invités de l'application (voir partie B). Notre messagerie est hébergée par Infomaniak. Base légale : notre intérêt légitime à vous répondre.
 - **Carte interactive.** La page de la carte charge la bibliothèque Leaflet depuis unpkg et les tuiles cartographiques depuis OpenStreetMap. Votre navigateur se connecte donc à ces services, qui reçoivent votre adresse IP.
 
 Nous ne vendons pas vos données, ne les utilisons pas à des fins publicitaires et ne créons pas de profils.
@@ -53,35 +53,38 @@ Certains prestataires sont établis hors de l'Espace économique européen. Dans
 
 ## Partie B — L'application de dialogue PLATO
 
-L'application n'est pas encore disponible. Cette partie décrit les données qu'elle est conçue pour traiter ; nous la réviserons avant le lancement et informerons les inscrits à la liste d'attente de toute modification.
+L'application, à l'adresse app.platophilosophy.com, est en bêta fermée, ouverte aux personnes invitées depuis la liste d'attente. Cette partie décrit ce qu'elle traite aujourd'hui. Les fonctions qui ne sont pas encore proposées, comme les dialogues enregistrés, la trace du parcours de lecture ou les paiements, ne sont pas décrites ici : nous mettrons cette politique à jour avant de les introduire.
 
-### B1. Données que traitera l'application
+### B1. Quelles données l'application traite et pourquoi
 
-- **Compte :** votre adresse e-mail et, si vous en choisissez un, un nom affiché. Nous ne voyons ni ne conservons votre mot de passe en clair.
-- **Conversations :** pour vous répondre, les messages de la conversation en cours sont traités sur nos serveurs et transmis à Anthropic (voir B2). Les conversations philosophiques peuvent révéler vos convictions religieuses ou philosophiques. C'est pourquoi **nous ne conservons pas vos dialogues, sauf si vous choisissez explicitement de les enregistrer** (« Enregistrer mes dialogues »). Ce choix est distinct de la création du compte et peut être retiré à tout moment. Sans lui, une conversation n'existe que pendant la durée de votre session.
-- **Parcours de lecture :** une brève trace des chemins parcourus — œuvres et thèmes abordés, langue préférée — qui permet de poursuivre votre parcours d'un dialogue à l'autre. Elle n'enregistre jamais ce que vous croyez ni votre niveau : l'application n'évalue pas ses utilisateurs.
-- **Crédits et achats :** votre solde d'oboles et l'historique de vos achats. Les paiements sont traités par le prestataire de paiement ; nous ne recevons ni ne conservons vos données de carte bancaire.
-- **Données techniques :** rapports d'erreur et journaux techniques, pour assurer le bon fonctionnement et la sécurité du service.
-- **Assistance :** les messages que vous nous envoyez.
+- **Invitation et compte.** Votre adresse e-mail et votre langue, copiées depuis la liste d'attente ou depuis votre demande lorsque nous vous invitons ; puis votre adresse e-mail, qui vous permet de vous connecter grâce à un lien que nous vous envoyons (il n'y a pas de mot de passe) ; la langue que vous choisissez ; la date à laquelle vous avez confirmé avoir au moins 15 ans ; le nombre de messages gratuits qu'il vous reste. Base légale : l'exécution du contrat qui nous lie.
+- **Conversations.** Pour vous répondre, vos messages et les réponses de Platon de la session en cours sont conservés sur nos serveurs et transmis à Anthropic (voir B2). **Ils ne sont pas enregistrés** : une session est effacée automatiquement deux heures après le dernier message (la suppression est en principe achevée dans les 24 heures). Les conversations philosophiques peuvent révéler vos convictions religieuses ou philosophiques. Nous ne les traitons que pour vous répondre : jamais à des fins publicitaires ou de profilage, et elles ne servent pas à entraîner des modèles d'intelligence artificielle. Base légale : l'exécution du contrat qui nous lie et votre consentement explicite, que vous donnez avant votre première conversation et pouvez retirer en supprimant votre compte (article 9, paragraphe 2, point a, du RGPD).
+- **Signalements.** Si vous signalez une réponse, après un avertissement dans l'application, nous conservons cet échange — votre question, la réponse et la note éventuelle que vous ajoutez — afin de l'examiner et d'améliorer Platon. Base légale : votre consentement explicite, donné au moment du signalement.
+- **Données techniques.** Pour chaque message, nous enregistrons l'identifiant de votre compte, l'heure, la quantité de texte traitée (en tokens), le coût et le résultat, **jamais le texte lui-même**. Nous tenons aussi des compteurs pour appliquer les limites, comme le nombre de messages par heure et la dépense quotidienne. Base légale : notre intérêt légitime à assurer la sécurité, à prévenir les abus et à maîtriser les coûts.
+- **Dans votre navigateur.** L'application enregistre dans le stockage local du navigateur votre langue, la confirmation de votre âge et, pendant que vous attendez le lien de connexion, votre adresse e-mail ; le service de connexion y conserve aussi votre session. Ces données sont nécessaires au fonctionnement de l'application et ne servent pas à vous suivre. L'application n'utilise aucun outil de statistiques ni de publicité.
 
-Bases légales : l'exécution du contrat qui nous lie (compte, conversation en cours, crédits et achats) ; votre consentement explicite pour les dialogues enregistrés (article 9, paragraphe 2, point a, du RGPD) ; notre intérêt légitime à assurer la sécurité et le bon fonctionnement du service. Nous n'utilisons jamais vos dialogues à des fins de marketing ou de profilage.
+### B2. Prestataires de l'application et transferts internationaux
 
-### B2. Prestataires de l'application
+- **Google (Firebase et Google Cloud) :** connexion, base de données, serveurs et hébergement de l'application, ainsi que les e-mails de connexion. La base de données et les serveurs se trouvent dans l'Union européenne (Belgique) ; le service de connexion (Firebase Authentication) peut conserver les données du compte hors de l'Union européenne.
+- **Anthropic** (États-Unis) : génère les réponses de Platon. Vos messages sont traités hors de l'Union européenne, selon les conditions commerciales d'Anthropic, qui n'en permettent pas l'utilisation pour entraîner ses modèles.
 
-- **Anthropic** (États-Unis) : génération des réponses des dialogues. Vos messages sont transmis à l'API d'Anthropic à cette fin.
-- **Hébergement, comptes et base de données :** le prestataire sera indiqué ici avant le lancement (actuellement prévu : Firebase / Google Cloud).
-- **Paiements :** le prestataire sera indiqué ici avant l'ouverture des achats (actuellement prévus : Stripe pour les paiements sur le web ; Apple, Google et RevenueCat si des applications mobiles sont publiées).
+Les transferts hors de l'Espace économique européen reposent sur les garanties prévues par le RGPD, comme les clauses contractuelles types de la Commission européenne ou une décision d'adéquation.
 
-### B3. Conservation et suppression
+### B3. Durée de conservation
 
-- **Dialogues enregistrés :** conservés jusqu'à ce que vous les supprimiez. Dans l'application, vous pouvez supprimer un dialogue, tous vos dialogues ou votre compte, et exporter vos conversations.
-- **Comptes inactifs :** supprimés automatiquement après 24 mois sans utilisation.
+- **Sessions :** effacées automatiquement deux heures après le dernier message.
+- **Signalements :** 180 jours.
 - **Journaux techniques :** 30 jours.
-- **Après suppression :** les données sont effacées dans un délai de 30 jours, sauf celles que la loi nous oblige à conserver (par exemple les justificatifs d'achat).
+- **Compte :** jusqu'à ce que vous le supprimiez. Depuis les paramètres de l'application, vous pouvez le supprimer à tout moment : le compte, les messages restants, les sessions, les signalements et les journaux techniques sont effacés immédiatement.
+- **Totaux quotidiens** (nombre de messages et coût global par jour), qui ne permettent d'identifier personne, peuvent être conservés plus longtemps.
 
 ### B4. Âge
 
-L'application est destinée aux personnes âgées d'au moins 15 ans. Les mineurs de moins de 18 ans ne peuvent acheter des oboles qu'avec le consentement d'un parent ou d'un tuteur, et nous ne pratiquons jamais de profilage commercial des mineurs. Si vous pensez qu'un enfant de moins de 15 ans nous a communiqué des données personnelles, contactez-nous et nous les supprimerons. Le site, lui, peut être consulté par tous sans fournir aucune donnée.
+L'application est destinée aux personnes âgées d'au moins 15 ans ; vous confirmez votre âge avant votre première conversation. Si vous pensez qu'un enfant de moins de 15 ans nous a communiqué des données personnelles, contactez-nous et nous les supprimerons. Le site, lui, peut être consulté par tous sans fournir aucune donnée.
+
+### B5. Réponses générées par l'intelligence artificielle
+
+Les réponses de Platon sont générées par une intelligence artificielle et peuvent être erronées. Elles ne constituent un conseil professionnel d'aucune sorte.
 
 ## Vos droits
 
@@ -98,7 +101,7 @@ En vertu du RGPD, vous pouvez nous demander :
 
 ## Sécurité
 
-Le site n'est servi qu'en HTTPS et nous faisons appel à des prestataires reconnus pour l'hébergement, la messagerie et, à l'avenir, l'application. Aucune transmission sur Internet n'est totalement sûre, mais nous limitons les données collectées à ce que chaque fonction exige.
+Le site n'est servi qu'en HTTPS et nous faisons appel à des prestataires reconnus pour l'hébergement, la messagerie et l'application. Aucune transmission sur Internet n'est totalement sûre, mais nous limitons les données collectées à ce que chaque fonction exige.
 
 ## Liens vers d'autres sites
 
@@ -106,8 +109,8 @@ Le site renvoie à des ressources externes, comme la Stanford Encyclopedia of Ph
 
 ## Modifications
 
-Nous mettrons cette page à jour lorsque nos pratiques changeront et indiquerons en haut la date de la dernière version. Les modifications importantes pour les inscrits à la liste d'attente ou les utilisateurs de l'application seront aussi annoncées par e-mail ou dans l'application.
+Nous mettrons cette page à jour lorsque nos pratiques changeront et indiquerons en haut la date de la dernière version. Les modifications importantes seront aussi annoncées par e-mail aux inscrits de la liste d'attente, ou dans l'application.
 
 ---
 
-**En bref :** le site n'utilise pas de cookies et compte les visites sans vous suivre. Nous n'avons votre adresse e-mail que si vous vous inscrivez à la liste d'attente ou nous écrivez, et vous pouvez nous demander de l'effacer à tout moment. Nous ne vendons pas vos données.
+**En bref :** le site n'utilise pas de cookies et compte les visites sans vous suivre. L'application ne conserve les conversations que pendant la session et ne les enregistre jamais. Nous n'avons votre adresse e-mail que si vous vous inscrivez à la liste d'attente, utilisez l'application ou nous écrivez, et vous pouvez nous demander de l'effacer à tout moment. Nous ne vendons pas vos données.
