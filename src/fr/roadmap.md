@@ -10,9 +10,9 @@ description: "Ce qui est disponible aujourd'hui, et ce sur quoi nous travaillons
 lead: "Ce qui est disponible aujourd'hui, et ce sur quoi nous travaillons."
 canonical: "/fr/roadmap.html"
 breadcrumb: {"links":[{"label":"Accueil","url":"/index.html"}],"current":"Feuille de route"}
-jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Feuille de route","description":"Ce qui est disponible aujourd'hui, et ce sur quoi nous travaillons.","inLanguage":"fr","url":"https://platophilosophy.com/fr/roadmap.html","mainEntityOfPage":"https://platophilosophy.com/fr/roadmap.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-10T00:47:49+01:00"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://platophilosophy.com/index.html"},{"@type":"ListItem","position":2,"name":"Feuille de route"}]}]
+jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Feuille de route","description":"Ce qui est disponible aujourd'hui, et ce sur quoi nous travaillons.","inLanguage":"fr","url":"https://platophilosophy.com/fr/roadmap.html","mainEntityOfPage":"https://platophilosophy.com/fr/roadmap.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-12T11:24:15+01:00"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://platophilosophy.com/index.html"},{"@type":"ListItem","position":2,"name":"Feuille de route"}]}]
 leadLarge: true
-importedFrom: {"path":"editorial/drafts/site-roadmap/fr-reader-v0.1.md","commit":"2401f3e7b6d6daa7e5aa959c2a5be69eda5d3c4c"}
+importedFrom: {"path":"editorial/drafts/site-roadmap/fr-reader-v0.4.md","commit":"1152f9708ab20506be39dbfc48088df0f29d8671"}
 ---
 PLATO est un projet indépendant pour lire Platon avec attention. Cette page présente nos priorités ; nous n'indiquons de dates que lorsqu'elles sont planifiées.
 
@@ -22,16 +22,15 @@ PLATO est un projet indépendant pour lire Platon avec attention. Cette page pr�
 - **La vie de Platon** — onze chapitres et une chronologie, qui distinguent les faits établis des traditions tardives.
 - **Philosophie** — quinze articles sur les grandes questions des dialogues.
 - **Glossaire, répertoire des dialogues et guides** — termes grecs, œuvres transmises sous le nom de Platon, cartes et parcours de lecture.
+- **Trois langues** — tout le site en anglais, en italien et en français (les Conditions d'utilisation sont pour l'instant en anglais seulement, en attendant un examen juridique).
 
 Toutes ces ressources sont gratuites.
 
-## Prochaine étape : l'italien et le français
-
-Le site est en préparation en **italien** et en **français**. Les traductions sont vérifiées sur les mêmes sources que les textes anglais, et les adresses anglaises existantes resteront inchangées.
-
 ## L'application de dialogue PLATO
 
-Une application pour explorer les questions de Platon à travers un dialogue guidé est prévue pour **fin novembre 2026**. Les inscrits à la liste d'attente recevront **3 questions gratuites** pour commencer.
+L'application est en **bêta fermée**, sur le web, pour ordinateur et téléphone. Nous invitons par petits groupes les inscrits à la liste d'attente : [comment fonctionne le dialogue](/dialogue.html).
+
+Prochaines étapes de l'application, dans cet ordre : des citations tirées des textes des dialogues ; la possibilité de continuer au-delà des questions gratuites ; des applications pour iPhone et Android. Nous donnerons des dates seulement lorsqu'elles seront planifiées.
 
 ## Plus tard
 
@@ -39,4 +38,4 @@ Nous réfléchissons aussi à des outils pour lire les dialogues de plus près, 
 
 ## Restons en contact
 
-Inscrivez-vous à la liste d'attente depuis la [page d'accueil](/index.html#waitlist) pour être prévenu du lancement de l'application, ou envoyez vos questions et corrections à [contact@platophilosophy.com](mailto:contact@platophilosophy.com).
+Inscrivez-vous à la liste d'attente depuis la [page d'accueil](/index.html#waitlist) pour recevoir une invitation à l'application, ou envoyez vos questions et corrections à [contact@platophilosophy.com](mailto:contact@platophilosophy.com).
