@@ -10,9 +10,9 @@ description: "Une conversation, pas un cours : Platon vous interroge, met vos r�
 lead: "Une conversation, pas un cours : Platon vous interroge, met vos réponses à l'épreuve et vous aide à penser par vous-même."
 canonical: "/fr/dialogue.html"
 breadcrumb: {"links":[{"label":"Accueil","url":"/index.html"}],"current":"Dialoguer avec Platon"}
-jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Dialoguer avec Platon","description":"Une conversation, pas un cours : Platon vous interroge, met vos réponses à l'épreuve et vous aide à penser par vous-même.","inLanguage":"fr","url":"https://platophilosophy.com/fr/dialogue.html","mainEntityOfPage":"https://platophilosophy.com/fr/dialogue.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-12T11:24:15+01:00"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://platophilosophy.com/index.html"},{"@type":"ListItem","position":2,"name":"Dialoguer avec Platon"}]}]
+jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Dialoguer avec Platon","description":"Une conversation, pas un cours : Platon vous interroge, met vos réponses à l'épreuve et vous aide à penser par vous-même.","inLanguage":"fr","url":"https://platophilosophy.com/fr/dialogue.html","mainEntityOfPage":"https://platophilosophy.com/fr/dialogue.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-12T11:32:45+01:00"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://platophilosophy.com/index.html"},{"@type":"ListItem","position":2,"name":"Dialoguer avec Platon"}]}]
 leadLarge: true
-importedFrom: {"path":"editorial/drafts/site-dialogue/fr-reader-v0.3.md","commit":"1152f9708ab20506be39dbfc48088df0f29d8671"}
+importedFrom: {"path":"editorial/drafts/site-dialogue/fr-reader-v0.3.md","commit":"4ebb86658290cdf19809bf10cc8d91a62718fe7e"}
 ---
 Le site sert à lire et à étudier. L'application PLATO sert à dialoguer. Vous apportez une question — sur la justice, l'amour, le courage, ce qui rend une chose sacrée — et Platon répond comme il écrivait : par des images, des exemples de tous les jours et des objections, en vous demandant ce que vous en pensez.
 
@@ -42,8 +42,12 @@ Les conversations ne sont pas enregistrées. Ce que vous écrivez sert à vous r
 
 ## La bêta
 
-L'application est en **bêta fermée**, sur le web, pour ordinateur et téléphone. Nous invitons par petits groupes les personnes inscrites sur la liste d'attente. Chaque participant reçoit **30 messages gratuits** pour l'essayer et nous dire ce qui fonctionne et ce qui ne fonctionne pas.
+L'application est en **bêta fermée**, sur le web, pour ordinateur et téléphone. Nous invitons les participants par petits groupes. Chacun reçoit **30 messages gratuits** pour l'essayer et nous dire ce qui fonctionne et ce qui ne fonctionne pas.
 
-**[S'inscrire sur la liste d'attente →](/index.html#waitlist)** · Déjà invité ? Le lien vers l'application se trouve dans votre e-mail d'invitation.
+**Vous souhaitez participer ?** Écrivez-nous qui vous êtes — étudiant, enseignant, lecteur curieux — et pourquoi cela vous intéresse. Le lien ouvre un e-mail prêt à compléter.
+
+**[Demander à participer à la bêta →](mailto:contact@platophilosophy.com?subject=Demande%20b%C3%AAta%20PLATO&body=Profil%20%28%C3%A9tudiant%20/%20enseignant%20/%20int%C3%A9r%C3%AAt%20personnel%20/%20autre%29%20%3A%20%0D%0A%0D%0APourquoi%20j%27aimerais%20essayer%20PLATO%20%3A%20%0D%0A%0D%0ALangue%20souhait%C3%A9e%20%28fran%C3%A7ais%20/%20anglais%20/%20italien%29%20%3A%20%0D%0A)**
+
+Pour être prévenu de l'ouverture à tous, [inscrivez-vous sur la liste d'attente](/index.html#waitlist). Déjà invité ? Le lien vers l'application se trouve dans votre e-mail d'invitation.
 
 Après la bêta, l'application offrira à tous quelques questions gratuites. Les éventuelles autres conditions seront annoncées avant de demander à quiconque de payer.

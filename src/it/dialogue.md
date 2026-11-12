@@ -10,9 +10,9 @@ description: "Una conversazione, non una lezione: Platone ti interroga, mette al
 lead: "Una conversazione, non una lezione: Platone ti interroga, mette alla prova le tue risposte e ti aiuta a pensare con la tua testa."
 canonical: "/it/dialogue.html"
 breadcrumb: {"links":[{"label":"Pagina iniziale","url":"/index.html"}],"current":"Dialoga con Platone"}
-jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Dialoga con Platone","description":"Una conversazione, non una lezione: Platone ti interroga, mette alla prova le tue risposte e ti aiuta a pensare con la tua testa.","inLanguage":"it","url":"https://platophilosophy.com/it/dialogue.html","mainEntityOfPage":"https://platophilosophy.com/it/dialogue.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-12T11:23:39+01:00"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Pagina iniziale","item":"https://platophilosophy.com/index.html"},{"@type":"ListItem","position":2,"name":"Dialoga con Platone"}]}]
+jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Dialoga con Platone","description":"Una conversazione, non una lezione: Platone ti interroga, mette alla prova le tue risposte e ti aiuta a pensare con la tua testa.","inLanguage":"it","url":"https://platophilosophy.com/it/dialogue.html","mainEntityOfPage":"https://platophilosophy.com/it/dialogue.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-12T11:32:45+01:00"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Pagina iniziale","item":"https://platophilosophy.com/index.html"},{"@type":"ListItem","position":2,"name":"Dialoga con Platone"}]}]
 leadLarge: true
-importedFrom: {"path":"editorial/drafts/site-dialogue/it-reader-v0.3.md","commit":"bd90e9d7dee7328b5bad55ec225ed92d07f0f762"}
+importedFrom: {"path":"editorial/drafts/site-dialogue/it-reader-v0.3.md","commit":"4ebb86658290cdf19809bf10cc8d91a62718fe7e"}
 ---
 Il sito serve a leggere e a studiare. L'app PLATO serve a dialogare. Porti una domanda — sulla giustizia, sull'amore, sul coraggio, su che cosa renda qualcosa sacro — e Platone risponde come scriveva: con immagini, esempi quotidiani e obiezioni, e chiedendoti che cosa ne pensi.
 
@@ -42,8 +42,12 @@ Le conversazioni non vengono salvate. Ciò che scrivi serve a risponderti durant
 
 ## La beta
 
-L'app è in **beta chiusa**, sul web, per computer e telefono. Invitiamo a piccoli gruppi le persone iscritte alla lista d'attesa. Chi partecipa alla beta riceve **30 messaggi gratuiti** per provarla e dirci che cosa funziona e che cosa no.
+L'app è in **beta chiusa**, sul web, per computer e telefono. Invitiamo le persone a piccoli gruppi. Chi partecipa alla beta riceve **30 messaggi gratuiti** per provarla e dirci che cosa funziona e che cosa no.
 
-**[Iscriviti alla lista d'attesa →](/index.html#waitlist)** · Hai già ricevuto l'invito? Il link all'app è nell'email di invito.
+**Vuoi partecipare?** Scrivici chi sei — studente, insegnante, lettore curioso — e perché ti interessa. Il link apre un'email già pronta da completare.
+
+**[Chiedi di partecipare alla beta →](mailto:contact@platophilosophy.com?subject=Richiesta%20beta%20PLATO&body=Profilo%20%28studente%20/%20insegnante%20/%20interesse%20personale%20/%20altro%29%3A%20%0D%0A%0D%0APerch%C3%A9%20vorrei%20provare%20PLATO%3A%20%0D%0A%0D%0ALingua%20in%20cui%20vorrei%20usarlo%20%28italiano%20/%20inglese%20/%20francese%29%3A%20%0D%0A)**
+
+Per sapere quando l'app sarà aperta a tutti, [iscriviti alla lista d'attesa](/index.html#waitlist). Hai già ricevuto l'invito? Il link all'app è nell'email di invito.
 
 Dopo la beta l'app offrirà a tutti alcune domande gratuite. Eventuali altre condizioni saranno annunciate prima di chiedere a chiunque di pagare.

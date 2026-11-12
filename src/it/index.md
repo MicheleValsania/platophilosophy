@@ -13,7 +13,7 @@ jsonld: [{"@context":"https://schema.org","@type":"WebSite","name":"Plato Philos
 waitlistHref: "#waitlist"
 leadLarge: true
 ogType: "website"
-importedFrom: {"path":"editorial/drafts/site-home/it-reader-v0.4.md","commit":"1152f9708ab20506be39dbfc48088df0f29d8671"}
+importedFrom: {"path":"editorial/drafts/site-home/it-reader-v0.4.md","commit":"4ebb86658290cdf19809bf10cc8d91a62718fe7e"}
 ---
 La scrittura di Platone invita a interrogarsi sulla giustizia, sulla conoscenza, sulla virtù e sulla vita buona. Questo sito aiuta ad affrontare tali domande attraverso il contesto storico, la spiegazione delle idee e percorsi che conducono ai dialoghi stessi.
 
@@ -35,11 +35,11 @@ Questo scambio è un **esempio scritto per questo sito**, non una citazione di P
 
 ## Dialoga con Platone
 
-**PLATO**, la nostra app per esplorare le domande di Platone attraverso il dialogo, è in **beta chiusa**. Invitiamo a piccoli gruppi le persone iscritte alla lista d'attesa. [Come funziona il dialogo →](/dialogue.html)
+**PLATO**, la nostra app per esplorare le domande di Platone attraverso il dialogo, è in **beta chiusa**: invitiamo le persone a piccoli gruppi. [Come funziona il dialogo e come chiedere di partecipare →](/dialogue.html)
 
 <div id="waitlist">
 
-**Iscriviti alla lista d'attesa:** riceverai un invito all'app e almeno **3 domande gratuite**.
+**Iscriviti alla lista d'attesa:** ti avviseremo quando l'app sarà aperta a tutti, con almeno **3 domande gratuite**.
 
 <p style="margin-top:22px;"><a class="btn" href="https://stats.sender.net/forms/aM8Ln1/view">Iscriviti alla lista d'attesa →</a></p>
 

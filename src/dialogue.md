@@ -10,10 +10,10 @@ description: "A conversation, not a lecture: Plato questions you, tests your ans
 lead: "A conversation, not a lecture: Plato questions you, tests your answers and helps you think for yourself."
 canonical: "/dialogue.html"
 breadcrumb: {"links":[{"label":"Home","url":"/index.html"}],"current":"Talk with Plato"}
-jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Talk with Plato","description":"A conversation, not a lecture: Plato questions you, tests your answers and helps you think for yourself.","inLanguage":"en","url":"https://platophilosophy.com/dialogue.html","mainEntityOfPage":"https://platophilosophy.com/dialogue.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-12T11:23:39+01:00"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://platophilosophy.com/index.html"},{"@type":"ListItem","position":2,"name":"Talk with Plato"}]}]
+jsonld: [{"@context":"https://schema.org","@type":"Article","headline":"Talk with Plato","description":"A conversation, not a lecture: Plato questions you, tests your answers and helps you think for yourself.","inLanguage":"en","url":"https://platophilosophy.com/dialogue.html","mainEntityOfPage":"https://platophilosophy.com/dialogue.html","author":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"publisher":{"@type":"Organization","name":"PLATO Philosophy","url":"https://platophilosophy.com"},"about":{"@type":"Person","name":"Plato"},"dateModified":"2026-11-12T11:32:45+01:00"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://platophilosophy.com/index.html"},{"@type":"ListItem","position":2,"name":"Talk with Plato"}]}]
 leadLarge: true
 sitemap: {"order":3,"loc":"/dialogue.html","changefreq":"monthly","priority":"0.8"}
-importedFrom: {"path":"editorial/drafts/site-dialogue/en-reader-v0.3.md","commit":"bd90e9d7dee7328b5bad55ec225ed92d07f0f762"}
+importedFrom: {"path":"editorial/drafts/site-dialogue/en-reader-v0.3.md","commit":"4ebb86658290cdf19809bf10cc8d91a62718fe7e"}
 ---
 This site is for reading and study. The PLATO app is for dialogue. You bring a question — about justice, love, courage, what makes something sacred — and Plato answers as he wrote: with images, everyday examples and objections, and by asking what you think.
 
@@ -43,8 +43,12 @@ Conversations are not saved. What you write is used to answer you during the ses
 
 ## The beta
 
-The app is in **closed beta**, on the web, for computer and phone. We are inviting people from the waitlist in small groups. Each beta tester receives **30 free messages** to try it and tell us what works and what does not.
+The app is in **closed beta**, on the web, for computer and phone. We invite people in small groups. Each beta tester receives **30 free messages** to try it and tell us what works and what does not.
 
-**[Join the waitlist →](/index.html#waitlist)** · Already invited? The link to the app is in your invitation email.
+**Would you like to take part?** Write to us and tell us who you are — student, teacher, interested reader — and why it interests you. The link opens an email that is ready to fill in.
+
+**[Ask to join the beta →](mailto:contact@platophilosophy.com?subject=PLATO%20beta%20request&body=Profile%20%28student%20/%20teacher%20/%20personal%20interest%20/%20other%29%3A%20%0D%0A%0D%0AWhy%20I%20would%20like%20to%20try%20PLATO%3A%20%0D%0A%0D%0ALanguage%20I%20would%20like%20to%20use%20%28English%20/%20Italian%20/%20French%29%3A%20%0D%0A)**
+
+To be told when the app opens to everyone, [join the waitlist](/index.html#waitlist). Already invited? The link to the app is in your invitation email.
 
 After the beta, the app will offer free questions to everyone. We will announce any other conditions before asking anyone to pay.

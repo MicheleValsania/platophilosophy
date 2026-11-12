@@ -14,7 +14,7 @@ waitlistHref: "#waitlist"
 leadLarge: true
 ogType: "website"
 sitemap: {"order":0,"loc":"/","changefreq":"weekly","priority":"1.0"}
-importedFrom: {"path":"editorial/drafts/site-home/en-reader-v0.4.md","commit":"1152f9708ab20506be39dbfc48088df0f29d8671"}
+importedFrom: {"path":"editorial/drafts/site-home/en-reader-v0.4.md","commit":"4ebb86658290cdf19809bf10cc8d91a62718fe7e"}
 ---
 Plato's writing invites readers to question what justice, knowledge, virtue and a good life might mean. This site helps you approach those questions with historical context, explanations of key ideas and paths to the dialogues themselves.
 
@@ -36,11 +36,11 @@ This exchange is an **illustrative example written for this site**, not a quotat
 
 ## Talk with Plato
 
-**PLATO**, our app for exploring Plato's questions through dialogue, is in **closed beta**. We are inviting people from the waitlist in small groups. [How the dialogue works →](/dialogue.html)
+**PLATO**, our app for exploring Plato's questions through dialogue, is in **closed beta**: we invite people in small groups. [How the dialogue works and how to ask to take part →](/dialogue.html)
 
 <div id="waitlist">
 
-**Join the waitlist:** you will receive an invitation to the app and at least **3 free questions**.
+**Join the waitlist:** you will be told when the app opens to everyone, with at least **3 free questions**.
 
 <p style="margin-top:22px;"><a class="btn" href="https://stats.sender.net/forms/e1wXkq/view">Join the waitlist →</a></p>
 
